@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next"
 
 const Header = () => {
+  const [t , i18next] = useTranslation();
   return (
-    <div>Header</div>
+    <div>{t("Header.0")}</div>
   )
 }
 

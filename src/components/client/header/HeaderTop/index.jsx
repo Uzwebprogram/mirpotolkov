@@ -28,7 +28,7 @@ const HeaderTop = () => {
                   <NavLink>Lorem</NavLink>
                 </li>
                 <li>
-                  <NavLink>Lorem</NavLink>
+                  <NavLink>Lorem1</NavLink>
                 </li>
             </NavList>
         </WrapperContainer>

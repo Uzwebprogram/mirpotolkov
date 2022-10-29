@@ -1,7 +1,15 @@
-
+import { WrapperContainer } from "../../../style-App"
+import { Section } from "./HeaderTop/styled-index"
+import HeaderTop from "./HeaderTop"
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+      <Section>
+        <WrapperContainer>
+          <HeaderTop/>
+        </WrapperContainer>
+      </Section>
+    </>
   )
 }
 

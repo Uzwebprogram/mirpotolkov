@@ -6,21 +6,27 @@ export const dataSidebar = [
         icon : "customize"
     },
     {
-        id : 2,
-        title : "Наши работы",
-        path : "/admin/project",
-        icon : "customize"
-    },
-    {
         id : 3,
-        title : "Cвязаться с нами",
+        title : "Вариант потолков",
         path : "/admin/contactus",
-        icon : "customize"
+        icon : "pie-chart-alt-2"
     },
     {
         id : 4,
+        title : "Натяжных потолков",
+        path : "/admin/contactus",
+        icon : "money-withdraw"
+    },
+    {
+        id : 5,
+        title : "Примеры натяжных потолков",
+        path : "/admin/project",
+        icon : "bar-chart-alt-2"
+    },
+    {
+        id : 6,
         title : "Cвязаться с нами",
         path : "/admin/contactus",
-        icon : "customize"
+        icon : "user-voice"
     }
 ]

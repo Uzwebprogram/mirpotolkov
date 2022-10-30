@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
 background-color: white;
-width: 15%;
-padding: 33px 30px;
+width: 22%;
+padding: 33px 20px;
 transition: 0.5s;
 `
 export const WrapperTop = styled.div`
@@ -12,18 +12,19 @@ export const WrapperTop = styled.div`
     justify-content: space-between;
     position: fixed;
     img:nth-child(1){
-        margin-right: 10px;
+        margin-right: 70px;
     }
 
 `
 export const WrapperList = styled.ul`
+
     list-style-type: none;
     margin: 0;
     padding: 0;
-    margin-top: 36px;
+    margin-top: 56px;
     position: fixed;
     span{
-        font-family: 'DM Sans';
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;

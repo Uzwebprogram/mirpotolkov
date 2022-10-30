@@ -19,7 +19,10 @@ function App() {
                     <GlobalStyle whiteColor/>
                    <Sidebar/>
                    <AdminRouterComponent/>
-           </Main>:<ClientRouterComponent/>
+           </Main>:<>
+              <GlobalStyle whiteColor/>
+              <ClientRouterComponent/>
+           </>
     }
     </>
   );

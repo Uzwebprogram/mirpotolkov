@@ -11,3 +11,9 @@ export const GlobalStyle = createGlobalStyle`
     background: ${props => (props.whiteColor ? '#F1F4FA' : 'white')};
   }
 `
+
+export const WrapperContainer = styled.div`
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+`

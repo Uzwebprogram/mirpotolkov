@@ -1,9 +1,12 @@
-
-
+import HomeHero from "./home-hero"
+import HomeCard from "./home-card"
+import HomeCeiling from "./home-ceiling"
 function HomeComponent(params) {
     return(
         <>
-        Home
+        <HomeHero/>
+        <HomeCard/>
+        <HomeCeiling/>
         </>
     )
 }

@@ -1,5 +1,38 @@
 {
     "Header":{
-        "0": "Salom"
+        "0": "Aktsiyalar",
+        "1": "Kalkulyator",
+        "2": "Foydalar",
+        "3": "Options",
+        "4": "Bizning ishlarimiz",
+        "5": "Sharhlar",
+        "6": "Kontaktlar",
+        "7": "Biz shahar va viloyatda ishlaymiz",
+        "8": "O'lchagichni chaqirish"
+    },
+
+    "Home":{
+        "0": "30% gacha imtiyozli cho'zilgan shiftlar",
+        "1": "290 rubl / m2 dan - Biz sizning buyurtmangizni 5 daqiqada hisoblab chiqamiz!",
+        "2": "Telefon raqamingizni qoldiring",
+        "3": "Telefon raqami",
+        "4": "Xarajatlarni hisoblash",
+        "5": "Ushbu shaklni yuborish orqali men shaxsiy ma'lumotlarni qayta ishlashga rozilik bildiraman",
+        "6": "Biz Tver, Tver viloyati, Moskva va Moskva viloyatida ishlaymiz"
+    },
+
+    "HomeCard":{
+        "0": "Aniq o'lcham",
+         "1": "Shahar bo'ylab bepul jo'nash",
+         "2": "Texnologning jo'nash uchun qulay vaqti",
+         "3": "Toza tahrirlash",
+         "4": "Biz o'zimizni tozalaymiz",
+         "5": "Biz ehtiyotkorlik bilan, ehtiyotkorlik bilan o'rnatamiz",
+         "6": "Xavfsizlik",
+         "7": "Yuqori sifatli material",
+         "8": "Texnologning jo'nash uchun qulay vaqti",
+         "9": "10 yil kafolat!",
+         "10": "Ish va material uchun kafolat",
+         "11": "10 yildan ortiq ishlagan"
     }
 }

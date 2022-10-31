@@ -3,21 +3,21 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
 background-color: white;
-width: 22%;
+width: 23%;
 padding: 33px 20px;
 transition: 0.5s;
+height: 90vh;
 `
 export const WrapperTop = styled.div`
     display: flex;
     justify-content: space-between;
     position: fixed;
     img:nth-child(1){
-        margin-right: 70px;
+        margin-right: 80px;
     }
 
 `
 export const WrapperList = styled.ul`
-
     list-style-type: none;
     margin: 0;
     padding: 0;

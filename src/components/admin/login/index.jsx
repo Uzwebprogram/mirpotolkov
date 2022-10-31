@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Wrapper } from "./styled-index"
 import Cookies from "universal-cookie"
+import Logo from "../../../assets/images/admin/logo.png"
 function LoginComponent() {
     const cookies = new Cookies();
     const Email = useRef();
@@ -15,7 +16,7 @@ function LoginComponent() {
       e.preventDefault()
   
       try {
-           await fetch('https://x8ki-letl-twmt.n7.xano.io/api:it_fc8zg/auth/login', {
+           await fetch('https://x8ki-letl-twmt.n7.xano.io/api:oMrL5JvU/auth/login', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
@@ -38,6 +39,8 @@ function LoginComponent() {
               console.log("error");
               PasswordError.current.style.backgroundColor = "#fe8585"
               EmailError.current.style.backgroundColor = "#fe8585"
+              Password.current.style.color = "white"
+              Email.current.style.color = "white"
               PasswordError.current.style.border = "2px solid red"
               EmailError.current.style.border = "2px solid red"
               ErrorText.current.style.display = "block"
@@ -70,12 +73,11 @@ function LoginComponent() {
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">
-            <h3>mirpotolkov.uz</h3>
+          <img src={Logo} width={400} height={150} className="image" alt="" />
             <p>
             Добро пожаловать на внутреннюю платформу mirpotolkov.uz ! Доступ есть только у администраторов 
             </p>
           </div>
-          {/* <img src={Logo} width={400} height={400} className="image" alt="" /> */}
         </div>
       </div>
     </div>

@@ -34,5 +34,17 @@
          "9": "10 year warranty!",
          "10": "Warranty for work and material",
          "11": "Working for over 10 years"
+    },
+    "celing":{
+        "0":"Favorable solutions",
+         "1" : "stretch ceilings",
+         "2" : "Discount",
+         "3" : "sum/m",
+         "4" : "years",
+         "5" : "guarantees",
+         "6" : "Price with installation",
+         "7" : "More",
+         "8" : "shades",
+         "9" : "Order"
     }
 }

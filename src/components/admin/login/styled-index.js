@@ -160,7 +160,7 @@ span{
 }
 .left-panel {
   pointer-events: all;
-  padding: 0rem 9% 2rem 35%;
+  padding: 0rem 9% 13rem 35%
 }
 
 .right-panel {
@@ -187,8 +187,9 @@ span{
 
 .panel p {
   font-size: 0.95rem;
-  padding: 0.7rem 0;
   color: white;
+  margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 

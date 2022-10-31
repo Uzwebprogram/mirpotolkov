@@ -28,5 +28,11 @@ export const dataSidebar = [
         title : "Cвязаться с нами",
         path : "/admin/contactus",
         icon : "user-voice"
+    },
+    {
+        id : 7,
+        title : "Добавить администратора",
+        path : "/admin/adminadd",
+        icon : "user-voice"
     }
 ]

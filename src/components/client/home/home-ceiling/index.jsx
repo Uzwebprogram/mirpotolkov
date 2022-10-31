@@ -1,5 +1,6 @@
 import React from "react";
 import { WrapperContainer } from "../../../../style-App";
+import { useContext } from "react";
 import {
   Section,
   CeilCardWrapper,
@@ -11,46 +12,53 @@ import {
   LeftBlock,
 } from "./styled-index";
 import potolog from "../../../../assets/images/client/potolog.jpg";
+import { StretchContext } from "../../../../context/client/stretch_ceilings/context";
+import { useTranslation } from "react-i18next";
 
-const card = [1, 2, 3, 4];
 
 const HomeCeiling = () => {
+  const {StretchMap} = useContext(StretchContext)
+  const {t , i18n} = useTranslation();
+  function ValueLang() {
+    return window.localStorage.getItem("i18nextLng")
+  }
   return (
     <>
       <Section>
         <WrapperContainer>
           <CeilCardWrapper>
-            <h2><span>Выгодные решения</span> натяжных потолков</h2>
+            <h2><span>{t("celing.0")}</span>{t("celing.1")}</h2>
             <CeilCard>
-              {card.map(() => (
-                <CeilItem>
-                  <h4>Матовый потолок</h4>
+              {StretchMap.map((elem , index) => (
+                <CeilItem key={index}>
+                  {ValueLang() == "ru" ? <h4>{elem.titleRu}</h4> : ValueLang() == "uz" ? <h4>{elem.titleUz}</h4>:  ValueLang() == "en" ? <h4>{elem.titleEn}</h4>:null}
+                  
                   <img src={potolog} alt="image" />
                   <Discount>
                     <DiscountItem>
                       <p>
-                        Скидка 20%
+                      {t("celing.2")} {elem.skidka}
                         <br />
                         <span>
-                          230 руб/м <sup>2</sup>
+                        {elem.money} {t("celing.3")} <sup>2</sup>
                         </span>
                       </p>
                     </DiscountItem>
                     <DiscountItem>
                       <i class="bx bxs-check-shield"></i>
                       <p>
-                        <span>30 лет</span> <br />
-                        гарантии
+                        <span>30 {t("celing.4")}</span> <br />
+                         {t("celing.5")}
                       </p>
                     </DiscountItem>
                   </Discount>
                   <LeftBlock>
-                    <p>Цена с установкой</p>
+                    <p>{t("celing.6")}</p>
                     <Line></Line>
-                    <p>Более 190 оттенков</p>
+                    <p>{t("celing.7")} {elem.shades} {t("celing.8")} </p>
                   </LeftBlock>
                   <button>
-                    Заказать <i class="bx bx-right-arrow-circle"></i>
+                    {t("celing.9")} <i class="bx bx-right-arrow-circle"></i>
                   </button>
                 </CeilItem>
               ))}

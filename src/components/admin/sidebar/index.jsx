@@ -6,8 +6,8 @@ import {
   Profile,
   ProfileTitle,
 } from "./styled-index";
-import Logo from "./../../../assets/images/admin/logo.cdr";
 import Close from "./../../../assets/images/admin/Close.svg";
+import Logo from "./../../../assets/images/admin/logo.png"
 import { useRef, useState } from "react";
 import { dataSidebar } from "./data-sidebar";
 import { NavLink } from "react-router-dom";
@@ -30,7 +30,7 @@ function Sidebar() {
         ) : (
           <img
             ref={ImageLogo}
-            style={{ transition: "0.5s" }}
+            style={{ transition: "0.5s"}}
             src={Logo}
             width={0}
             alt="logo images"
@@ -91,7 +91,7 @@ function Sidebar() {
         {hamburger === "false" ? (
           <img
             ref={ImageLogo}
-            style={{ transition: "0.5s" }}
+            style={{ transition: "0.5s" ,  }}
             src={Logo}
             width={140}
             alt="logo images"
@@ -99,7 +99,7 @@ function Sidebar() {
         ) : (
           <img
             ref={ImageLogo}
-            style={{ transition: "0.5s" }}
+            style={{ transition: "0.5s", marginRight:"10px"  }}
             src={Logo}
             width={0}
             alt="logo images"

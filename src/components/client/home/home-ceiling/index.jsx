@@ -11,16 +11,18 @@ import {
   LeftBlock,
 } from "./styled-index";
 import potolog from "../../../../assets/images/client/potolog.jpg";
+import { useTranslation } from "react-i18next";
 
 const card = [1, 2, 3, 4];
 
 const HomeCeiling = () => {
+  const [t,i18n] = useTranslation()
   return (
     <>
       <Section>
         <WrapperContainer>
           <CeilCardWrapper>
-            <h2><span>Выгодные решения</span> натяжных потолков</h2>
+            <h2>{t("HomeCeil.0")}</h2>
             <CeilCard>
               {card.map(() => (
                 <CeilItem>

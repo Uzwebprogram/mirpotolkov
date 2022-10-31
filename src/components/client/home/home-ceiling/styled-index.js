@@ -5,10 +5,9 @@ import vig from "../../../../assets/images/client/vig.png";
 export const Section = styled.div`
   width: 100%;
   height: 840px;
-  background-image: url(${grayBg});
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  z-index: 2;
+  position: relative;
+  background: transparent url(${grayBg}) no-repeat scroll center top / cover;
 `;
 
 export const CeilCardWrapper = styled.div`
@@ -18,6 +17,7 @@ export const CeilCardWrapper = styled.div`
     font-size: 46px;
     font-weight: 200;
     padding-top: 100px;
+    color: #224066;
 
     span{
         font-weight: bold;

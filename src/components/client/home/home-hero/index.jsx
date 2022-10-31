@@ -3,10 +3,11 @@ import HeaderBottom from "../../header/HeaderBottom";
 import { WrapperContainer } from "../../../../style-App";
 import { Section } from "../../header/styled-index";
 import Header from "../../header";
-import { Form, HomeContent, FormP, FormInBt } from "./styled-index";
+import { HomeContent } from "./styled-index";
+import HomeForm from "../home-form";
 import { useTranslation } from "react-i18next";
 
-const HomeHero = () => {
+const HomeHero = ({isText}) => {
   const [t, i18n] = useTranslation()
   return (
     <>
@@ -23,26 +24,7 @@ const HomeHero = () => {
               </span>
               {t("Home.2")}
             </p>
-            <Form>
-              <FormInBt>
-                <div>
-                  <i class="bx bxs-phone"></i>
-                  <input type="tel" placeholder={t("Home.3")} />
-                </div>
-                <button>
-                {t("Home.4")}
-                  <i class="bx bx-right-arrow-circle"></i>
-                </button>
-              </FormInBt>
-              <FormP>
-                <p>
-                {t("Home.5")}
-                </p>
-                <p>
-                {t("Home.6")}
-                </p>
-              </FormP>
-            </Form>
+           <HomeForm isText={isText}/>
           </HomeContent>
         </WrapperContainer>
       </Section>

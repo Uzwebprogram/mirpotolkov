@@ -13,7 +13,7 @@ const HomeHero = ({isText}) => {
     <>
       <Section>
         <WrapperContainer>
-          <HeaderBottom />
+          <HeaderBottom isLocal={true} />
           <HomeContent>
             <h2>
              {t("Home.0")}

@@ -8,7 +8,8 @@
         "5": "Sharhlar",
         "6": "Kontaktlar",
         "7": "Biz shahar va viloyatda ishlaymiz",
-        "8": "O'lchagichni chaqirish"
+        "8": "O'lchagichni chaqirish",
+        "9": "Ish vaqti 9:00 dan 21:00 gacha"
     },
 
     "Home":{
@@ -55,5 +56,25 @@
     "HomeCount": {
         "0": "50% gacha chegirmali fotosuratlar chop etilgan shiftlar",
          "1": "Aksiya aprel oyining oxirigacha amal qiladi"
+    },
+
+    "HomeInstall":{
+        "0": "Shahar va viloyatda o'rnatilgan shiftlarga misollar"
+    },
+
+    "HomeSxema":{
+        "0": "Oddiy ish sxemasi",
+        "1": "Siz so'rov qoldiring, biz sizga 5 daqiqadan keyin qo'ng'iroq qilamiz",
+         "2": "Ustamiz keldi, xonani o'lchaydi",
+         "3": "Shartnoma tuzamiz, qulay usulda 5-10% to'laymiz",
+         "4": "O'rnatish guruhi cho'zilgan shiftlarni o'rnatadi va axlatni olib tashlaydi"
+    },
+
+    "HomeMap":{
+        "0": "Xarita"
+    },
+
+    "Footer": {
+        "0": "Maxfiylik siyosati"
     }
 }

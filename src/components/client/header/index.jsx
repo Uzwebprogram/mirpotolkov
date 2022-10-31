@@ -1,25 +1,18 @@
-
-import { WrapperContainer } from "../../../style-App"
-import { Section } from "./HeaderTop/styled-index"
-import HeaderTop from "./HeaderTop"
-
-import { useTranslation } from "react-i18next"
+import { WrapperContainer } from "../../../style-App";
+import { Section } from "./styled-index";
+import HeaderTop from "./HeaderTop";
+import { useTranslation } from "react-i18next";
+import HeaderBottom from "./HeaderBottom";
+import { WrapperHero } from "./styled-index";
 
 const Header = () => {
-  const [t , i18next] = useTranslation();
+  const [t, i18n] = useTranslation();
+
   return (
-
     <>
-      <Section>
-        <WrapperContainer>
-          <HeaderTop/>
-        </WrapperContainer>
-      </Section>
+      <HeaderTop />
     </>
+  );
+};
 
-    <div>{t("Header.0")}</div>
-
-  )
-}
-
-export default Header
+export default Header;

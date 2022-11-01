@@ -46,5 +46,25 @@
          "7" : "More",
          "8" : "shades",
          "9" : "Order"
+},
+    "HomeCeil": {
+        "0": "Affordable Stretch Ceiling Solutions"
+    },
+
+    "HomeCost": {
+        "0": "Quick cost calculation"
+    },
+
+    "HomeAdvan":{
+        "0": "The advantages of our ceilings",
+        "1": "The amount after the conclusion of the contract does not change",
+         "2": "One of the lowest prices in the city and profitable promotions",
+         "3": "Guarantee for all works 10 years",
+         "4": "Free maintenance for 3 years"
+    },
+
+    "HomeCount": {
+        "0": "Ceilings with photo printing up to 50% discount",
+         "1": "Promotion valid until the end of April"
     }
 }

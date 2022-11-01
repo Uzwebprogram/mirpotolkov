@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Section = styled.div`
   width: 100%;
   position: fixed;
+  z-index: 999;
   right: 0;
   left: 0;
   background-color: #fff;

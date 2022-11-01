@@ -32,7 +32,7 @@ export const FormP = styled.div`
     font-size: 24px;
     :nth-child(1){
         font-size: 13px;
-        margin: 0;
+        margin: 2px 0 0 10px;
     }
  }
 `;
@@ -49,6 +49,11 @@ export const FormInBt = styled.div`
     border-radius: 50px;
     padding: 10px 10px;
     margin: 0 20px 0 0;
+    border: 2px solid transparent;
+
+    &:hover{
+        border: 2px solid #d4665c;
+    }
 
     input{
         border: none;

@@ -8,7 +8,7 @@ export const dataSidebar = [
     {
         id : 3,
         title : "Вариант потолков",
-        path : "/admin/contactus",
+        path : "/admin/stretch",
         icon : "pie-chart-alt-2"
     },
     {

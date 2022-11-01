@@ -46,5 +46,25 @@
          "7" : "Ko'proq",
          "8": "soyalar",
          "9" : "Buyurtma"
+    },
+    "HomeCeil": {
+        "0": "Arzon narxlardagi cho'zilgan ship echimlari"
+    },
+
+    "HomeCost": {
+        "0": "Tez xarajatlarni hisoblash"
+    },
+
+    "HomeAdvan":{
+        "0": "Bizning shiftlarimizning afzalliklari",
+        "1": "Shartnoma tuzilgandan keyin summa o'zgarmaydi",
+         "2": "Shahardagi eng past narxlardan biri va foydali aksiyalar",
+         "3": "Barcha ishlar uchun kafolat 10 yil",
+         "4": "3 yil davomida bepul texnik xizmat ko'rsatish"
+    },
+
+    "HomeCount": {
+        "0": "50% gacha chegirmali fotosuratlar chop etilgan shiftlar",
+         "1": "Aksiya aprel oyining oxirigacha amal qiladi"
     }
 }

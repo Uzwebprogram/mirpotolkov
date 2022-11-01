@@ -8,7 +8,8 @@
         "5": "Reviews",
         "6": "Contacts",
         "7": "We work in the city and region",
-        "8": "Call measurer"
+        "8": "Call measurer",
+        "9": "Working hours from 9:00 to 21:00"
     },
 
     "Home": {
@@ -66,5 +67,25 @@
     "HomeCount": {
         "0": "Ceilings with photo printing up to 50% discount",
          "1": "Promotion valid until the end of April"
+    },
+
+    "HomeInstall":{
+        "0": "Examples of installed ceilings in the city and region"
+    },
+
+    "HomeSxema":{
+        "0": "Simple operation scheme",
+        "1": "You leave a request, we will call you back in 5 minutes",
+         "2": "Our master arrives, measures the room",
+         "3": "We conclude a contract, pay 5-10% in a convenient way",
+         "4": "The installation team installs stretch ceilings and takes out the garbage"
+    },
+
+    "HomeMap":{
+        "0": "Map"
+    },
+
+    "Footer": {
+        "0": "Privacy Policy"
     }
 }

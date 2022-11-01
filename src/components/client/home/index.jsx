@@ -5,6 +5,9 @@ import HomeCost from "./home-cost";
 import HomeAdvantage from "./home-advantage";
 import HomeDiscount from "./home-discount";
 import HomeChoose from "./home-choose";
+import HomeInstalled from "./home-installed";
+import HomeSxema from "./home-sxema";
+import HomeMap from "./home-maps";
 function HomeComponent(params) {
   return (
     <>
@@ -13,9 +16,12 @@ function HomeComponent(params) {
       <HomeCeiling />
       <HomeCost isCost={true} />
       <HomeAdvantage />
-      <HomeDiscount isCount={true} />
+      {/* <HomeDiscount isCount={true} /> */}
       <HomeChoose/>
-      <HomeDiscount isCount={true} />
+      {/* <HomeDiscount isCount={true} /> */}
+      <HomeInstalled/>
+      <HomeSxema/>
+      <HomeMap/>
     </>
   );
 }

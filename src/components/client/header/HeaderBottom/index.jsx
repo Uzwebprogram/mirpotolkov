@@ -10,7 +10,7 @@ import localIcon from "../../../../assets/images/client/point.png";
 import phoneIcon from "../../../../assets/images/client/tel.png";
 import { useTranslation } from "react-i18next";
 
-const HeaderBottom = () => {
+const HeaderBottom = ({isLocal}) => {
   const [t, i18n] = useTranslation()
   return (
     <>
@@ -20,7 +20,7 @@ const HeaderBottom = () => {
         </LogoItem>
         <LocalItem>
           <img src={localIcon} alt="image" />
-          <p>{t("Header.7")}</p>
+         {isLocal ?  <p>{t("Header.7")}</p> :  <p>{t("Header.9")}</p>}
         </LocalItem>
         <PhoneItem>
           <img src={phoneIcon} alt="image" />

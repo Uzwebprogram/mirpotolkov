@@ -54,11 +54,7 @@ const AdminChoose = () => {
     return window.localStorage.getItem("i18nextLng");
   }
 
-  // const [value, setValue] = React.useState(0);
 
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
   return (
     <>
       <Section>
@@ -90,12 +86,25 @@ const AdminChoose = () => {
               </Tabs>
             </Box>
             {ChooseMap.map((elem, index) => (
+              <>
               <TabPanel value={value} index={index}>
                 <AdminChoosCard Element={elem} />
               </TabPanel>
+              </>
             ))}
+
           </Box>
         </WrapperContainer>
+
+              <>
+                <select>
+                <option  selected disabled>delete</option>
+                {ChooseMap.map((elem, index) => (
+                  <option key={index} value={elem.id}>{elem.titleru}</option>
+                ))}
+              </select>
+              </>
+
       </Section>
     </>
   );

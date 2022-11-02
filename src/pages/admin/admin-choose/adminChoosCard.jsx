@@ -41,7 +41,7 @@ const AdminChoosCard = ({ Element }) => {
                 src={`https://mebel-b.herokuapp.com/static/${elem.image}`}
                 width={360}
                 height={202}
-                alt="image"
+                alt="imagef"
               />
               <Prise>
                 <strike>от сум</strike>

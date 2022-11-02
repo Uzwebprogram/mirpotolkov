@@ -1,6 +1,9 @@
+import { useContext } from "react"
+import { AdminContext } from "../../../../context/admin/adminAdd/context"
 import {Wrapper} from "./styled-index"
 
 function Detials() {
+    const {AdminMap} = useContext(AdminContext)
     return(
         <Wrapper>
                         <div class="details">
@@ -17,15 +20,16 @@ function Detials() {
                         </thead>
 
                         <tbody>
-                            {/* {TeamMap.map(elem => 
+                            {AdminMap.map(elem => 
                              <tr>
-                                    <td>
-                                    <img alt="" src={elem.imageavatar} width={50} style={{borderRadius:"50%"}} height={50} />
-                                    <span>{elem.workername}</span>
+                                                                    <td>
+                                    <span>{elem.name}</span>
                                     </td>
-                                    <td>{elem.workerposition}</td>
+                                    <td>
+                                    <span>{elem.email}</span>
+                                    </td>
                                 </tr>
-                                ) } */}
+                                ) }
                         </tbody>
                     </table>
                 </div>
@@ -36,14 +40,16 @@ function Detials() {
                     </div>
 
                     <ul>
-            {/* {SitesMap.map((elem) =>(
-                <li>
-                    <a href={elem.link} target="_blank">
-                    <img className="image" src={elem.background} width={258} height={144} alt="" />
-                    <span>{elem.title}</span>
-                    </a>
-                </li>
-            ))} */}
+                    {AdminMap.map(elem => 
+                             <tr>
+                            <td>
+                                    <span>{elem.name}</span>
+                                    </td>
+                                    <td>
+                                    <span>{elem.email}</span>
+                                    </td>
+                                </tr>
+                                ) }
             </ul>
                 </div>
             </div>

@@ -34,13 +34,13 @@ function OptionDeletPutComponent({}) {
         <Wrapper>
                 <div >
                 <select onChange={HandleOpen2}>
-                <option  selected disabled>Удалить</option>
+                <option  selected disabled> Категория Удалить</option>
                 {ChooseMap.map((elem, index) => (
                   <option key={index} value={elem.id}>{elem.titleru}</option>
                 ))}
               </select>
               <select onChange={HandleOpen}>
-                <option  selected disabled>Изминеть</option>
+                <option  selected disabled> Категория Изминеть</option>
                 {ChooseMap.map((elem, index) => (
                   <option key={index}  value={elem.id}>{elem.titleru}</option>
                 ))}

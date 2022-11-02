@@ -50,7 +50,7 @@ const CardInstall = () => {
                 <p>
                   Объем: {elem.volume} <sup>2</sup>
                 </p>
-                <p>3 432р</p>
+                <p>{elem.money}сум</p>
               </CardImgContent>
             </CardBody>
             <CardFooter>

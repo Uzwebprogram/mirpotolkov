@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import { WrapperContainer } from "../../../style-App";
 import { Section } from "./styled-index";
 import "./styled-tab.css";
-
+import OptionDeletPutComponent from "../../../components/admin/ceilling-option/option-delet-put";
 
 import AdminChoosCard from "./adminChoosCard";
 import { ChooseContext } from "../../../context/client/choose/context";
@@ -94,16 +94,8 @@ const AdminChoose = () => {
             ))}
 
           </Box>
+          <OptionDeletPutComponent/>
         </WrapperContainer>
-
-              <>
-                <select>
-                <option  selected disabled>delete</option>
-                {ChooseMap.map((elem, index) => (
-                  <option key={index} value={elem.id}>{elem.titleru}</option>
-                ))}
-              </select>
-              </>
 
       </Section>
     </>

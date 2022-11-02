@@ -73,15 +73,6 @@ function CategoryModal() {
           enctype="multipart/form-data"
           onSubmit={HandleSubmit}
         >
-          
-          {loading ? (
-            <>
-              <span className="loading">загрузка...</span>
-            </>
-          ) : null}
-          <span ref={load} style={{ display: "none" }}>
-            загрузка...
-          </span>
           <input
             ref={titleuz}
             type="text"

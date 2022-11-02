@@ -16,6 +16,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
   const avatarimage = useRef();
   const volume = useRef();
   const clientnamesurname = useRef();
+  const moneys = useRef()
   const load = useRef();
   const [loading, setLoading] = useState(false);
   const [ceilingId, setCeilingId] = useState("");
@@ -37,6 +38,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
     formData.append("creating_canvas", creatingCanvas.current.value);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
+    formData.append("money", moneys.current.value);
     try {
       await fetch(`https://mebel-b.herokuapp.com/client_comment/${id}`, {
         method: "PUT",
@@ -53,7 +55,8 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
       e.target[6].value = null;
       e.target[7].value = null;
       e.target[8].value = null;
-      e.target[7].value = null;
+      e.target[9].value = null;
+      e.target[10].value = null;
     } catch (err) {
       console.log(err);
     }
@@ -105,6 +108,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <input type="text" placeholder={Element.client_comment_en} ref={clientcommenten} />
           <input type="text" placeholder={Element.client_comment_en} ref={clientcommentru} />
           <input type="text" placeholder={Element.client_name_surname} ref={clientnamesurname} />
+          <input type="text" placeholder={Element.money} ref={moneys} />
           <input type="text" placeholder={Element.mounting} ref={mounting} />
           <input type="text" placeholder={Element.volume} ref={volume} />
           <input type="text" placeholder={Element.creating_canvas} ref={creatingCanvas} />

@@ -85,6 +85,7 @@ const AdminChoose = () => {
                 ))}
               </Tabs>
             </Box>
+            <OptionDeletPutComponent/>
             {ChooseMap.map((elem, index) => (
               <>
               <TabPanel value={value} index={index}>
@@ -94,7 +95,6 @@ const AdminChoose = () => {
             ))}
 
           </Box>
-          <OptionDeletPutComponent/>
         </WrapperContainer>
 
       </Section>

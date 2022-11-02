@@ -4,36 +4,43 @@ import ModalCommon from "../../../common/modal";
 import { ChooseContext } from "../../../../../context/client/choose/context";
 
 function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
-    const titleuz = useRef();
-    const titleen = useRef();
-    const titleru = useRef();
-    const descriptionuz = useRef();
-    const descriptionen = useRef();
-    const descriptionru = useRef();
-    const money = useRef();
-    const image = useRef();
-    const load = useRef();
+  const titleuz = useRef();
+  const titleen = useRef();
+  const titleru = useRef();
+  const clientcommentuz = useRef();
+  const clientcommentru = useRef();
+  const clientcommenten = useRef();
+  const creatingCanvas = useRef();
+  const mounting = useRef();
+  const image = useRef();
+  const avatarimage = useRef();
+  const volume = useRef();
+  const clientnamesurname = useRef();
+  const load = useRef();
   const [loading, setLoading] = useState(false);
   const [ceilingId, setCeilingId] = useState("");
 
-  const { ChooseMap} = useContext(ChooseContext)
+  const { ChooseMap } = useContext(ChooseContext);
 
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
-    let form = new FormData();
-    form.append("titleCuisineUz", titleuz.current.value);
-    form.append("titleCuisineEn", titleen.current.value);
-    form.append("titleCuisineRu", titleru.current.value);
-    form.append("descriptionUz", descriptionuz.current.value);
-    form.append("descriptionEn", descriptionen.current.value);
-    form.append("descriptionRu", descriptionru.current.value);
-    form.append("money", money.current.value);
-    form.append("image", image.current.files[0]);
-    form.append("ceiling_id", Number(ceilingId));
+    let formData = new FormData();
+    formData.append("titleUz", titleuz.current.value);
+    formData.append("titleRu", titleru.current.value);
+    formData.append("titleEn", titleen.current.value);
+    formData.append("client_comment_uz", clientcommentuz.current.value);
+    formData.append("client_comment_ru", clientcommentru.current.value);
+    formData.append("client_comment_en", clientcommenten.current.value);
+    formData.append("client_name_surname", clientnamesurname.current.value);
+    formData.append("Volume", volume.current.value);
+    formData.append("mounting", mounting.current.value);
+    formData.append("creating_canvas", creatingCanvas.current.value);
+    formData.append("image", image.current.files[0]);
+    formData.append("avatar_image", avatarimage.current.files[0]);
     try {
-      await fetch(`https://mebel-b.herokuapp.com/cuisine/${id}`, {
+      await fetch(`https://mebel-b.herokuapp.com/client_comment/${id}`, {
         method: "PUT",
-        body: form,
+        body: formData,
       })
         .then((res) => res.text())
         .then((result) => console.log(result));
@@ -44,6 +51,8 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
       e.target[4].value = null;
       e.target[5].value = null;
       e.target[6].value = null;
+      e.target[7].value = null;
+      e.target[8].value = null;
       e.target[7].value = null;
     } catch (err) {
       console.log(err);
@@ -62,25 +71,24 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <span>Добавить потолков</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
-        <Form
-          className="form"
-          enctype="multipart/form-data"
-          onSubmit={(e) => HandleSubmit(e , PutBlog)}
-        >
-          <select onChange={(e) => setCeilingId(e.target.value)}>
-            {ChooseMap.map((elem, index) => (
-              <option key={index} value={elem.id}>
-                {elem.titleru}
-              </option>
-            ))}
-          </select>
-          <input type="file" id="file" ref={image} />
-          <label for="file" class="custom-file-upload">
+        <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
+          <input type="file" id="fileImagePut" ref={image} />
+          <label for="fileImagePut" class="custom-file-upload">
             <span className="span-download">
               <ion-icon name="cloud-download-outline"></ion-icon>
             </span>
             загрузить изображение
           </label>
+
+          <hr />
+          <input type="file" id="fileAvatarPut" ref={avatarimage} />
+          <label for="fileAvatarPut" class="custom-file-upload">
+            <span className="span-download">
+              <ion-icon name="cloud-download-outline"></ion-icon>
+            </span>
+            загрузить изображение
+          </label>
+
           {loading ? (
             <>
               <span className="loading">загрузка...</span>
@@ -89,44 +97,18 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <span ref={load} style={{ display: "none" }}>
             загрузка...
           </span>
-          <input
-            ref={titleuz}
-            type="text"
-            placeholder={Element.titleuz}
-            required
-          />
-          <input
-            ref={titleru}
-            type="text"
-            placeholder={Element.titleru}
-            required
-          />
-          <input
-            ref={titleen}
-            type="text"
-            placeholder={Element.titleen}
-            required
-          />
-          <input
-            ref={descriptionuz}
-            type="text"
-            placeholder={Element.descriptionuz}
-            required
-          />
-          <input
-            ref={descriptionru}
-            type="text"
-            placeholder={Element.descriptionru}
-            required
-          />
-          <input
-            ref={descriptionen}
-            type="text"
-            placeholder={Element.descriptionen}
-            required
-          />
-          <input ref={money} type="text" placeholder={Element.money} required />
-          <button type="submit">Сохранять</button>
+
+          <input type="text" placeholder={Element.titleuz} ref={titleuz} />
+          <input type="text" placeholder={Element.titleru} ref={titleru} />
+          <input type="text" placeholder={Element.titleen} ref={titleen} />
+          <input type="text" placeholder={Element.client_comment_uz} ref={clientcommentuz} />
+          <input type="text" placeholder={Element.client_comment_en} ref={clientcommenten} />
+          <input type="text" placeholder={Element.client_comment_en} ref={clientcommentru} />
+          <input type="text" placeholder={Element.client_name_surname} ref={clientnamesurname} />
+          <input type="text" placeholder={Element.mounting} ref={mounting} />
+          <input type="text" placeholder={Element.volume} ref={volume} />
+          <input type="text" placeholder={Element.creating_canvas} ref={creatingCanvas} />
+          <button type="submit">submit</button>
         </Form>
       </ModalCommon>
     </Wrapper>

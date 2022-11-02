@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <Section>
+      <Section id="contact">
         <WrapperContainer>
           <HeaderBottom />
           <PrivacyPolicy>

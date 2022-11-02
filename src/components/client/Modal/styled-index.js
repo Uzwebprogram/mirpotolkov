@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import  PhoneInput  from 'react-phone-input-2';
 export const ModalHeader = styled.div`
   h2 {
     color: #000;
@@ -20,8 +20,7 @@ export const ModalForm = styled.form`
  justify-content: center;
  flex-direction: column;
  width: 100%;
-
- input, button{
+ input{
     width: 100%;
     background-color: #fff;
     border-radius: 36px;
@@ -29,8 +28,7 @@ export const ModalForm = styled.form`
     color: #777;
     font-size: 16px;
     margin-top: 6px;
-    padding: 11px 0;
-    text-align: center;
+    padding: 11px 58px !important ;
     width: 100%;
  }
  input:focus{
@@ -51,7 +49,7 @@ export const ModalForm = styled.form`
     padding: 10px 0;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background 0.5s ease 0s;
+    transition: 0.5s ease 0s;
     width: 100%;
     margin: 10px 0;
  }
@@ -62,4 +60,55 @@ export const ModalFooter = styled.div`
     font-size: 12px;
     text-align: center;
  }
-`;
+`
+export const ReactPhoneInput = styled(PhoneInput)`
+   margin-top: 10px;
+   height: 60px;
+   width: 100% !important;
+   @media only screen and (max-width: 769px) {
+    width: 100% !important;
+    }
+   input {
+    width: 100% !important;
+    height: 50px !important;
+    background: white !important;
+    border-radius: 25px !important;
+   }
+
+   .special-label{
+    display: none;
+   }
+   .flag-dropdown{
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #d4665c !important;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    color: white !important;
+  }
+   .form-control{
+    padding-right: 0px !important;
+  }
+  .selected-flag{
+    background-color: #d4665c !important;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    color: white !important;
+  }
+  .country-list{
+    background-color: #d4665c !important;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+   color: white !important;
+  }
+  .country-list .country{
+    background-color: #d4665c !important;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    color: white;
+  }
+  .react-tel-input .flag-dropdown.open{
+   border-bottom-left-radius: 25px !important;
+    border-top-left-radius: 25px !important;
+  }
+`

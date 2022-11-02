@@ -54,7 +54,7 @@ const HomeChoose = () => {
   }
   return (
     <>
-      <Section>
+      <Section id="choose">
         <WrapperContainer>
           <h2>Выбери свой вариант потолков</h2>
           <Box sx={{ width: '100%'}} style={{margin: '0 auto'}}>
@@ -84,7 +84,7 @@ const HomeChoose = () => {
             </Box>
             {ChooseMap.map((elem, index) => (
               <TabPanel value={value} index={index}>
-                <ChoosCard Element={elem} />
+                <ChoosCard ElementChoos={elem} />
               </TabPanel>
             ))}
           </Box>

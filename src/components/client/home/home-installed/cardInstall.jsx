@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   CardWrapper,
   Card,
@@ -10,24 +10,23 @@ import {
   MiniImg
 } from "./styled-index";
 
-import chooseImg from "../../../../assets/images/client/chooseImg.jpg";
-import avatar from "../../../../assets/images/client/logo1.png";
-const card = [1, 2, 3, 4];
-const cardInstall = () => {
+import { CommentContext } from "../../../../context/client/comment/context";
+const CardInstall = () => {
+  const {CommentMap} = useContext(CommentContext)
   return (
     <>
       <CardWrapper>
-        {card.map(() => (
+        {CommentMap.map((elem) => (
           <Card>
             <CardHeader>
-              <h4>Глянцевый потолок на кухню</h4>
+              <h4>{elem.titleru}</h4>
             </CardHeader>
             <CardBody>
               <CardImg>
-                <img src={chooseImg} alt="image" width={352} height={197} />
+                <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={352} height={197} />
                 <MiniImg>
-                  <img src={chooseImg} alt="image" width={63} height={35} />
-                  <img src={chooseImg} alt="image" width={63} height={35} />
+                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={63} height={35} />
+                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={63} height={35} />
                 </MiniImg>
               </CardImg>
               <CardImgContent>
@@ -50,15 +49,11 @@ const cardInstall = () => {
               </CardImgContent>
             </CardBody>
             <CardFooter>
-              <img src={avatar} width={78} height={78} alt="image" />
+              <img src={elem.avatar_image} width={78} height={78} alt="image" />
               <div>
-                <h4>Заказчик: Оксана Иванова</h4>
+                <h4>Заказчик: {elem.client_name_surname}</h4>
                 <p>
-                  Добрый день, хотелось бы оставить благодарственный отзыв о
-                  работе вашей компании. Результатом очень довольны, все было
-                  сделано быстро и аккуратно, после работы убрали за собой и
-                  дали рекомендации как ухаживать за потолками. Нисколько не
-                  жалею, что обратилась в эту компанию
+                 {elem.client_comment_ru}
                 </p>
               </div>
             </CardFooter>
@@ -70,4 +65,4 @@ const cardInstall = () => {
   );
 };
 
-export default cardInstall;
+export default CardInstall;

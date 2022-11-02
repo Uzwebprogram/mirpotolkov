@@ -2,17 +2,17 @@ import React from "react";
 import { WrapperContainer } from "../../../../style-App";
 import { Section, Next } from "./styled-index";
 import { NavLink } from "react-router-dom";
-import Card from "./cardInstall";
+import CardInstall from "./cardInstall";
 import { useTranslation } from "react-i18next";
 
 const HomeInstalled = () => {
   const [t, i18n] = useTranslation()
   return (
     <>
-      <Section>
+      <Section id="HomeInstalled">
         <WrapperContainer>
           <h2>{t("HomeInstall.0")}</h2>
-          <Card />
+          <CardInstall />
           <Next>
             <div>
               <NavLink to="#">

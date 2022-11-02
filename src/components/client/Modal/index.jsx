@@ -1,10 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import {ModalHeader, ModalBody, ModalForm, ModalFooter} from './styled-index'
-
+import axios from "axios";
+import 'react-phone-input-2/lib/style.css';
+import { ReactPhoneInput } from "./styled-index";
 const style = {
   position: "absolute",
   top: "50%",
@@ -18,6 +18,17 @@ const style = {
 };
 
 const ModalPhone = ({ open, setOpen, handleClose }) => {
+  const [numberValue , setNumberValue] = React.useState();
+  const HandleSubmit = async (e)=>{
+    e.preventDefault();
+    const req = {
+      telephone : numberValue
+    }
+    const response = await axios.post("https://mebel-b.herokuapp.com/contact_us" , req)
+    if (response) {
+      setOpen(false)
+    }
+  }
   return (
     <>
       <div>
@@ -25,15 +36,18 @@ const ModalPhone = ({ open, setOpen, handleClose }) => {
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
+          aria-describedby="modal-modal-description">
           <Box sx={style}>
             <ModalHeader>
               <h2>Оставьте заявку и наш менеджер Вам перезвонит</h2>
             </ModalHeader>
             <ModalBody>
-                <ModalForm>
-                    <input type="tel" placeholder="Номер телефона" />
+                <ModalForm onSubmit={HandleSubmit}>
+                <ReactPhoneInput
+                country={'uz'}
+                name="Number"
+                onChange={(data) => setNumberValue(data)}
+              />
                     <button type="submit">Рассчитать стоимость</button>
                 </ModalForm>
             </ModalBody>

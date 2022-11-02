@@ -10,7 +10,7 @@ const HomeSxema = () => {
     const [t, i18n] = useTranslation()
   return (
     <>
-      <Section>
+      <Section id="HomeSxema">
         <WrapperContainer>
           <h2>{t("HomeSxema.0")}</h2>
           <CardSxemaWrapper>

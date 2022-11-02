@@ -1,48 +1,74 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Form, FormP, FormInBt } from "../home-hero/styled-index";
 import { BlueLine, FormCost, FormGroup } from "./styled-index";
+import { ReactPhoneInput } from "../../Modal/styled-index"; 
 import ModalPhone from "../../Modal";
+import axios from "axios";
 const HomeForm = ({ isText, isCost, isCount }) => {
   const [t, i18n] = useTranslation();
-
+  const input1 = useRef();
+  const input2 = useRef();
+  const select = useRef();
+  const [count , setCount] = useState(null);
+  const [numberValue , setNumberValue] = React.useState();
+  const HandleSubmit = async (e)=>{
+    e.preventDefault();
+    const req = {
+      telephone : numberValue
+    }
+    const response = await axios.post("https://mebel-b.herokuapp.com/contact_us" , req)
+    console.log(response);
+  }
+  const HanleChange = (e) =>{
+    setCount((Number(input1.current.value) * Number(input2.current.value)) *  Number(e.target.value))
+  }
+  const HanleChangeInput = (e) =>{
+    setCount((Number(e.target.value) * Number(input2.current.value)) *  Number(select.current.value))
+  }
+  const HanleChangeInput2 = (e) =>{
+    setCount((Number(input1.current.value) * Number(e.target.value)) *  Number(select.current.value))
+  }
   return (
     <>
       <Form>
         {isCost ? (
           <div>
             <BlueLine></BlueLine>
-            <FormCost>
-              <FormGroup>
+            <FormCost >
+              <FormGroup >
                 <label htmlFor="square">Площадь потолка</label>
-                <input type="number" id="square" placeholder="10" />
+                <input onChange={HanleChangeInput} ref={input1} type="number" id="square" placeholder="0" />
               </FormGroup>
               <i class="bx bx-chevron-right"></i>
-              <FormGroup>
+              <FormGroup >
                 <label htmlFor="chandeliers">Количество люстр</label>
-                <input type="number" id="chandeliers" placeholder="4" />
+                <input onChange={HanleChangeInput2} ref={input2} type="number" id="chandeliers" placeholder="0" />
               </FormGroup>
               <i class="bx bx-chevron-right"></i>
               <FormGroup>
                 <label htmlFor="inputtype">Тип потолка</label>
-                <select name="" id="inputtype">
-                  <option value="1">Матовый</option>
-                  <option value="2">Глянцевый</option>
-                  <option value="3">Сатиновый</option>
-                  <option value="4">Двухуровневый</option>
+                <select ref={select} onChange={HanleChange} name="" id="inputtype">
+                  <option value="300000">Матовый</option>
+                  <option value="150000">Глянцевый</option>
+                  <option value="250000">Сатиновый</option>
+                  <option value="500000">Двухуровневый</option>
                 </select>
               </FormGroup>
             </FormCost>
-            <BlueLine></BlueLine>
+            <BlueLine>
+              {count ?<h3>{count} Cум</h3>: null}
+            </BlueLine>
           </div>
         ) : null}
         {isCost ? null : (
           <FormInBt>
-            <div>
-              <i class="bx bxs-phone"></i>
-              <input type="tel" placeholder={t("Home.3")} />
-            </div>
-            <button type="button">
+              <ReactPhoneInput
+            country={'uz'}
+            name="Number"
+            onChange={(data) => setNumberValue(data)}
+          />
+            <button onClick={HandleSubmit}>
               {t("Home.4")}
               <i class="bx bx-right-arrow-circle"></i>
             </button>

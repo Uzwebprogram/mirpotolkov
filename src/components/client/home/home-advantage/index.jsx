@@ -12,7 +12,7 @@ const HomeAdvantage = () => {
     const [t, i18n] = useTranslation()
   return (
     <>
-      <Section>
+      <Section id="Advantage">
         <WrapperContainer>
           <h2>{t("HomeAdvan.0")}</h2>
           <AdvantageCardWrapper>

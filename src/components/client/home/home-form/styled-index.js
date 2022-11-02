@@ -4,15 +4,24 @@ export const BlueLine = styled.div`
   background: #46a4e9;
   height: 1px;
   width: 90%;
-  margin-top: 20px;
   margin-bottom: 34px;
+  h3{
+    color: white;
+    font-size: 60px;
+  }
+  
+  @media only screen and (max-width: 820px) {
+    h3{
+    font-size: 30px;
+    text-align: center;
+  }
+  }
 `;
 
 export const FormCost = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   @media only screen and (max-width: 820px) {
     display: flex;
     align-items: center;

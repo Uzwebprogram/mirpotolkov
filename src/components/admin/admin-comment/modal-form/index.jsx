@@ -11,8 +11,7 @@ function CommentModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-const {CommentMap} = useContext(CommentContext)
-
+  const { CommentMap } = useContext(CommentContext);
 
   const titleuz = useRef();
   const titleen = useRef();
@@ -20,7 +19,7 @@ const {CommentMap} = useContext(CommentContext)
   const clientcommentuz = useRef();
   const clientcommentru = useRef();
   const clientcommenten = useRef();
-  // const date = useRef();
+
   const creatingCanvas = useRef();
   const mounting = useRef();
   const money = useRef();
@@ -30,18 +29,6 @@ const {CommentMap} = useContext(CommentContext)
   const clientnamesurname = useRef();
   const load = useRef();
 
-//   titleUz,
-// titleEn,
-// titleRu,
-// creating_canvas
-// ,mounting,
-// Volume,
-// image
-// ,avatar_image
-// ,client_name_surname
-// ,client_comment_ru
-// ,client_comment_uz
-// ,client_comment_en
   const HandleSubmit = async (e) => {
     e.preventDefault();
     let form = new FormData();
@@ -58,31 +45,52 @@ const {CommentMap} = useContext(CommentContext)
     form.append("Volume", volume.current.value);
     form.append("mounting", mounting.current.value);
     form.append("client_name_surname", clientnamesurname.current.value);
-    form.append("creating_canvas", creatingCanvas.current.value)
-    try {
-      await fetch("https://mebel-b.herokuapp.com/client_comment", {
-        method: "POST",
-        body: form,
-      })
-        .then((res) => res.json())
-        .then((result) => console.log(result));
-      e.target[0].value = null;
-      e.target[1].value = null;
-      e.target[2].value = null;
-      e.target[3].value = null;
-      e.target[4].value = null;
-      e.target[5].value = null;
-      e.target[6].value = null;
-      e.target[7].value = null;
-      e.target[8].value = null;
-      e.target[9].value = null;
-      e.target[10].value = null;
-      e.target[11].value = null;
-      // e.target[12].value = null;
-      // e.target[13].value = null;
-    } catch (err) {
-      console.log(err);
-    }
+    form.append("creating_canvas", creatingCanvas.current.value);
+
+    await fetch("https://mebel-b.herokuapp.com/client_comment", {
+      method: "POST",
+      body: form,
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+    e.target[0].value = null;
+    e.target[1].value = null;
+    e.target[2].value = null;
+    e.target[3].value = null;
+    e.target[4].value = null;
+    e.target[5].value = null;
+    e.target[6].value = null;
+    e.target[7].value = null;
+    e.target[8].value = null;
+    e.target[9].value = null;
+    e.target[10].value = null;
+    e.target[11].value = null;
+    // e.target[12].value = null;
+    // e.target[13].value = null;
+    // try {
+    //   await fetch("https://mebel-b.herokuapp.com/client_comment", {
+    //     method: "POST",
+    //     body: form,
+    //   })
+    //     .then((res) => res.json())
+    //     .then((result) => console.log(result));
+    //   e.target[0].value = null;
+    //   e.target[1].value = null;
+    //   e.target[2].value = null;
+    //   e.target[3].value = null;
+    //   e.target[4].value = null;
+    //   e.target[5].value = null;
+    //   e.target[6].value = null;
+    //   e.target[7].value = null;
+    //   e.target[8].value = null;
+    //   e.target[9].value = null;
+    //   e.target[10].value = null;
+    //   e.target[11].value = null;
+    //   // e.target[12].value = null;
+    //   // e.target[13].value = null;
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 
   return (
@@ -104,7 +112,6 @@ const {CommentMap} = useContext(CommentContext)
           enctype="multipart/form-data"
           onSubmit={HandleSubmit}
         >
-          
           <input type="file" id="file" ref={image} />
           <label for="file" class="custom-file-upload">
             <span className="span-download">
@@ -112,6 +119,7 @@ const {CommentMap} = useContext(CommentContext)
             </span>
             загрузить изображение
           </label>
+          <hr />
           <input type="file" id="file" ref={avatarimage} />
           <label for="file" class="custom-file-upload">
             <span className="span-download">
@@ -170,7 +178,12 @@ const {CommentMap} = useContext(CommentContext)
             required
           />
           {/* <input ref={money} type="text" placeholder="Денги" required /> */}
-          <input ref={creatingCanvas} type="text" placeholder="creatingCanvas" required />
+          <input
+            ref={creatingCanvas}
+            type="text"
+            placeholder="creatingCanvas"
+            required
+          />
           <input ref={mounting} type="text" placeholder="mounting" required />
           <input ref={volume} type="text" placeholder="volume" required />
           <button type="submit">Сохранять</button>

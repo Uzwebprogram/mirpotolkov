@@ -14,17 +14,22 @@ import {
 import potolog from "../../../../assets/images/client/potolog.jpg";
 import { StretchContext } from "../../../../context/client/stretch_ceilings/context";
 import { useTranslation } from "react-i18next";
-
+import ModalPhone from "../../Modal";
+const card = [1, 2, 3, 4];
 
 const HomeCeiling = () => {
   const {StretchMap} = useContext(StretchContext)
-  const {t , i18n} = useTranslation();
+  const [t,i18n] = useTranslation()
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   function ValueLang() {
     return window.localStorage.getItem("i18nextLng")
   }
   return (
     <>
       <Section>
+      <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
         <WrapperContainer>
           <CeilCardWrapper>
             <h2><span>{t("celing.0")}</span>{t("celing.1")}</h2>
@@ -57,8 +62,8 @@ const HomeCeiling = () => {
                     <Line></Line>
                     <p>{t("celing.7")} {elem.shades} {t("celing.8")} </p>
                   </LeftBlock>
-                  <button>
-                    {t("celing.9")} <i class="bx bx-right-arrow-circle"></i>
+                  <button onClick={handleOpen}>
+                    Заказать <i class="bx bx-right-arrow-circle"></i>
                   </button>
                 </CeilItem>
               ))}

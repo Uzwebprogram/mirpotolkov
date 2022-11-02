@@ -12,4 +12,10 @@ export const Section = styled.div`
   background-position: center -20px;
   background-repeat: no-repeat;
   background-size: cover;
+
+
+  @media only screen and (max-width: 768px) {
+    
+    
+  }
 `;

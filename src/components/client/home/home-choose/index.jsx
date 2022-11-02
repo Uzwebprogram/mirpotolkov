@@ -57,12 +57,13 @@ const HomeChoose = () => {
       <Section>
         <WrapperContainer>
           <h2>Выбери свой вариант потолков</h2>
-          <Box sx={{ width: "100%" }}>
+          <Box sx={{ width: '100%'}} style={{margin: '0 auto'}}>
             <Box sx={{ borderColor: "divider" }}>
               <Tabs
                 value={value}
                 onChange={handleChange}
-                aria-label="basic tabs example"
+                variant="scrollable"
+                aria-label="scrollable prevent tabs example"
               >
                 {ChooseMap.map((elem, index) => (
                   <Tab

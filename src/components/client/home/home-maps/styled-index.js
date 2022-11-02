@@ -17,9 +17,11 @@ export const Section = styled.div`
     text-align: center;
     margin: 0 0 20px 0;
     font-weight: 200;
-  }
 
- 
+    @media only screen and (max-width: 430px) {
+      font-size: 36px;
+    }
+  }
 `;
 
 export const MapWrapper = styled.div`

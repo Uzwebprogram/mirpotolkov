@@ -16,9 +16,7 @@ function HomeComponent(params) {
       <HomeCeiling />
       <HomeCost isCost={true} />
       <HomeAdvantage />
-      {/* <HomeDiscount isCount={true} /> */}
       <HomeChoose/>
-      {/* <HomeDiscount isCount={true} /> */}
       <HomeInstalled/>
       <HomeSxema/>
       <HomeMap/>

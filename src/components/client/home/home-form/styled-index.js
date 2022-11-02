@@ -13,7 +13,19 @@ export const FormCost = styled.div`
   align-items: center;
   justify-content: center;
 
-  i{
+  @media only screen and (max-width: 820px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 40px;
+
+    i {
+      display: none;
+    }
+  }
+
+  i {
     font-size: 50px;
     color: #fff;
     margin: 37px 0 0 0;
@@ -25,13 +37,18 @@ export const FormGroup = styled.div`
   align-items: flex-start;
   flex-direction: column;
 
-  label{
+  @media only screen and (max-width: 820px) {
+    width: 100%;
+  }
+
+  label {
     font-size: 22px;
     color: #213a66;
     margin: 0 0 7px 10px;
   }
 
-  input, select {
+  input,
+  select {
     border: none;
     outline: none;
     font-size: 18px;
@@ -41,9 +58,18 @@ export const FormGroup = styled.div`
     font-weight: bold;
     color: #224066;
 
+    &:focus {
+      border: 2px solid #d4665c;
+    }
 
-    &:focus{
-        border: 2px solid #d4665c;
+    @media only screen and (max-width: 820px) {
+      width: 100%;
+    }
+  }
+
+  input{
+    @media only screen and (max-width: 820px) {
+      width: 96.5%;
     }
   }
 `;

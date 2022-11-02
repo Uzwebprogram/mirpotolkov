@@ -12,7 +12,7 @@ export const ContactProvider = ({children})=>{
         fetch("https://mebel-b.herokuapp.com/contact_us")
         .then(res => res.json())
         .then(result => setContactMap(result))
-    }, [])
+    }, [ContactMap])
 
     const value = { ContactMap};
     return(

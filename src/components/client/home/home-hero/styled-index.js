@@ -78,34 +78,10 @@ export const FormP = styled.div`
 export const FormInBt = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
+
   @media only screen and (max-width: 750px) {
     display: none;
-  }
-
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: 50px;
-    padding: 10px 10px;
-    margin: 0 20px 0 0;
-    border: 2px solid transparent;
-
-    &:hover {
-      border: 2px solid #d4665c;
-    }
-
-    input {
-      border: none;
-      outline: none;
-      margin: 0 0 0 10px;
-      font-size: 18px;
-    }
-
-    i {
-      font-size: 22px;
-    }
   }
 
   button {
@@ -122,7 +98,8 @@ export const FormInBt = styled.div`
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
-
+    width: 100%;
+    margin-left: 20px;
     i {
       font-size: 25px;
       margin-left: 20px;

@@ -8,12 +8,9 @@ import {
   Prise,
   FlagBox,
 } from "./styled-index";
-import chooseImg from "../../../../assets/images/client/chooseImg.jpg";
 import flag from "../../../../assets/images/client/flag.png";
 import ModalPhone from "../../Modal";
-import { ChooseContext } from "../../../../context/client/choose/context";
-const ChoosCard = () => {
-  const {ChooseMap} = useContext(ChooseContext)
+const ChoosCard = ({ElementChoos}) => {
   function getValue(){
     return window.localStorage.getItem("i18nextLng")
   }
@@ -24,13 +21,13 @@ const ChoosCard = () => {
     <>
       <CardWrapper>
       <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
-        {ChooseMap.map((elem) => (
+        {ElementChoos?.cuisine.map((elem) => (
           <Card>
             <CardHeader>
               <h4>{getValue() == "ru" ? elem.titleCuisineRu: getValue() == "en" ? elem.titleCuisineEn: getValue() == "uz" ? elem.titleCuisineUz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={elem.image} width={360} height={202} alt="image" />
+              <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} width={360} height={202} alt="image" />
               <Prise>
                 <strike>от сум</strike>
                 <br />
@@ -38,7 +35,7 @@ const ChoosCard = () => {
               </Prise>
               <FlagBox>
                 <img src={flag} alt="image" />
-                <p>{getValue() == "ru" ? elem.descriptionRu: getValue() == "en" ? elem.descriptionEn: getValue() == "uz" ? elem.descriptionUz:null}</p>
+                <p>{getValue() == "ru" ? elem.descriptionru: getValue() == "en" ? elem.descriptionen: getValue() == "uz" ? elem.descriptionuz:null}</p>
               </FlagBox>
             </CardBody>
             <CardFooter>

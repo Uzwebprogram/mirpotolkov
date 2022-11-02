@@ -17,7 +17,6 @@ const card = [1, 2, 3, 4];
 const CardInstall = () => {
 
   const {CommentMap} = useContext(CommentContext)
-  console.log(CommentMap);
   return (
     <>
       <CardWrapper>

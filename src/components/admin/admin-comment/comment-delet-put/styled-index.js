@@ -12,7 +12,7 @@ button{
     text-align: center;
     cursor: pointer;
     border: none;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
     color: white;
     border-radius: 20px;
 }

@@ -9,6 +9,7 @@ import {
   CardImg,
   MiniImg
 } from "./styled-index";
+import CommentDeletPutComponent from '../../../components/admin/admin-comment/comment-delet-put/index'
 
 import CommentModal from "../../../components/admin/admin-comment/modal-form";
 import { CommentContext } from "../../../context/client/comment/context";
@@ -53,14 +54,16 @@ const CardInstall = () => {
               </CardImgContent>
             </CardBody>
             <CardFooter>
-              <img src={`https://mebel-b.herokuapp.com/static/${elem.avatar_image}`} width={78} height={78} alt="image" />
+              <img style={{borderRadius: "50%", objectFit: 'cover'}} src={`https://mebel-b.herokuapp.com/static/${elem.avatar_image}`} width={78} height={78} alt="image" />
               <div>
                 <h4>Заказчик: {elem.client_name_surname}</h4>
                 <p>
                  {elem.client_comment_ru}
                 </p>
               </div>
+             
             </CardFooter>
+            <CommentDeletPutComponent  Element={elem} DeleteId={elem.id} PutBlog={elem.id}/>
             <hr />
           </Card>
         ))}

@@ -7,10 +7,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-    /* font-family: 'Poppins' sans-serif; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: ${(props) => (props.whiteColor ? "#fff" : "white")};
+    background: ${(props) => (props.backgroundColor ? "white" : "#F1F4FA")};
   }
 `;
 

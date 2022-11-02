@@ -18,7 +18,10 @@ export const CeilCardWrapper = styled.div`
     font-size: 46px;
     font-weight: 200;
     padding-top: 100px;
+    font-family: sans-serif;
     color: #224066;
+    span{
+        font-weight: bold;
 
     @media only screen and (max-width: 1068px) {
       padding-left: 40px;
@@ -32,7 +35,8 @@ export const CeilCardWrapper = styled.div`
       font-weight: bold;
     }
   }
-`;
+}
+`
 export const CeilCard = styled.div`
   width: 100%;
   display: flex;
@@ -63,6 +67,7 @@ export const CeilItem = styled.div`
   h4 {
     font-size: 22px;
     color: #213a66;
+    font-family: sans-serif;
   }
 
   img {
@@ -104,7 +109,8 @@ export const Discount = styled.div`
 
     p {
       margin: 0;
-
+      font-size: 18px;
+      font-family: sans-serif;
       span {
         font-weight: bold;
       }
@@ -119,11 +125,13 @@ export const Discount = styled.div`
     p {
       margin: 0;
       font-size: 14px;
+      font-family: sans-serif;
 
       span {
-        font-size: 19px;
+        font-size: 16px;
         font-weight: bold;
         margin: -10px 0 0 0;
+      font-family: sans-serif;
       }
     }
   }
@@ -143,5 +151,6 @@ export const LeftBlock = styled.div`
   p {
     font-size: 14px;
     font-weight: bold;
+    font-family: sans-serif;
   }
 `;

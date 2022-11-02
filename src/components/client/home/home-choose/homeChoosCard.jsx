@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   CardWrapper,
   Card,
@@ -11,8 +11,12 @@ import {
 import chooseImg from "../../../../assets/images/client/chooseImg.jpg";
 import flag from "../../../../assets/images/client/flag.png";
 import ModalPhone from "../../Modal";
-const card = [1, 2, 3];
+import { ChooseContext } from "../../../../context/client/choose/context";
 const ChoosCard = () => {
+  const {ChooseMap} = useContext(ChooseContext)
+  function getValue(){
+    return window.localStorage.getItem("i18nextLng")
+  }
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -20,24 +24,21 @@ const ChoosCard = () => {
     <>
       <CardWrapper>
       <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
-        {card.map(() => (
+        {ChooseMap.map((elem) => (
           <Card>
             <CardHeader>
-              <h4>Матовый потолок на кухню до 10 м2</h4>
+              <h4>{getValue() == "ru" ? elem.titleCuisineRu: getValue() == "en" ? elem.titleCuisineEn: getValue() == "uz" ? elem.titleCuisineUz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={chooseImg} alt="image" />
+              <img src={elem.image} width={360} height={202} alt="image" />
               <Prise>
-                <strike>от руб</strike>
+                <strike>от сум</strike>
                 <br />
-                <span>от 2800 р</span>
+                <span>от {elem.money} сум</span>
               </Prise>
               <FlagBox>
                 <img src={flag} alt="image" />
-                <p>
-                  Установка «под ключ» - работа + материал. Рассрочка 0% без
-                  банка.
-                </p>
+                <p>{getValue() == "ru" ? elem.descriptionRu: getValue() == "en" ? elem.descriptionEn: getValue() == "uz" ? elem.descriptionUz:null}</p>
               </FlagBox>
             </CardBody>
             <CardFooter>

@@ -9,10 +9,10 @@ import { Section } from "./styled-index";
 import "./styled-tab.css";
 
 import ChoosCard from "./homeChoosCard";
+import { ChooseContext } from "../../../../context/client/choose/context";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -45,10 +45,13 @@ function a11yProps(index) {
 
 const HomeChoose = () => {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const { ChooseMap } = React.useContext(ChooseContext);
+  function getValue() {
+    return window.localStorage.getItem("i18nextLng");
+  }
   return (
     <>
       <Section>
@@ -62,24 +65,28 @@ const HomeChoose = () => {
                 variant="scrollable"
                 aria-label="scrollable prevent tabs example"
               >
-                <Tab label="Кухня" {...a11yProps(0)} />
-                <Tab label="Спальня" {...a11yProps(1)} />
-                <Tab label="Ванная + Санузел" {...a11yProps(2)} />
-                <Tab label="Гостинная" {...a11yProps(3)} />
+                {ChooseMap.map((elem, index) => (
+                  <Tab
+                    key={index}
+                    label={
+                      getValue() == "ru"
+                        ? elem.titleru
+                        : getValue() == "en"
+                        ? elem.titleen
+                        : getValue() == "uz"
+                        ? elem.titleuz
+                        : null
+                    }
+                    {...a11yProps(index)}
+                  />
+                ))}
               </Tabs>
             </Box>
-            <TabPanel value={value} index={0}>
-              <ChoosCard />
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              <ChoosCard />
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <ChoosCard />
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-              <ChoosCard />
-            </TabPanel>
+            {ChooseMap.map((elem, index) => (
+              <TabPanel value={value} index={index}>
+                <ChoosCard Element={elem} />
+              </TabPanel>
+            ))}
           </Box>
         </WrapperContainer>
       </Section>

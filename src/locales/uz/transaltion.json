@@ -36,7 +36,18 @@
          "10": "Ish va material uchun kafolat",
          "11": "10 yildan ortiq ishlagan"
     },
-
+    "celing" : {
+        "0":"Qulay echimlar",
+         "1": "cho'zilgan shiftlar",
+         "2" : "Chegirma",
+         "3": "sum/m",
+         "4": "yillar",
+         "5" : "kafolatlar",
+         "6" : "O'rnatish narxi",
+         "7" : "Ko'proq",
+         "8": "soyalar",
+         "9" : "Buyurtma"
+    },
     "HomeCeil": {
         "0": "Arzon narxlardagi cho'zilgan ship echimlari"
     },

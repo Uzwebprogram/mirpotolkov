@@ -11,7 +11,10 @@ function App() {
   return (
     <>
     {pathname.pathname === "/admin" ? 
-           <AdminRouterComponent /> :
+           <>
+           <AdminRouterComponent />
+           <GlobalStyle whiteColor/>
+           </> :
            <ClientRouterComponent/> && pathname.pathname === window.localStorage.getItem("pathname") ? <Main>
                     <GlobalStyle whiteColor/>
                    <Sidebar/>

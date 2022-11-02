@@ -6,7 +6,6 @@ background-color: white;
 width: 23%;
 padding: 33px 20px;
 transition: 0.5s;
-height: 90vh;
 `
 export const WrapperTop = styled.div`
     display: flex;

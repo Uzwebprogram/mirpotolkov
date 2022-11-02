@@ -15,13 +15,13 @@ function StretchCeilings() {
                       <th id="th">Изображение <span>название потолка</span></th>
                       <th>Деньги</th>
                       <th>скидка</th>
-                      <th>оттенков</th>
+                      <th>оттенки</th>
                       <th id="th">Изменить Удалить</th>
                     </thead>
                     <tbody id="tbody">
                         {StretchMap.map((elem) =>
                       <tr>
-                        <td><img src={elem.image} style={{marginRight : "20px"}} width={48} height={48} alt="img avatar" /><span>{elem.titleRu}</span> </td>
+                        <td><img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} style={{marginRight : "20px"}} width={48} height={48} alt="img avatar" /><span>{elem.titleru}</span> </td>
                           <td>{elem.money} сум</td>
                           <td>{elem.skidka}</td>
                           <td>{elem.shades}</td>

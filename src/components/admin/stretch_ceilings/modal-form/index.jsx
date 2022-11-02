@@ -3,27 +3,32 @@ import {Wrapper , ModalTop , Form} from "./styled-index"
 import ModalCommon from "../../common/modal";
 import axios from "axios";
 function StretchModal() {
-    const [selectedImages , setSelectedImages] = useState()
     const [loading , setLoading] = useState(false)
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const WorkerName  = useRef();
-    const WorkerPosition  = useRef();
+    const titleuz  = useRef();
+    const titleen  = useRef();
+    const titleru  = useRef();
+    const money  = useRef();
+    const skidka  = useRef();
+    const shades  = useRef();
+    const image  = useRef();
     const load = useRef();
     const HandleSubmit = async (e) =>{
         e.preventDefault()
+        let form = new FormData()
+        form.append("titleUz" , titleuz.current.value)
+        form.append("titleEn" , titleen.current.value)
+        form.append("titleRu" , titleru.current.value)
+        form.append("money" ,  money.current.value)
+        form.append("skidka" ,  skidka.current.value)
+        form.append("shades" ,  shades.current.value)
+        form.append("image" ,  image.current.files[0])
         try {
-           await fetch('http://localhost:8000/stretch_ceilings', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    imageAvatar :  selectedImages, 
-                    WorkerName : WorkerName.current.value,
-                    WorkerPosition :  WorkerPosition.current.value, 
-                })
+           await fetch('https://mebel-b.herokuapp.com/stretch_ceilings', {
+                method: 'POST', 
+                body: form,
             })
             .then(res => res.text())
             .then(result =>  console.log(result));
@@ -31,27 +36,14 @@ function StretchModal() {
             e.target[1].value = null
             e.target[2].value = null
             e.target[3].value = null
+            e.target[4].value = null
+            e.target[5].value = null
+            e.target[6].value = null
           } catch(err) {
             console.log(err)
         }
     }
 
-        const HandleChange = (e) =>{
-                const formData = new FormData()
-                formData.append("file" , e.target.files[0])
-                formData.append("upload_preset" , "v8gxbibt")
-                setLoading(true)
-                const postImage = async () =>{
-                    try{
-                        const response = await axios.post("https://api.cloudinary.com/v1_1/dugfn5qgj/upload" , formData)
-                        setSelectedImages(response?.data.secure_url)
-                        setLoading(false)
-                    }catch(error){
-                        console.error(error);
-                    }
-                }
-                postImage()
-        }
     return(
         <Wrapper>
         <button onClick={handleOpen}>Добавить работника</button>
@@ -61,8 +53,8 @@ function StretchModal() {
                     <span>Добавить потолков</span>
                     <span onClick={handleClose}>&times;</span>
             </ModalTop>
-            <Form className="form" onSubmit={HandleSubmit}>
-                <input type="file" id="file" onChange={HandleChange}/>
+            <Form className="form" enctype="multipart/form-data" onSubmit={HandleSubmit}>
+                <input type="file" id="file" ref={image} />
                 <label for="file" class="custom-file-upload">
                     <span className="span-download"><ion-icon  name="cloud-download-outline"></ion-icon></span>
                 загрузить изображение
@@ -70,15 +62,13 @@ function StretchModal() {
                 {loading ? (<>
                     <span className="loading">загрузка...</span>
                 </>):null}
- 
-
                 <span ref={load} style={{display : "none"}}>загрузка...</span>
-                <input  ref={WorkerName} type="text" placeholder="название потолка уз" required />
-                <input  ref={WorkerName} type="text" placeholder="название потолка ру" required />
-                <input  ref={WorkerName} type="text" placeholder="название потолка ен" required />
-                <input  ref={WorkerName} type="text" placeholder="Денги" required />
-                <input  ref={WorkerPosition} type="text" placeholder="Скидка" required />
-                <input  ref={WorkerPosition} type="text" placeholder="Оттенков" required />
+                <input  ref={titleuz} type="text" placeholder="название потолка уз" required />
+                <input  ref={titleru} type="text" placeholder="название потолка ру" required />
+                <input  ref={titleen} type="text" placeholder="название потолка ен" required />
+                <input  ref={money} type="text" placeholder="Денги" required />
+                <input  ref={skidka} type="text" placeholder="Скидка" required />
+                <input  ref={shades} type="text" placeholder="Оттенков" required />
                 <button type="submit">Сохранять</button>
             </Form>
         </ModalCommon>

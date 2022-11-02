@@ -9,7 +9,7 @@ export const StretchProvider = ({children})=>{
     const [StretchMap , setStretchMap] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:8000/stretch_ceilings")
+        fetch("https://mebel-b.herokuapp.com/stretch_ceilings")
         .then(res => res.json())
         .then(result => setStretchMap(result))
     }, [StretchMap])

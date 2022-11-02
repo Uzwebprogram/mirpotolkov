@@ -45,13 +45,12 @@ function a11yProps(index) {
 
 const HomeChoose = () => {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const {ChooseMap} = React.useContext(ChooseContext)
-  function getValue(){
-    return window.localStorage.getItem("i18nextLng")
+  const { ChooseMap } = React.useContext(ChooseContext);
+  function getValue() {
+    return window.localStorage.getItem("i18nextLng");
   }
   return (
     <>
@@ -65,25 +64,28 @@ const HomeChoose = () => {
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
-                {ChooseMap.map((elem , index) =>
-                <Tab key={index} label={getValue() == "ru" ? elem.titleRu: getValue() == "en" ? elem.titleEn: getValue() == "uz" ? elem.tileUz:null} {...a11yProps(index)} />
-                )}
+                {ChooseMap.map((elem, index) => (
+                  <Tab
+                    key={index}
+                    label={
+                      getValue() == "ru"
+                        ? elem.titleru
+                        : getValue() == "en"
+                        ? elem.titleen
+                        : getValue() == "uz"
+                        ? elem.titleuz
+                        : null
+                    }
+                    {...a11yProps(index)}
+                  />
+                ))}
               </Tabs>
             </Box>
-                {ChooseMap.map((elem , index) =>
-                          <TabPanel value={value} index={index}>
-                            <ChoosCard Element={elem} />
-                          </TabPanel>
-                )}
-            {/* <TabPanel value={value} index={1}>
-              <ChoosCard />
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <ChoosCard />
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-              <ChoosCard />
-            </TabPanel> */}
+            {ChooseMap.map((elem, index) => (
+              <TabPanel value={value} index={index}>
+                <ChoosCard Element={elem} />
+              </TabPanel>
+            ))}
           </Box>
         </WrapperContainer>
       </Section>

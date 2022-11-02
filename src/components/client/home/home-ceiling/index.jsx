@@ -31,9 +31,9 @@ const HomeCeiling = () => {
             <CeilCard>
               {StretchMap.map((elem , index) => (
                 <CeilItem key={index}>
-                  {ValueLang() == "ru" ? <h4>{elem.titleRu}</h4> : ValueLang() == "uz" ? <h4>{elem.titleUz}</h4>:  ValueLang() == "en" ? <h4>{elem.titleEn}</h4>:null}
+                  {ValueLang() == "ru" ? <h4>{elem.titleru}</h4> : ValueLang() == "uz" ? <h4>{elem.titleuz}</h4>:  ValueLang() == "en" ? <h4>{elem.titleen}</h4>:null}
                   
-                  <img src={potolog} alt="image" />
+                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} width={247} height={173} alt="images" />
                   <Discount>
                     <DiscountItem>
                       <p>

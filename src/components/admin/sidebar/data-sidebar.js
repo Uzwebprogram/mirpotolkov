@@ -8,13 +8,13 @@ export const dataSidebar = [
     {
         id : 3,
         title : "Вариант потолков",
-        path : "/admin/stretch",
+        path : "/admin/option",
         icon : "pie-chart-alt-2"
     },
     {
         id : 4,
         title : "Натяжных потолков",
-        path : "/admin/contactus",
+        path : "/admin/stretch",
         icon : "money-withdraw"
     },
     {
@@ -26,7 +26,7 @@ export const dataSidebar = [
     {
         id : 6,
         title : "Cвязаться с нами",
-        path : "/admin/contactus",
+        path : "/admin/contact",
         icon : "user-voice"
     },
     {

@@ -8,10 +8,10 @@ const HomeCost = ({ isCost }) => {
   const [t, i18n] = useTranslation()
   return (
     <>
-      <Section>
+      <Section id="calculator">
         <WrapperContainer>
           <h2>{t("HomeCost.0")}</h2>
-          <HomeForm isCost={isCost} />
+          <HomeForm isCost={isCost}  />
         </WrapperContainer>
       </Section>
     </>

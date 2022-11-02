@@ -35,13 +35,13 @@ const HomeForm = ({ isText, isCost, isCount }) => {
         {isCost ? (
           <div>
             <BlueLine></BlueLine>
-            <FormCost>
-              <FormGroup>
+            <FormCost >
+              <FormGroup >
                 <label htmlFor="square">Площадь потолка</label>
                 <input onChange={HanleChangeInput} ref={input1} type="number" id="square" placeholder="0" />
               </FormGroup>
               <i class="bx bx-chevron-right"></i>
-              <FormGroup>
+              <FormGroup >
                 <label htmlFor="chandeliers">Количество люстр</label>
                 <input onChange={HanleChangeInput2} ref={input2} type="number" id="chandeliers" placeholder="0" />
               </FormGroup>

@@ -9,6 +9,13 @@ export const BlueLine = styled.div`
     color: white;
     font-size: 60px;
   }
+  
+  @media only screen and (max-width: 820px) {
+    h3{
+    font-size: 30px;
+    text-align: center;
+  }
+  }
 `;
 
 export const FormCost = styled.div`

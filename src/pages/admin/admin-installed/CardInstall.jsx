@@ -12,7 +12,6 @@ import {
 
 import chooseImg from "../../../assets/images/client/chooseImg.jpg";
 import avatar from "../../../assets/images/client/logo1.png";
-// import { ChooseContext } from "../../../context/client/choose/context";
 import { CommentContext } from "../../../context/client/comment/context";
 const card = [1, 2, 3, 4];
 const CardInstall = () => {
@@ -29,10 +28,10 @@ const CardInstall = () => {
             </CardHeader>
             <CardBody>
               <CardImg>
-                <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="image" width={352} height={197} />
+                <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={352} height={197} />
                 <MiniImg>
-                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="image" width={63} height={35} />
-                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="image" width={63} height={35} />
+                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={63} height={35} />
+                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={63} height={35} />
                 </MiniImg>
               </CardImg>
               <CardImgContent>

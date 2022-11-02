@@ -16,37 +16,42 @@ function HamburgerMenu({HamburgerClick , HandleClickClose}) {
           {
               id : 1, 
               title : "Header.0",
-              link : "/services",
+              link : "#calculator",
   
           },
           {
               id : 2, 
               title : "Header.1",
-              link : "/projects",
+              link : "#calculator",
   
           },
           {
               id : 3, 
               title : "Header.2",
-              link : "/about",
+              link : "#Advantage",
   
           },
           {
               id : 4, 
               title : "Header.3",
-              link : "/team",
+              link : "#choose",
   
           },
           {
               id : 5, 
               title : "Header.4",
-              link : "/Blog",
+              link : "#HomeInstalled",
   
           },
             {
               id : 5, 
               title : "Header.5",
-              link : "/reviews",
+              link : "#HomeSxema",
+          }, 
+          {
+            id : 6, 
+            title : "Header.6",
+            link : "#contact",
           }, 
       ]
     return(
@@ -85,8 +90,8 @@ function HamburgerMenu({HamburgerClick , HandleClickClose}) {
           <ul>
                     {data.map(elem =>(
                         <>
-                                            <li key={elem.id}>
-                    <NavLink onClick={HandleClickClose} to={elem.link}>{t(elem.title)}</NavLink>
+                    <li key={elem.id}>
+                    <a onClick={HandleClickClose} href={elem.link}>{t(elem.title)}</a>
                     </li> 
                     <hr />
                     </>
@@ -123,7 +128,7 @@ function HamburgerMenu({HamburgerClick , HandleClickClose}) {
           <ul>
                     {data.map(elem =>(
                         <>
-                                            <li key={elem.id}>
+                 <li key={elem.id}>
                     <NavLink to={elem.link}>{t(elem.title)}</NavLink>
                     </li> 
                     <hr />

@@ -20,22 +20,22 @@ const HeaderTop = ({ HandleClick }) => {
                 <NavLink to="#">{t("Header.0")}</NavLink>
               </li>
               <li>
-                <NavLink to="#">{t("Header.1")}</NavLink>
+                <a href="#calculator">{t("Header.1")}</a>
               </li>
               <li>
-                <NavLink to="#">{t("Header.2")}</NavLink>
+                <a href="#Advantage">{t("Header.2")}</a>
               </li>
               <li>
-                <NavLink to="#">{t("Header.3")}</NavLink>
+                <a href="#choose" to="#">{t("Header.3")}</a>
               </li>
               <li>
-                <NavLink to="#">{t("Header.4")}</NavLink>
+                <a href="#HomeInstalled">{t("Header.4")}</a>
               </li>
               <li>
-                <NavLink to="#">{t("Header.5")}</NavLink>
+                <a href="#HomeSxema">{t("Header.5")}</a>
               </li>
               <li>
-                <NavLink to="#">{t("Header.6")}</NavLink>
+                <a href="#contact">{t("Header.6")}</a>
               </li>
             </NavList>
             <HeaderLang />

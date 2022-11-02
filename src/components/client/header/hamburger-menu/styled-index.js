@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
         margin-left: 0;
         opacity: 0.3;
     }
-    hr:nth-child(12){
+    hr:nth-child(14){
         display: none;
     }
     ul li a{

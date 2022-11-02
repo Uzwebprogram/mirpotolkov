@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import { WrapperContainer } from "../../../style-App";
 import { Section } from "./styled-index";
 import "./styled-tab.css";
-
+import OptionDeletPutComponent from "../../../components/admin/ceilling-option/option-delet-put";
 
 import AdminChoosCard from "./adminChoosCard";
 import { ChooseContext } from "../../../context/client/choose/context";
@@ -54,11 +54,7 @@ const AdminChoose = () => {
     return window.localStorage.getItem("i18nextLng");
   }
 
-  // const [value, setValue] = React.useState(0);
 
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
   return (
     <>
       <Section>
@@ -90,12 +86,17 @@ const AdminChoose = () => {
               </Tabs>
             </Box>
             {ChooseMap.map((elem, index) => (
+              <>
               <TabPanel value={value} index={index}>
                 <AdminChoosCard Element={elem} />
               </TabPanel>
+              </>
             ))}
+
           </Box>
+          <OptionDeletPutComponent/>
         </WrapperContainer>
+
       </Section>
     </>
   );

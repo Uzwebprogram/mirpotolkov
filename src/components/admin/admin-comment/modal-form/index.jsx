@@ -102,6 +102,8 @@ function CommentModal() {
               загрузка...
             </span>
 
+
+
             <input type="text" placeholder="tuz" ref={titleuz} />
             <input type="text" placeholder="tru" ref={titleru} />
             <input type="text" placeholder="ten" ref={titleen} />

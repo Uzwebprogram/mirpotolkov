@@ -12,7 +12,6 @@ function ChooseModal() {
   const { ChooseMap } = useContext(ChooseContext);
 
   const [ceilingId, setCeilingId] = useState("");
-  console.log(ceilingId);
   const titleuz = useRef();
   const titleen = useRef();
   const titleru = useRef();

@@ -8,7 +8,7 @@ export const dataSidebar = [
     {
         id : 3,
         title : "Вариант потолков",
-        path : "/admin/option",
+        path : "/admin/adminchoose",
         icon : "pie-chart-alt-2"
     },
     {
@@ -20,7 +20,7 @@ export const dataSidebar = [
     {
         id : 5,
         title : "Примеры натяжных потолков",
-        path : "/admin/project",
+        path : "/admin/adminInstall",
         icon : "bar-chart-alt-2"
     },
     {

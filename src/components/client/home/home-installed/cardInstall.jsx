@@ -49,7 +49,7 @@ const CardInstall = () => {
               </CardImgContent>
             </CardBody>
             <CardFooter>
-              <img src={elem.avatar_image} width={78} height={78} alt="image" />
+              <img  style={{borderRadius:"50%" , boxShadow:"0px 0px 5px 5px gray"}} src={`https://mebel-b.herokuapp.com/static/${elem.avatar_image}`}  width={78} height={78} alt="image" />
               <div>
                 <h4>Заказчик: {elem.client_name_surname}</h4>
                 <p>

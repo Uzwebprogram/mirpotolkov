@@ -1,19 +1,31 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ModalDelete from "./Modal-delet";
 import { Wrapper} from "./styled-index";
 import ModalPut from "./modal-put";
-function OptionDeletPutComponent({DeleteId , PutBlog , Element}) {
+import { ChooseContext } from "../../../../context/client/choose/context";
+function OptionDeletPutComponent({}) {
     const [open , SetOpen] = useState(false)
     const [open2 , SetOpen2] = useState(false)
-
-    const HandleOpen = () => {
+    const [DeletId , setDeleteId] = useState(); 
+    const [PutBlog , setPutBlog] = useState();
+    const [Elements , setElement] = useState();
+    const {ChooseMap} = useContext(ChooseContext);
+    useEffect(() => {
+        ChooseMap.map(elem =>
+            setElement(elem)
+            )
+    }, [Elements])
+    
+    const HandleOpen = (e) => {
         SetOpen(true)
+        setPutBlog(e.target.value)
     }
     const HandleClose = () => {
         SetOpen(false)
     }
-    const HandleOpen2 = () => {
+    const HandleOpen2 = (e) => {
         SetOpen2(true)
+        setDeleteId(e.target.value)
     }
     const HandleClose2 = () => {
         SetOpen2(false)
@@ -21,11 +33,21 @@ function OptionDeletPutComponent({DeleteId , PutBlog , Element}) {
      return(
         <Wrapper>
                 <div >
-                        <button onClick={HandleOpen}>изменить</button>
-                        <button onClick={HandleOpen2}>удалить</button>
+                <select onChange={HandleOpen2}>
+                <option  selected disabled>Удалить</option>
+                {ChooseMap.map((elem, index) => (
+                  <option key={index} value={elem.id}>{elem.titleru}</option>
+                ))}
+              </select>
+              <select onChange={HandleOpen}>
+                <option  selected disabled>Изминеть</option>
+                {ChooseMap.map((elem, index) => (
+                  <option key={index}  value={elem.id}>{elem.titleru}</option>
+                ))}
+              </select>
                 </div>
-            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeleteId}/>
-            <ModalPut open={open} handleClose={HandleClose} Element={Element} PutBlog={PutBlog} />
+            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId}/>
+            <ModalPut open={open} handleClose={HandleClose} Element={Elements} PutBlog={PutBlog} />
         </Wrapper>
     )
 }

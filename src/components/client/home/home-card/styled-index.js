@@ -12,9 +12,35 @@ export const CardList = styled.ul`
   list-style: none;
   padding: 0;
 
-  li:nth-child(2){
-    div{
-        margin-top: -69px;
+  @media only screen and (max-width: 1030px) {
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    li{
+      width: 45%;
+    }
+  }
+  @media only screen and (max-width: 526px) {
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    li{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 25px 0;
+    }
+  }
+
+  li:nth-child(2) {
+    div {
+      margin-top: -69px;
     }
   }
 `;
@@ -53,11 +79,11 @@ export const CardContent = styled.div`
     display: flex;
     align-items: center;
 
-    i{
-        font-size: 35px;
-        color:#d4665c;
-        font-weight: bold;
-        margin: 0 5px 0 40px;
+    i {
+      font-size: 35px;
+      color: #d4665c;
+      font-weight: bold;
+      margin: 0 5px 0 40px;
     }
   }
 `;

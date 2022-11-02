@@ -17,7 +17,7 @@ const HomeAdvantage = () => {
           <h2>{t("HomeAdvan.0")}</h2>
           <AdvantageCardWrapper>
             <AdvantageCard>
-              <img src={priem1} width={271} alt="image" />
+              <img src={priem1}  alt="image" />
               <p>{t("HomeAdvan.1")}</p>
             </AdvantageCard>
             <AdvantageCard>

@@ -12,14 +12,18 @@ import {
 } from "./styled-index";
 import potolog from "../../../../assets/images/client/potolog.jpg";
 import { useTranslation } from "react-i18next";
-
+import ModalPhone from "../../Modal";
 const card = [1, 2, 3, 4];
 
 const HomeCeiling = () => {
   const [t,i18n] = useTranslation()
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       <Section>
+      <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
         <WrapperContainer>
           <CeilCardWrapper>
             <h2>{t("HomeCeil.0")}</h2>
@@ -51,7 +55,7 @@ const HomeCeiling = () => {
                     <Line></Line>
                     <p>Более 190 оттенков</p>
                   </LeftBlock>
-                  <button>
+                  <button onClick={handleOpen}>
                     Заказать <i class="bx bx-right-arrow-circle"></i>
                   </button>
                 </CeilItem>

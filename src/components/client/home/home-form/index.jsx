@@ -2,8 +2,10 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Form, FormP, FormInBt } from "../home-hero/styled-index";
 import { BlueLine, FormCost, FormGroup } from "./styled-index";
+import ModalPhone from "../../Modal";
 const HomeForm = ({ isText, isCost, isCount }) => {
   const [t, i18n] = useTranslation();
+
   return (
     <>
       <Form>
@@ -34,17 +36,19 @@ const HomeForm = ({ isText, isCost, isCount }) => {
             <BlueLine></BlueLine>
           </div>
         ) : null}
-        <FormInBt>
-          <div>
-            <i class="bx bxs-phone"></i>
-            <input type="tel" placeholder={t("Home.3")} />
-          </div>
-          <button>
-            {t("Home.4")}
-            <i class="bx bx-right-arrow-circle"></i>
-          </button>
-        </FormInBt>
-        {isCount ? null : (
+        {isCost ? null : (
+          <FormInBt>
+            <div>
+              <i class="bx bxs-phone"></i>
+              <input type="tel" placeholder={t("Home.3")} />
+            </div>
+            <button type="button">
+              {t("Home.4")}
+              <i class="bx bx-right-arrow-circle"></i>
+            </button>
+          </FormInBt>
+        )}
+        {isCost ? null : (
           <FormP>
             {isText ? (
               <p>{t("Home.5")}</p>

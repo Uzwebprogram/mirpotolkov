@@ -5,6 +5,27 @@ export const WrapperNavBtm = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: 1042px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 0 0;
+  }
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 0 0;
+  }
+
+  @media only screen and (max-width: 680px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px 0 0 20px;
+  }
 `;
 
 export const LogoItem = styled.div`
@@ -15,6 +36,15 @@ export const LogoItem = styled.div`
     margin: 0;
     text-transform: uppercase;
   }
+
+  @media only screen and (max-width: 1042px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
 `;
 
 export const LocalItem = styled.div`
@@ -26,7 +56,13 @@ export const LocalItem = styled.div`
     color: #fff;
     margin: 0 7px;
     font-size: 18px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
+
+ 
 `;
 export const PhoneItem = styled.div`
   display: flex;
@@ -39,12 +75,22 @@ export const PhoneItem = styled.div`
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
-    
 
-    span{
+    span {
       font-weight: bold;
       font-size: 30px;
     }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    margin: 10px 0;
   }
 `;
 export const LinkItem = styled.div`

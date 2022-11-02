@@ -1,4 +1,4 @@
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
     border-radius: 50px !important;
     color: #224066 !important;
     /* border: 2px solid #fff !important; */
@@ -16,19 +16,34 @@
     z-index: -;
 } */
 
-.css-1aquho2-MuiTabs-indicator{
+.css-1aquho2-MuiTabs-indicator {
     height: 100% !important;
     border-radius: 50px !important;
     z-index: 1 !important;
     background: #224066 !important;
     /* opacity: 0.5 !important; */
 }
+/* .css-19kzrtu{
+    width: 100%;
+} */
 
 /* .css-8je8zh-MuiTouchRipple-root{
     background: #000 !important;
     z-index: -1;
 } */
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: #fff !important;
     z-index: 2 !important;
 }
+
+/* @media only screen and (max-width: 638px) {
+    .css-heg063-MuiTabs-flexContainer{
+        width: 100%;
+        margin: 0 !important;
+        overflow-x: scroll;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+    }
+} */

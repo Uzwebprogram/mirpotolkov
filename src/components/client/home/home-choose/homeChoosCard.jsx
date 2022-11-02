@@ -10,11 +10,16 @@ import {
 } from "./styled-index";
 import chooseImg from "../../../../assets/images/client/chooseImg.jpg";
 import flag from "../../../../assets/images/client/flag.png";
+import ModalPhone from "../../Modal";
 const card = [1, 2, 3];
 const ChoosCard = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       <CardWrapper>
+      <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
         {card.map(() => (
           <Card>
             <CardHeader>
@@ -36,7 +41,7 @@ const ChoosCard = () => {
               </FlagBox>
             </CardBody>
             <CardFooter>
-              <button>
+              <button onClick={handleOpen}>
                 Заказать <i class="bx bx-right-arrow-circle"></i>
               </button>
             </CardFooter>

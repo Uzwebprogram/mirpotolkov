@@ -4,7 +4,7 @@ import vig from "../../../../assets/images/client/vig.png";
 
 export const Section = styled.div`
   width: 100%;
-  height: 840px;
+  /* height: 840px; */
   z-index: 2;
   position: relative;
   background: transparent url(${grayBg}) no-repeat scroll center top / cover;
@@ -12,15 +12,24 @@ export const Section = styled.div`
 
 export const CeilCardWrapper = styled.div`
   width: 100%;
+  padding: 0 0 70px 0;
 
-  h2{
+  h2 {
     font-size: 46px;
     font-weight: 200;
     padding-top: 100px;
     color: #224066;
 
-    span{
-        font-weight: bold;
+    @media only screen and (max-width: 1068px) {
+      padding-left: 40px;
+    }
+    @media only screen and (max-width: 812px) {
+      font-size: 36px;
+      padding-bottom: -200px;
+    }
+
+    span {
+      font-weight: bold;
     }
   }
 `;
@@ -29,11 +38,27 @@ export const CeilCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 1068px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 0 120px 0;
+  }
+
+  @media only screen and (max-width: 812px) {
+    padding: 0 0 120px 0;
+  }
 `;
 
 export const CeilItem = styled.div`
   height: 550px;
   background: url(${vig}) no-repeat 20px 50%;
+
+  @media only screen and (max-width: 1068px) {
+    margin: 0 70px;
+  }
 
   h4 {
     font-size: 22px;
@@ -58,9 +83,9 @@ export const CeilItem = styled.div`
     text-transform: uppercase;
     font-weight: 600;
 
-    i{
-        font-size: 25px;
-        margin-left: 20px;
+    i {
+      font-size: 25px;
+      margin-left: 20px;
     }
   }
 `;

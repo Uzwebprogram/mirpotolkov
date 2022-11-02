@@ -7,6 +7,7 @@ import {
   CardFooter,
   CardImgContent,
   CardImg,
+  MiniImg
 } from "./styled-index";
 
 import chooseImg from "../../../../assets/images/client/chooseImg.jpg";
@@ -24,10 +25,10 @@ const cardInstall = () => {
             <CardBody>
               <CardImg>
                 <img src={chooseImg} alt="image" width={352} height={197} />
-                <div>
+                <MiniImg>
                   <img src={chooseImg} alt="image" width={63} height={35} />
                   <img src={chooseImg} alt="image" width={63} height={35} />
-                </div>
+                </MiniImg>
               </CardImg>
               <CardImgContent>
                 <p>10.05.2022</p>

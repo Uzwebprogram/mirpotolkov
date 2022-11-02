@@ -5,19 +5,32 @@ import varBg from "../../../../assets/images/client/var.png";
 export const Section = styled.div`
   width: 100%;
   margin-top: -150px;
-  padding-top: 100px;
-  height: 800px;
+  padding-top: 20px;
+  /* height: 800px; */
   background: transparent url(${grayBg1}) no-repeat scroll center top / cover;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1142px) {
+    padding: 20px 0 50px 0;
+  }
+
+  /* @media only screen and (max-width: 946px) {
+    padding: 20px 0 400px 0;
+  } */
 
   div {
     h2 {
-      margin: 120px 0 34px 20px;
+      margin: 100px 0 34px 20px;
       font-size: 46px;
       color: #224066;
       text-align: left;
       font-weight: 200;
+
+      @media only screen and (max-width: 425px) {
+        font-size: 36px;
+      }
     }
   }
 `;
@@ -27,12 +40,59 @@ export const CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 20px 0 0 0;
+  padding: 0 0 100px 0;
+
+  @media only screen and (max-width: 914px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 export const Card = styled.div`
-  width: 382px;
+  width: 33%;
   background: url(${varBg}) no-repeat 20px 50%;
   height: 390px;
+  @media only screen and (max-width: 1142px) {
+    width: 45%;
+    margin: 10px 0;
+  }
+
+  @media only screen and (max-width: 914px) {
+    width: 100%;
+    margin: 30px -300px 30px 0;
+  }
+
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+    margin: 30px -200px 30px 0;
+  }
+  @media only screen and (max-width: 582px) {
+    width: 100%;
+    margin: 30px -150px 30px 0;
+  }
+  @media only screen and (max-width: 530px) {
+    width: 100%;
+    margin: 30px -100px 30px 0;
+  }
+  @media only screen and (max-width: 478px) {
+    width: 100%;
+    margin: 30px -50px 30px 0;
+  }
+  @media only screen and (max-width: 478px) {
+    width: 100%;
+    margin: 30px 0 30px 0;
+  }
+  @media only screen and (max-width: 375px) {
+    width: 100%;
+    margin: 30px 0 30px -35px;
+  }
+  @media only screen and (max-width: 375px) {
+    width: 100%;
+    margin: 30px 0 30px -45px;
+  }
 `;
 
 export const CardHeader = styled.div`
@@ -48,6 +108,12 @@ export const CardHeader = styled.div`
 
 export const CardBody = styled.div`
   position: relative;
+
+  /* img {
+    @media only screen and (max-width: 375px) {
+      width: 341px;
+    }
+  } */
 `;
 
 export const Prise = styled.div`
@@ -75,6 +141,14 @@ export const FlagBox = styled.div`
   align-items: center;
   justify-content: center;
   margin: 10px 0 0 50px;
+
+  @media only screen and (max-width: 914px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 425px) {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
 
   p {
     margin-top: 10px;

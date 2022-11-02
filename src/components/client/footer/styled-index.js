@@ -18,8 +18,15 @@ export const PrivacyPolicy = styled.div`
   align-content: center;
   justify-content: center;
   margin: 70px 0 0 0;
+  
   padding: 10px;
   border-radius: 50px;
+
+  @media only screen and (max-width: 1242px) {
+    width: 90%;
+    
+    margin: 30px auto;
+  }
 
   a {
     color: #337ab7;

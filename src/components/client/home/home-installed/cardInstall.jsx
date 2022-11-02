@@ -10,13 +10,9 @@ import {
   MiniImg
 } from "./styled-index";
 
-import chooseImg from "../../../../assets/images/client/chooseImg.jpg";
-import avatar from "../../../../assets/images/client/logo1.png";
 import { CommentContext } from "../../../../context/client/comment/context";
 const CardInstall = () => {
-
   const {CommentMap} = useContext(CommentContext)
-  console.log(CommentMap);
   return (
     <>
       <CardWrapper>

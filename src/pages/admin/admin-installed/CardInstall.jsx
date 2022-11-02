@@ -10,6 +10,9 @@ import {
   MiniImg
 } from "./styled-index";
 
+import CommentModal from "../../../components/admin/admin-comment/modal-form";
+ 
+
 import chooseImg from "../../../assets/images/client/chooseImg.jpg";
 import avatar from "../../../assets/images/client/logo1.png";
 // import { ChooseContext } from "../../../context/client/choose/context";
@@ -18,9 +21,10 @@ const card = [1, 2, 3, 4];
 const CardInstall = () => {
 
   const {CommentMap} = useContext(CommentContext)
-  console.log(CommentMap);
+  // console.log(CommentMap);
   return (
     <>
+    <CommentModal/>
       <CardWrapper>
         {CommentMap.map((elem) => (
           <Card>
@@ -36,7 +40,7 @@ const CardInstall = () => {
                 </MiniImg>
               </CardImg>
               <CardImgContent>
-                <p>10.05.2022</p>
+                <p>{elem.date}</p>
                 <div>
                   <i class="bx bxs-star"></i>
                   <i class="bx bxs-star"></i>
@@ -45,11 +49,11 @@ const CardInstall = () => {
                   <i class="bx bxs-star"></i>
                 </div>
                 <p>
-                  Создание полотна: <br /> 1 день
+                  Создание полотна: <br /> {elem.creating_canvas}
                 </p>
-                <p>Монтаж: 1 день</p>
+                <p>Монтаж: {elem.mounting}</p>
                 <p>
-                  Объем: 10м <sup>2</sup>
+                  Объем: {elem.volume} <sup>2</sup>
                 </p>
                 <p>3 432р</p>
               </CardImgContent>

@@ -59,6 +59,11 @@ export const SectionMobile = styled.div`
   align-items: center;
   justify-content: space-between;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
+  display: none;
+
+  @media only screen and (max-width: 1042px) {
+    display: flex;
+  }
 
   /* @media only screen and (max-width: 1220px) {
     div {

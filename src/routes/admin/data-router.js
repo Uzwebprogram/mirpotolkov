@@ -3,7 +3,8 @@ import Dashboard from "../../pages/admin/dashboard";
 import AdminAdmins from "../../pages/admin/admin-add";
 import StretchCeilings from "../../pages/admin/stretch_ceilings";
 import Contact from "../../pages/admin/contact_us";
-import Option from "../../pages/admin/option";
+import AdminChoose from "../../pages/admin/admin-choose";
+import AdminInstalled from "../../pages/admin/admin-installed";
 import Cookies from "universal-cookie"
 
 const cookies = new Cookies();
@@ -35,7 +36,12 @@ export const  AdminRouter = [
     },
     {
         id : 6, 
-        path : cookies.get("access") ? "/admin/option" : null,
-        Element : <Option/>
+        path : cookies.get("access") ? "/admin/adminchoose" : null,
+        Element : <AdminChoose/>
+    },
+    {
+        id : 7, 
+        path : cookies.get("access") ? "/admin/adminInstall" : null,
+        Element : <AdminInstalled/>
     },
 ]

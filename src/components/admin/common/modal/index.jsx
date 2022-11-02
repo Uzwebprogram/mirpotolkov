@@ -15,6 +15,7 @@ function ModalCommon({children , open , handleClose ,height , scroll}) {
         boxShadow: 24,
         borderRadius : "10px",
         height : height,
+        width: 400,
         overflowY : scroll,
       };
 

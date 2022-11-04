@@ -57,7 +57,7 @@ function CommentModal() {
     e.target[6].value = null;
     e.target[7].value = null;
     e.target[8].value = null;
-    e.target[7].value = null;
+    e.target[9].value = null;
     console.log(x);
   };
 

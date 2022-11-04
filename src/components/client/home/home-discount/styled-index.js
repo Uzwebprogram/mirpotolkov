@@ -2,17 +2,14 @@ import styled from "styled-components";
 import jeltBg from "../../../../assets/images/client/jelt.png";
 export const Section = styled.div`
   width: 100%;
-  height: 567px;
   position: relative;
   z-index: 4;
   background: transparent url(${jeltBg}) no-repeat scroll center top / cover;
-
+  height: 1000px;
   div {
     h2 {
-      /* margin: 150px 50px 30px 0; */
       padding: 160px 0 0 0;
       max-width: 690px;
-      /* width: 100%; */
       font-size: 60px;
       color: #224066;
       font-weight: 200;

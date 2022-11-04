@@ -63,6 +63,7 @@ function CommentModal() {
     e.target[11].value = null;
     e.target[12].value = null;
 
+
     console.log(x);
   };
 

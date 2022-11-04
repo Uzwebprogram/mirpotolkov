@@ -11,7 +11,7 @@ import {
 
 import ChooseModal from "../../../components/admin/ceilling-option/modal-form/index";
 import CategoryModal from "../../../components/admin/ceilling-option/modal-form-category/index";
-import OptionDeletPutComponent from "../../../components/admin/ceilling-option/option-delet-put/index";
+import CuinsinesDeletPutComponent from "../../../components/admin/cuisines/team-delet-put";
 
 import flag from "../../../assets/images/client/flag.png";
 
@@ -54,7 +54,7 @@ const AdminChoosCard = ({ Element }) => {
               </FlagBox>
             </CardBody>
             <CardFooter>
-              <OptionDeletPutComponent
+              <CuinsinesDeletPutComponent
                 Element={elem}
                 DeleteId={elem.id}
                 PutBlog={elem.id}

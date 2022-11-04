@@ -68,7 +68,7 @@ export const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   @media only screen and (max-width: 516px) {
     display: flex;

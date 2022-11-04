@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import blueBg from "../../../../assets/images/client/blue.png";
+import blueBg from "../../../../assets/images/client/backgroundblue.png";
 export const Section = styled.div`
   width: 100%;
-  background: transparent url(${blueBg}) no-repeat scroll center top / cover;
-  height: 594px;
+  background: transparent url(${blueBg}) no-repeat scroll left center / cover;
+  height:  ${props => (props.calculator ? '0px' : '540px')} 534px;
   margin-top: -100px;
   z-index: 1;
 

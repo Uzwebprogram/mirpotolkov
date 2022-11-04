@@ -16,9 +16,7 @@ const HeaderTop = ({ HandleClick }) => {
         <WrapperContainer>
           <NavBar>
             <NavList>
-              <li>
-                <NavLink to="#">{t("Header.0")}</NavLink>
-              </li>
+              
               <li>
                 <a href="#calculator">{t("Header.1")}</a>
               </li>

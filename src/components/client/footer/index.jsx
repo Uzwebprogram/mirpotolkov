@@ -7,7 +7,7 @@ function Footer() {
     <>
       <Section id="contact">
         <WrapperContainer>
-          <HeaderBottom />
+          <HeaderBottom logoWhite />
           <PrivacyPolicy>
             <NavLink to="#">Политика конфиденциальности</NavLink>
           </PrivacyPolicy>

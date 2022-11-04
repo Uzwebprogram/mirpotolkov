@@ -6,6 +6,7 @@ import { Section, FormWrap } from "./styled-index";
 
 const HomeDiscount = ({isCount}) => {
     const [t, i18n] = useTranslation()
+    const data = [1 , 2 , 3 , 4]
   return (
     <>
       <Section>

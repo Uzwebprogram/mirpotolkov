@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const BlueLine = styled.div`
-  background: #46a4e9;
+  background: #d4665c;
   height: 1px;
   width: 90%;
-  margin-bottom: 34px;
+  margin: 60px 0;
   h3{
     color: white;
     font-size: 60px;
@@ -41,6 +41,18 @@ export const FormCost = styled.div`
   }
 `;
 
+export const ButtonAdd = styled.button`
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 15px;
+    margin-top: 15px;
+    display: flex;
+    margin-left: auto;
+    background: #d4665c;
+    color: #fff;
+`
+
 export const FormGroup = styled.div`
   display: flex;
   align-items: flex-start;
@@ -52,7 +64,7 @@ export const FormGroup = styled.div`
 
   label {
     font-size: 22px;
-    color: #213a66;
+    color: white;
     margin: 0 0 7px 10px;
   }
 
@@ -60,13 +72,12 @@ export const FormGroup = styled.div`
   select {
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 12px;
     border-radius: 50px;
     padding: 10px 10px;
     border: 2px solid transparent;
     font-weight: bold;
     color: #224066;
-
     &:focus {
       border: 2px solid #d4665c;
     }

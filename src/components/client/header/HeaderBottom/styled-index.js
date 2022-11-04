@@ -44,7 +44,6 @@ export const LogoItem = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-
 `;
 
 export const LocalItem = styled.div`
@@ -61,8 +60,6 @@ export const LocalItem = styled.div`
       font-size: 14px;
     }
   }
-
- 
 `;
 export const PhoneItem = styled.div`
   display: flex;
@@ -102,7 +99,7 @@ export const LinkItem = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 10px 10px 35px;
+    padding: 7px 7px 7px 35px;
     border: none;
     outline: none;
     background: #d4665c;
@@ -112,6 +109,8 @@ export const LinkItem = styled.div`
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    border: 8px solid #d78f88;
+    box-shadow: -2px 2px 20px 2px rgb(56 53 51 / 36%);
 
     i {
       margin: 2px 0 0 20px;

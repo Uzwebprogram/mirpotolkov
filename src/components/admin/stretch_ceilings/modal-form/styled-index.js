@@ -83,18 +83,18 @@ label{
     }
     button{
         margin-top: 40px;
-        font-family: sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 23px;
-        text-transform: uppercase;
-        color: white;
-        border-radius: 15px;
-        background: #F67263;
-        padding: 23px 0px;
-        border: transparent;
-        cursor: pointer;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 15px;
+    background: #F67263;
+    padding: 23px 0px;
+    border: transparent;
+    cursor: pointer;
     }
     textarea{
         width: 300px;

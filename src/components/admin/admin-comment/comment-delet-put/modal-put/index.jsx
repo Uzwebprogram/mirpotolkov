@@ -89,7 +89,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
             <span className="span-download">
               <ion-icon name="cloud-download-outline"></ion-icon>
             </span>
-            загрузить изображение
+            загрузить аватар
           </label>
 
           {loading ? (
@@ -112,7 +112,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <input type="text" placeholder={Element.mounting} ref={mounting} />
           <input type="text" placeholder={Element.volume} ref={volume} />
           <input type="text" placeholder={Element.creating_canvas} ref={creatingCanvas} />
-          <button type="submit">submit</button>
+          <button type="submit">Сохранять</button>
         </Form>
       </ModalCommon>
     </Wrapper>

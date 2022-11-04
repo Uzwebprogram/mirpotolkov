@@ -96,7 +96,7 @@ function CommentModal() {
               <span className="span-download">
                 <ion-icon name="cloud-download-outline"></ion-icon>
               </span>
-              загрузить изображение
+              загрузить аватар
             </label>
 
             {loading ? (
@@ -121,7 +121,7 @@ function CommentModal() {
             <input type="text" placeholder="volume" ref={volume} />
             <input type="text" placeholder="ccanvas" ref={creatingCanvas} />
             <input type="text" placeholder="money" ref={money} />
-            <button type="submit">submit</button>
+            <button type="submit">Сохранять</button>
           </Form>
         </ModalCommon>
       </Wrapper>

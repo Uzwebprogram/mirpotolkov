@@ -10,7 +10,7 @@ export const ModalContent = styled.div`
     padding: 0;
     font-size: 24px;
     text-align: center;
-    width: 300px;
+    /* width: 300px; */
 }
 
 `
@@ -20,11 +20,18 @@ export const Buttons = styled.div`
     margin-top: 70px;
 button{
     margin: 0; 
-    padding: 0;
-    background-color: #FFD700;
-    border: none;
-    font-size: 30px;
-    padding: 10px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 15px;
+    background: #F67263;
+    padding: 10px 30px;
+    border: transparent;
     cursor: pointer;
+
 }
 `

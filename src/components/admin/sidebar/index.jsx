@@ -7,7 +7,7 @@ import {
   ProfileTitle,
 } from "./styled-index";
 import Close from "./../../../assets/images/admin/Close.svg";
-import Logo from "./../../../assets/images/admin/logo.png"
+import Logo from "./../../../assets/images/client/logomir.png"
 import { useRef, useState } from "react";
 import { dataSidebar } from "./data-sidebar";
 import { NavLink } from "react-router-dom";

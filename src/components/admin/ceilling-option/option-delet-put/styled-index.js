@@ -12,7 +12,7 @@ button{
     text-align: center;
     cursor: pointer;
     border: none;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
     color: white;
     border-radius: 20px;
 }
@@ -28,18 +28,18 @@ select{
     color: white;
     border: none;
     background: #F67263;
-    padding: 23px 42px;
+    padding: 15px 30px;
     margin:0 10px 20px 10px;
     cursor: pointer;
     border-radius:20px;
     outline: none;
     position: absolute;
     top: 10px;
-    left: 44%;
+    left: 43.5%;
   }
   select:nth-child(2){
     position: absolute;
     top: 10px;
-    left: 24%;
+    left: 23.5%;
   }
 `

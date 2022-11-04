@@ -24,11 +24,11 @@ function CommentModal() {
   const image = useRef();
   const avatarimage = useRef();
   const volume = useRef();
+  const money = useRef();
   const clientnamesurname = useRef();
   const load = useRef();
   const handleUpload = async (e) => {
     e.preventDefault();
-
     let formData = new FormData();
     formData.append("titleUz", titleuz.current.value);
     formData.append("titleRu", titleru.current.value);
@@ -38,6 +38,7 @@ function CommentModal() {
     formData.append("client_comment_en", clientcommenten.current.value);
     formData.append("client_name_surname", clientnamesurname.current.value);
     formData.append("Volume", volume.current.value);
+    formData.append("money", money.current.value);
     formData.append("mounting", mounting.current.value);
     formData.append("creating_canvas", creatingCanvas.current.value);
     formData.append("image", image.current.files[0]);
@@ -57,7 +58,11 @@ function CommentModal() {
     e.target[6].value = null;
     e.target[7].value = null;
     e.target[8].value = null;
-    e.target[7].value = null;
+    e.target[9].value = null;
+    e.target[10].value = null;
+    e.target[11].value = null;
+    e.target[12].value = null;
+
     console.log(x);
   };
 
@@ -114,6 +119,7 @@ function CommentModal() {
             <input type="text" placeholder="mounting" ref={mounting} />
             <input type="text" placeholder="volume" ref={volume} />
             <input type="text" placeholder="ccanvas" ref={creatingCanvas} />
+            <input type="text" placeholder="money" ref={money} />
             <button type="submit">submit</button>
           </Form>
         </ModalCommon>

@@ -10,14 +10,13 @@ export const Wrapper =styled.div`
     font-size: 18px;
     line-height: 23px;
     text-transform: uppercase;
-    color: white;
-    border: none;
-    background: #F67263;
-    padding: 15px 30px;
+    color: #1B1B1B;
+    background: #FFD700;
+    padding: 23px 42px;
     margin-bottom: 20px;
     cursor: pointer;
-    border-radius:20px;
   }
+
   
 `
 export const ModalTop = styled.div`
@@ -48,30 +47,30 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     padding:20px;
-    input[type="file"] {
-    display: none;
-}
-label{
+    label{
     border-style: dotted;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 15px;
     cursor: pointer;
 }
-.loading{
-    position: absolute;
-    text-align: center;
-    background-color: #F67263;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    width: 86%;
-    margin-top: 2px;
-}
+input[type="file"] {
+    display: none;
+}   
 .span-download{
     font-size: 22px;
     position: relative;
     top: 7px;
     margin-right: 5px;
+}
+.loading{
+    position: absolute;
+    text-align: center;
+    background-color: #FFD700;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 86%;
+    margin-top: 2px;
 }
     input{
         border-top: transparent;
@@ -89,18 +88,11 @@ label{
         font-size: 18px;
         line-height: 23px;
         text-transform: uppercase;
-        color: white;
-        border-radius: 15px;
-        background: #F67263;
+        color: #1B1B1B;
+        background: #FFD700;
         padding: 23px 0px;
         border: transparent;
         cursor: pointer;
-    }
-    select{
-        border-radius: 10px;
-        padding: 10px;
-        width: 100%;
-        margin-bottom: 10px;
     }
     textarea{
         width: 300px;

@@ -71,15 +71,7 @@ const AdminChoose = () => {
                   <Tab
                    
                     key={index}
-                    label={
-                      getValue() == "ru"
-                        ? elem.titleru
-                        : getValue() == "en"
-                        ? elem.titleen
-                        : getValue() == "uz"
-                        ? elem.titleuz
-                        : null
-                    }
+                    label={elem.titleru}
                     {...a11yProps(index)}
                   />
                 ))}

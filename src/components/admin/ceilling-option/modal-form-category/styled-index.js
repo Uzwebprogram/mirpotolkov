@@ -13,7 +13,7 @@ export const Wrapper =styled.div`
     color: white;
     border: none;
     background: #F67263;
-    padding: 23px 42px;
+    padding: 15px 30px;
     margin-bottom: 20px;
     cursor: pointer;
     border-radius:20px;

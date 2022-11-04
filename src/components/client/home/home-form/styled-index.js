@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const BlueLine = styled.div`
-  background: #46a4e9;
+  background: #d4665c;
   height: 1px;
   width: 90%;
-  margin-bottom: 34px;
+  margin: 20px 0;
   h3{
     color: white;
     font-size: 60px;

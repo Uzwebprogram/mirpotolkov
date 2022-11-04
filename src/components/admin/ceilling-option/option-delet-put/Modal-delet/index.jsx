@@ -4,12 +4,9 @@ import { Wrapper , ModalContent , Buttons } from "./styled-index"
 function ModalDelete({open , HandleClose , DeleteId}) {
     const DeleteBlog = (DeleteId) => {
         console.log(Number(DeleteId));
-        fetch(`https://mebel-b.herokuapp.com/ceiling_option/${Number(DeleteId)}`, {
+        fetch(`https://mebel-b.herokuapp.com/ceiling_option/${DeleteId}`, {
             method: "DELETE",
         }).catch((DeleteId) => console.error(DeleteId));
-        setTimeout(() => {
-            window.location.reload() 
-        }, 1000);
     };
     return(
         <Wrapper>

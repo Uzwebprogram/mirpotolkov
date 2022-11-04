@@ -17,7 +17,7 @@ function CardBox() {
                 <div class="card">
                     <div>
                         <div class="numbers">{ChooseMap.length}</div>
-                        <div class="cardName">Команда</div>
+                        <div class="cardName">Вариант потолков</div>
                     </div>
 
                     <div class="iconBx">
@@ -28,7 +28,7 @@ function CardBox() {
                 <div class="card">
                     <div>
                         <div class="numbers">{CommentMap.length}</div>
-                        <div class="cardName">Наши работы</div>
+                        <div class="cardName">Натяжных потолков</div>
                     </div>
 
                     <div class="iconBx">
@@ -39,7 +39,7 @@ function CardBox() {
                 <div class="card">
                     <div>
                         <div class="numbers">{StretchMap.length}</div>
-                        <div class="cardName">Наши клиенты</div>
+                        <div class="cardName">Примеры натяжных потолков</div>
                     </div>
 
                     <div class="iconBx">
@@ -50,7 +50,7 @@ function CardBox() {
                 <div class="card">
                     <div>
                         <div class="numbers">{ContactMap.length}</div>
-                        <div class="cardName">Связаться с нами</div>
+                        <div class="cardName">Cвязаться с нами</div>
                     </div>
 
                     <div class="iconBx">

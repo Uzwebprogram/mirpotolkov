@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import blueBg from "../../../../assets/images/client/blue.png";
+import blueBg from "../../../../assets/images/client/backgroundblue.png";
 export const Section = styled.div`
   width: 100%;
   background: transparent url(${blueBg}) no-repeat scroll center top / cover;

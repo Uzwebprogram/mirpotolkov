@@ -9,13 +9,13 @@ function Detials() {
                         <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Наша Команда</h2>
+                        <h2>Добавить администратора</h2>
                     </div>
                     <table>
                         <thead>
                             <tr>
-                                <td>картинка рабочих Имя</td>
-                                <td>должность</td>
+                                <td>имя</td>
+                                <td>ел.почта</td>
                             </tr>
                         </thead>
 
@@ -36,7 +36,7 @@ function Detials() {
 
                 <div class="recentCustomers">
                     <div class="cardHeader">
-                        <h2>Наши работы</h2>
+                        <h2>Добавить администратора</h2>
                     </div>
 
                     <ul>

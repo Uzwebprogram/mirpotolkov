@@ -5,6 +5,7 @@ import {ModalHeader, ModalBody, ModalForm, ModalFooter} from './styled-index'
 import axios from "axios";
 import 'react-phone-input-2/lib/style.css';
 import { ReactPhoneInput } from "./styled-index";
+import { useTranslation } from "react-i18next";
 const style = {
   position: "absolute",
   top: "50%",
@@ -19,12 +20,13 @@ const style = {
 
 const ModalPhone = ({ open, setOpen, handleClose }) => {
   const [numberValue , setNumberValue] = React.useState();
+  const {t , i18n} = useTranslation();
   const HandleSubmit = async (e)=>{
     e.preventDefault();
     const req = {
       telephone : numberValue
     }
-    const response = await axios.post("https://mebel-b.herokuapp.com/contact_us" , req)
+    const response = await axios.post("http://62.113.105.56:5000/contact_us" , req)
     if (response) {
       setOpen(false)
     }
@@ -39,7 +41,7 @@ const ModalPhone = ({ open, setOpen, handleClose }) => {
           aria-describedby="modal-modal-description">
           <Box sx={style}>
             <ModalHeader>
-              <h2>Оставьте заявку и наш менеджер Вам перезвонит</h2>
+              <h2>{t("HomeForm.0")}</h2>
             </ModalHeader>
             <ModalBody>
                 <ModalForm onSubmit={HandleSubmit}>
@@ -48,13 +50,12 @@ const ModalPhone = ({ open, setOpen, handleClose }) => {
                 name="Number"
                 onChange={(data) => setNumberValue(data)}
               />
-                    <button type="submit">Рассчитать стоимость</button>
+                    <button type="submit">{t("HomeForm.1")}</button>
                 </ModalForm>
             </ModalBody>
             <ModalFooter>
               <p>
-                Отправля я данную форму, я соглашаюсь на обработку персональных
-                данных
+              {t("HomeForm.2")}
               </p>
             </ModalFooter>
           </Box>

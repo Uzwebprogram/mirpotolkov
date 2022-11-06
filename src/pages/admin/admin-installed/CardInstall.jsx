@@ -28,10 +28,10 @@ const CardInstall = () => {
             </CardHeader>
             <CardBody>
               <CardImg>
-                <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={352} height={197} />
+                <img src={`http://62.113.105.56:5000/static/${elem.image}`} alt="imagee" width={352} height={197} />
                 <MiniImg>
-                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={63} height={35} />
-                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} alt="imagee" width={63} height={35} />
+                  <img src={`http://62.113.105.56:5000/static/${elem.image}`} alt="imagee" width={63} height={35} />
+                  <img src={`http://62.113.105.56:5000/static/${elem.image}`} alt="imagee" width={63} height={35} />
                 </MiniImg>
               </CardImg>
               <CardImgContent>
@@ -54,7 +54,7 @@ const CardInstall = () => {
               </CardImgContent>
             </CardBody>
             <CardFooter>
-              <img style={{borderRadius: "50%", objectFit: 'cover'}} src={`https://mebel-b.herokuapp.com/static/${elem.avatar_image}`} width={78} height={78} alt="image" />
+              <img style={{borderRadius: "50%", objectFit: 'cover'}} src={`http://62.113.105.56:5000/static/${elem.avatar_image}`} width={78} height={78} alt="image" />
               <div>
                 <h4>Заказчик: {elem.client_name_surname}</h4>
                 <p>

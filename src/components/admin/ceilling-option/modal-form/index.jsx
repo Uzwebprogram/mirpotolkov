@@ -34,7 +34,7 @@ function ChooseModal() {
     form.append("image", image.current.files[0]);
     form.append("ceiling_id", Number(ceilingId))
     try {
-      await fetch("https://mebel-b.herokuapp.com/cuisine", {
+      await fetch("http://62.113.105.56:5000/cuisine", {
         method: "POST",
         body: form,
       })

@@ -23,7 +23,7 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
         form.append("shades" ,  shades.current.value)
         form.append("image" ,  image.current.files[0])
         try {
-           await fetch(`https://mebel-b.herokuapp.com/stretch_ceilings/${id}`, {
+           await fetch(`http://62.113.105.56:5000/stretch_ceilings/${id}`, {
                 method: 'PUT',
                 body: form
             })

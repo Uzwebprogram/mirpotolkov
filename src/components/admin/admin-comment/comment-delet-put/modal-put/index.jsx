@@ -40,7 +40,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
     formData.append("avatar_image", avatarimage.current.files[0]);
     formData.append("money", moneys.current.value);
     try {
-      await fetch(`https://mebel-b.herokuapp.com/client_comment/${id}`, {
+      await fetch(`http://62.113.105.56:5000/client_comment/${id}`, {
         method: "PUT",
         body: formData,
       })

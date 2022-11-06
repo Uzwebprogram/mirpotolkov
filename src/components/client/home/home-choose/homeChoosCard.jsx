@@ -27,7 +27,7 @@ const ChoosCard = ({ElementChoos}) => {
               <h4>{getValue() == "ru" ? elem.titleCuisineRu: getValue() == "en" ? elem.titleCuisineEn: getValue() == "uz" ? elem.titleCuisineUz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} width={360} height={202} alt="image" />
+              <img src={`http://62.113.105.56:5000/static/${elem.image}`} width={360} height={202} alt="image" />
               <Prise>
                 <strike>от сум</strike>
                 <br />

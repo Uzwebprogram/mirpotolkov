@@ -20,7 +20,7 @@ function App() {
                    <Sidebar/>
                    <AdminRouterComponent/>
            </Main>:<>
-              <GlobalStyle whiteColor/>
+              <GlobalStyle/>
               <ClientRouterComponent/>
            </>
     }

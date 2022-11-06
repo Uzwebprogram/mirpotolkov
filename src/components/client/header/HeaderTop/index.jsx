@@ -1,11 +1,10 @@
 import React from "react";
 import { WrapperContainer } from "../../../../style-App";
-import { NavList, Section, NavBar, SectionMobile } from "./styled-index";
+import { NavList, Section, NavBar, SectionMobile , PhoneItem} from "./styled-index";
 import { NavLink } from "react-router-dom";
 import HeaderLang from "../header-language/index";
 import { useTranslation } from "react-i18next";
 import Logo1 from "../../../../assets/images/client/logomir.png";
-import { PhoneItem } from "../HeaderBottom/styled-index";
 import phoneIcon from "../../../../assets/images/client/tel.png";
 
 const HeaderTop = ({ HandleClick }) => {

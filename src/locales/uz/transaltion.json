@@ -3,7 +3,7 @@
         "0": "Aktsiyalar",
         "1": "Kalkulyator",
         "2": "Foydalar",
-        "3": "Options",
+        "3": "Variantlar",
         "4": "Bizning ishlarimiz",
         "5": "Sharhlar",
         "6": "Kontaktlar",
@@ -32,9 +32,9 @@
          "6": "Xavfsizlik",
          "7": "Yuqori sifatli material",
          "8": "Texnologning jo'nash uchun qulay vaqti",
-         "9": "10 yil kafolat!",
+         "9": "25 yil kafolat!",
          "10": "Ish va material uchun kafolat",
-         "11": "10 yildan ortiq ishlagan"
+         "11": "15 yildan ortiq ishlagan"
     },
     "celing" : {
         "0":"Qulay echimlar",
@@ -53,15 +53,26 @@
     },
 
     "HomeCost": {
-        "0": "Tez xarajatlarni hisoblash"
+        "0": "Tez xarajatlarni hisoblash",
+        "1": "Shift kengligi",
+         "2": "Siz bilan tez orada bog'lanadi",
+         "3": "Shift uzunligi",
+         "5": "Lyustralar soni",
+         "6": "Shift turi",
+         "7": "mat",
+         "8": "Yorqin",
+         "9": "atlas",
+         "10": "Ikki darajali",
+         "11": "sum",
+         "12":"Xona qo'shish"
     },
 
     "HomeAdvan":{
         "0": "Bizning shiftlarimizning afzalliklari",
-        "1": "Shartnoma tuzilgandan keyin summa o'zgarmaydi",
-         "2": "Shahardagi eng past narxlardan biri va foydali aksiyalar",
-         "3": "Barcha ishlar uchun kafolat 10 yil",
-         "4": "3 yil davomida bepul texnik xizmat ko'rsatish"
+        "1": "GO'ZAL. ZAMONAVIY DIZAYN , HAR QANDAY XONANI BEZADI",
+         "2": "TEZ. KALDIRGAN O'RNATISH 1 KUNGA CHUQ VA CHINTASIZ!",
+         "3": "AMALIY. YASSI SHIP YORIQ YO'Q - 25 YIL KAFOLAT!",
+         "4": "MUVOFIQ. ENG DAROFLI Shiftni tugatish usuli BUGUNGI KUNDA!"
     },
 
     "HomeCount": {
@@ -70,14 +81,15 @@
     },
 
     "HomeInstall":{
-        "0": "Shahar va viloyatda o'rnatilgan shiftlarga misollar"
+        "0": "Shahar va viloyatda o'rnatilgan shiftlarga misollar",
+        "1": "Ko'proq ko'rsatish"
     },
 
     "HomeSxema":{
         "0": "Oddiy ish sxemasi",
-        "1": "Siz so'rov qoldiring, biz sizga 5 daqiqadan keyin qo'ng'iroq qilamiz",
+        "1": "Siz so'rov qoldirasiz, 5 daqiqadan so'ng menejerimiz siz bilan bog'lanadi",
          "2": "Ustamiz keldi, xonani o'lchaydi",
-         "3": "Shartnoma tuzamiz, qulay usulda 5-10% to'laymiz",
+         "3": "Shartnoma tuzamiz, qulay usulda 50% to'laymiz",
          "4": "O'rnatish guruhi cho'zilgan shiftlarni o'rnatadi va axlatni olib tashlaydi"
     },
 
@@ -87,5 +99,13 @@
 
     "Footer": {
         "0": "Maxfiylik siyosati"
+    },
+    "HomeChoose" : {
+        "0": "Shiftingiz variantini tanlang"
+    },
+    "HomeForm" :{
+        "0" : "SO'ROV QO'YING VA MENEJERIMIZ SIZGA QAYTA QO'ng'iroq qiladi",
+         "1" : "XARAJATNI HISOBLASH",
+         "2" :"Ushbu shaklni yuborish orqali men shaxsiy ma'lumotlarni qayta ishlashga roziman"
     }
 }

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     width: 80%;
     height: 100%;
-    background: #224066;
+    background: white;
     flex-direction: column;
     padding: 10px;
     left: -650px;
@@ -16,19 +16,19 @@ export const Wrapper = styled.div`
     top: 0;
     select{
         background-color: transparent;
-        color: white;
+        color: black;
         padding: 6px 8px;
         cursor: pointer;
         width: 78px;
         margin-bottom: 26px;
     }
     select option{
-        background-color: #737373;
+        background-color: white;
     }
     span{
         cursor: pointer;
         font-size: 34px;
-        color: white;
+        color: black;
         margin-left: auto;
     }
     ul{
@@ -63,7 +63,7 @@ export const Wrapper = styled.div`
         font-size: 16px;
         line-height: 23px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: black;
         text-decoration: none;
     }
     a:nth-child(4){

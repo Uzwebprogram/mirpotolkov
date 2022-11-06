@@ -10,6 +10,7 @@ import "./styled-tab.css";
 
 import ChoosCard from "./homeChoosCard";
 import { ChooseContext } from "../../../../context/client/choose/context";
+import { useTranslation } from "react-i18next";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,11 +53,12 @@ const HomeChoose = () => {
   function getValue() {
     return window.localStorage.getItem("i18nextLng");
   }
+  const {t, i18n} = useTranslation();
   return (
     <>
       <Section id="choose">
         <WrapperContainer>
-          <h2>Выбери свой вариант потолков</h2>
+          <h2>{t("HomeChoose.0")}</h2>
           <Box sx={{ width: '100%'}} style={{margin: '0 auto'}}>
             <Box sx={{ borderColor: "divider" }}>
               <Tabs

@@ -44,7 +44,6 @@ export const LogoItem = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-
 `;
 
 export const LocalItem = styled.div`
@@ -61,8 +60,6 @@ export const LocalItem = styled.div`
       font-size: 14px;
     }
   }
-
- 
 `;
 export const PhoneItem = styled.div`
   display: flex;
@@ -75,7 +72,6 @@ export const PhoneItem = styled.div`
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
-
     span {
       font-weight: bold;
       font-size: 30px;
@@ -87,6 +83,11 @@ export const PhoneItem = styled.div`
         font-size: 20px;
       }
     }
+    @media screen and (max-width : 426px) {
+        span{
+          font-size: 15px;
+        }
+      }
   }
 
   @media only screen and (max-width: 680px) {
@@ -98,7 +99,7 @@ export const LinkItem = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  button {
+  button {    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -112,6 +113,43 @@ export const LinkItem = styled.div`
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    ::before {
+      content: "";
+      position: absolute;
+      transform: translateX(-40%) translateX(-50%);
+      display: block;
+      width: 230px;
+      left: 90%;
+      z-index: 1;
+      height: 40px;
+      border-radius: 50px;
+      animation-name: plus-borde;
+      -webkit-animation: pulse-borde 1500ms ease-out infinite;
+      animation: pulse-borde 1500ms ease-out infinite;
+
+      @media screen and (max-width : 768px) {
+        left: 97.5%;
+      }
+      @media screen and (max-width : 426px) {
+        left: 60%;
+      }
+      @media screen and (max-width : 376px) {
+        left: 68%;
+      }
+    }
+
+    @keyframes pulse-borde {
+      0% {
+        transform: translateX(-100%) translateY(-1%) translateZ(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 0px rgba(212 , 102,  92);
+      }
+      100% {
+        transform: translateX(-100%) translateY(-1%) translateZ(0) ;
+        opacity: 0;
+        box-shadow: 0px 0px 0px 20px rgba(212 , 102,  92);
+      }
+    }
 
     i {
       margin: 2px 0 0 20px;

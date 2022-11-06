@@ -16,7 +16,7 @@ const HomeInstalled = () => {
           <Next>
             <div>
               <NavLink to="#">
-                <i class="bx bx-down-arrow-circle"></i>Показать больше
+                <i class="bx bx-down-arrow-circle"></i>{t("HomeInstall.1")}
               </NavLink>
             </div>
           </Next>

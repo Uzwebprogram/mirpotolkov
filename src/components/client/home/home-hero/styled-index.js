@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContent = styled.div`
-  width: 55%;
+  width: 60%;
   margin: 50px 0 0 0;
   @media only screen and (max-width: 1042px) {
     padding: 0 40px;

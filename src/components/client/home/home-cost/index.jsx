@@ -11,7 +11,6 @@ const HomeCost = ({ isCost }) => {
   const calAdd = useRef();
   const calAdd1 = useRef();
   const calAdd2 = useRef();
-  const calAdd3 = useRef();
 
   const [calculator, setCalcutor] = useState(0);
   return (
@@ -28,7 +27,7 @@ const HomeCost = ({ isCost }) => {
                 <ButtonAdd ref={calAdd} calculator={calculator == 1} onClick={() => {
                   setCalcutor(1)
                   calAdd.current.style.display = "none"
-                }}>Добавить комнату</ButtonAdd>
+                }}>{t("HomeCost.12")}</ButtonAdd>
                 </>
                 )
             : calculator == 1
@@ -58,7 +57,7 @@ const HomeCost = ({ isCost }) => {
                 .slice(0, 4)
                 .map((elem, index) => (
                 <>
-                <HomeForm isCost={isCost} key={index} /> 
+                <HomeForm isCost={isCost} /> 
                 </>
                 ))
             : null}

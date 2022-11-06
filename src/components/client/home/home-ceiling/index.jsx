@@ -38,7 +38,7 @@ const HomeCeiling = () => {
                 <CeilItem key={index}>
                   {ValueLang() == "ru" ? <h4>{elem.titleru}</h4> : ValueLang() == "uz" ? <h4>{elem.titleuz}</h4>:  ValueLang() == "en" ? <h4>{elem.titleen}</h4>:null}
                   
-                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} width={247} height={173} alt="images" />
+                  <img src={`http://62.113.105.56:5000/static/${elem.image}`} width={247} height={173} alt="images" />
                   <Discount>
                     <DiscountItem>
                       <p>

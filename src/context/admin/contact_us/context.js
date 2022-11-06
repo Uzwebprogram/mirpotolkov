@@ -9,7 +9,7 @@ export const ContactProvider = ({children})=>{
     const [ContactMap , setContactMap] = useState([])
 
     useEffect(() => {
-        fetch("https://mebel-b.herokuapp.com/contact_us")
+        fetch("http://62.113.105.56:5000/contact_us")
         .then(res => res.json())
         .then(result => setContactMap(result))
     }, [ContactMap])

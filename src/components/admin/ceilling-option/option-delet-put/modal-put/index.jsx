@@ -15,7 +15,7 @@ function ModalPut({ handleClose, open, PutBlog }) {
       titleRu: titleru.current.value,
       titleEn: titleen.current.value
     }
-    const response = await axios.put(`https://mebel-b.herokuapp.com/ceiling_option/${id}` , req)
+    const response = await axios.put(`http://62.113.105.56:5000/ceiling_option/${id}` , req)
     console.log(response);
   };
   return (

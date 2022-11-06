@@ -38,7 +38,7 @@ const AdminChoosCard = ({ Element }) => {
             </CardHeader>
             <CardBody>
               <img
-                src={`https://mebel-b.herokuapp.com/static/${elem.image}`}
+                src={`http://62.113.105.56:5000/static/${elem.image}`}
                 width={360}
                 height={202}
                 alt="imagef"

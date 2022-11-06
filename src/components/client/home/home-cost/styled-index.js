@@ -2,11 +2,11 @@ import styled from "styled-components";
 import blueBg from "../../../../assets/images/client/backgroundblue.png";
 export const Section = styled.div`
   width: 100%;
-  background: transparent url(${blueBg}) no-repeat scroll left center / cover;
-  height:  ${props => (props.calculator ? '0px' : '540px')} 534px;
+  background: transparent url(${blueBg}) no-repeat scroll center  center / cover;
+  height:  ${props => (props.calculator ? '0px' : '534px')} 534px;
   margin-top: -100px;
   z-index: 1;
-
+  padding-bottom: 20px;
   @media only screen and (max-width: 1069px) {
     margin-top: -150px;
   }

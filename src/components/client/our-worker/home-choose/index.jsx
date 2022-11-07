@@ -4,15 +4,13 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { WrapperContainer } from "../../../style-App";
+import { WrapperContainer } from "../../../../style-App";
 import { Section } from "./styled-index";
 import "./styled-tab.css";
-import OptionDeletPutComponent from "../../../components/admin/ceilling-option/option-delet-put";
 
-import AdminChoosCard from "./adminChoosCard";
-import { ChooseContext } from "../../../context/client/choose/context";
-import ChooseModal from "../../../components/admin/ceilling-option/modal-form";
-import CategoryModal from "../../../components/admin/ceilling-option/modal-form-category";
+import ChooseCard from "./homeChoosCard";
+import { ChooseContext } from "../../../../context/client/choose/context";
+import { useTranslation } from "react-i18next";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,7 +44,7 @@ function a11yProps(index) {
   };
 }
 
-const AdminChoose = () => {
+const WorkChoose = () => {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -55,47 +53,47 @@ const AdminChoose = () => {
   function getValue() {
     return window.localStorage.getItem("i18nextLng");
   }
+  const {t, i18n} = useTranslation();
   return (
     <>
-      <Section>
-      <div style={{display: 'flex', position: 'absolute', top: '10px', right: '10px'}}>
-        <ChooseModal />
-        <CategoryModal />
-      </div>
-      <OptionDeletPutComponent/>
+      <Section id="choose">
         <WrapperContainer>
-          <Box sx={{ width: "100%" }} style={{ margin: "0 auto" }}>
+          <h2>{t("HomeChoose.0")}</h2>
+          <Box sx={{ width: '100%'}} style={{margin: '0 auto'}}>
             <Box sx={{ borderColor: "divider" }}>
               <Tabs
                 value={value}
                 onChange={handleChange}
                 variant="scrollable"
-                aria-label="icon label tabs example"
+                aria-label="scrollable prevent tabs example"
               >
                 {ChooseMap.map((elem, index) => (
                   <Tab
-                   
                     key={index}
-                    label={elem.titleru}
+                    label={
+                      getValue() == "ru"
+                        ? elem.titleru
+                        : getValue() == "en"
+                        ? elem.titleen
+                        : getValue() == "uz"
+                        ? elem.titleuz
+                        : null
+                    }
                     {...a11yProps(index)}
                   />
                 ))}
               </Tabs>
             </Box>
             {ChooseMap.map((elem, index) => (
-              <>
               <TabPanel value={value} index={index}>
-                <AdminChoosCard Element={elem} />
+                <ChooseCard ElementChoos={elem} />
               </TabPanel>
-              </>
             ))}
-
           </Box>
         </WrapperContainer>
-
       </Section>
     </>
   );
 };
 
-export default AdminChoose;
+export default WorkChoose;

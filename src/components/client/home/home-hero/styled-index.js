@@ -88,7 +88,7 @@ export const FormInBt = styled.div`
     border: none;
     border-radius: 50px;
     outline: none;
-    padding: 10px 10px 10px 35px;
+    padding: 7px 7px 7px 35px;
     background: #d4665c;
     color: #fff;
     display: flex;
@@ -100,6 +100,8 @@ export const FormInBt = styled.div`
     cursor: pointer;
     width: 100%;
     margin-left: 20px;
+    border: 8px solid #d78f88;
+    box-shadow: -2px 2px 20px 2px rgb(56 53 51 / 36%);
     i {
       font-size: 25px;
       margin-left: 20px;

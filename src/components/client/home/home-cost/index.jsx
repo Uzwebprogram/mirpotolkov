@@ -27,7 +27,7 @@ const HomeCost = ({ isCost }) => {
                 <ButtonAdd ref={calAdd} calculator={calculator == 1} onClick={() => {
                   setCalcutor(1)
                   calAdd.current.style.display = "none"
-                }}>{t("HomeCost.12")}</ButtonAdd>
+                }}>{t("HomeCost.12")}</ButtonAdd>    
                 </>
                 )
             : calculator == 1
@@ -38,7 +38,7 @@ const HomeCost = ({ isCost }) => {
                 <HomeForm isCost={isCost} /> 
                 <ButtonAdd ref={calAdd1} onClick={() => {
                   setCalcutor(2)
-                  calAdd1.current.style.display = "none"}}>Добавить комнату</ButtonAdd>
+                  calAdd1.current.style.display = "none"}}>{t("HomeCost.12")}</ButtonAdd>
                 </>
                 ))
             : calculator == 2
@@ -49,7 +49,7 @@ const HomeCost = ({ isCost }) => {
                 <HomeForm isCost={isCost} /> 
                 <ButtonAdd ref={calAdd2} onClick={() => {
                   setCalcutor(3)
-                  calAdd2.current.style.display = "none"}}>Добавить комнату</ButtonAdd>
+                  calAdd2.current.style.display = "none"}}>{t("HomeCost.12")}</ButtonAdd>
                 </>
                 ))
             : calculator == 3

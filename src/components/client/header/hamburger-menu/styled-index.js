@@ -57,7 +57,6 @@ export const Wrapper = styled.div`
         display: none;
     }
     ul li a{
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -65,10 +64,11 @@ export const Wrapper = styled.div`
         text-transform: uppercase;
         color: black;
         text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
     a:nth-child(4){
         background: #d4665c;
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
@@ -79,6 +79,8 @@ export const Wrapper = styled.div`
         padding-bottom: 19px;
         text-align: center;
         text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
  }
 `   

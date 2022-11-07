@@ -58,7 +58,7 @@ const CardInstall = () => {
               <div>
                 <h4>Заказчик: {elem.client_name_surname}</h4>
                 <p>
-                 {elem.client_comment_ru}
+                 {elem.client_comment_en}
                 </p>
               </div>
              

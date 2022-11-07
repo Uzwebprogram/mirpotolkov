@@ -68,11 +68,9 @@ export const FormGroup = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-
   @media only screen and (max-width: 820px) {
     width: 100%;
   }
-
   label {
     font-size: 22px;
     color: white;

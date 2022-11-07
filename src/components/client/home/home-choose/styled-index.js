@@ -6,20 +6,13 @@ export const Section = styled.div`
   width: 100%;
   margin-top: -150px;
   padding-top: 20px;
-  /* height: 800px; */
   background: transparent url(${grayBg1}) no-repeat scroll center top / cover;
   position: relative;
   z-index: 1;
   overflow: hidden;
-
   @media only screen and (max-width: 1142px) {
     padding: 20px 0 50px 0;
   }
-
-  /* @media only screen and (max-width: 946px) {
-    padding: 20px 0 400px 0;
-  } */
-
   div {
     h2 {
       margin: 100px 0 34px 20px;
@@ -27,9 +20,8 @@ export const Section = styled.div`
       color: #224066;
       text-align: left;
       font-weight: 200;
-
       @media only screen and (max-width: 425px) {
-        font-size: 36px;
+        font-size: 24px;
       }
     }
   }
@@ -43,12 +35,12 @@ export const CardWrapper = styled.div`
   flex-wrap: wrap;
   margin: 20px 0 0 0;
   padding: 0 0 100px 0;
-
   @media only screen and (max-width: 914px) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-right: 10px;
   }
 `;
 export const Card = styled.div`
@@ -108,12 +100,12 @@ export const CardHeader = styled.div`
 
 export const CardBody = styled.div`
   position: relative;
-
-  /* img {
-    @media only screen and (max-width: 375px) {
+  
+  img {
+    @media only screen and (max-width: 425px) {
       width: 341px;
     }
-  } */
+  }
 `;
 
 export const Prise = styled.div`
@@ -141,7 +133,11 @@ export const FlagBox = styled.div`
   align-items: center;
   justify-content: center;
   margin: 10px 0 0 50px;
-
+  img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
   @media only screen and (max-width: 914px) {
     width: 50%;
   }
@@ -183,3 +179,42 @@ export const CardFooter = styled.div`
     }
   }
 `;
+
+export const ChooseTop = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+span{
+   background: #213a66;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+@media only screen and (max-width: 426px) {
+  span{
+   background: #213a66;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+}
+`

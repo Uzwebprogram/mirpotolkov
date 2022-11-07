@@ -34,7 +34,7 @@ export const Section = styled.div`
 
       @media only screen and (max-width: 820px) {
         font-size: 36px;
-        padding: 70px 0 0 40px;
+        padding: 178px 0 0 38px;
       }
     }
   }

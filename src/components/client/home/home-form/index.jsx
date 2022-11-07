@@ -47,7 +47,7 @@ const HomeForm = ({ isText, isCost, isCount }) => {
     setCount((Number(input1.current.value) * Number(e.target.value)) *  Number(select.current.value))
   }
   const HanleChangeInput3 = (e) =>{
-    let lyustra = e.target.value * 200000
+    let lyustra = e.target.value * 50000
     setCount((Number(input1.current.value) * Number(input2.current.value)) *  Number(select.current.value) + lyustra)
   }
   const [open, setOpen] = useState(false);
@@ -81,10 +81,10 @@ const HomeForm = ({ isText, isCost, isCount }) => {
               <FormGroup>
                 <label htmlFor="inputtype">{t("HomeCost.6")}</label>
                 <select ref={select} onChange={HanleChange} name="" id="inputtype">
-                  <option value="300000">{t("HomeCost.7")}</option>
-                  <option value="150000">{t("HomeCost.8")}</option>
-                  <option value="250000">{t("HomeCost.9")}</option>
-                  <option value="500000">{t("HomeCost.10")}</option>
+                  <option value="140000">{t("HomeCost.7")}</option>
+                  <option value="140000">{t("HomeCost.8")}</option>
+                  <option value="140000">{t("HomeCost.9")}</option>
+                  <option value="300000">{t("HomeCost.10")}</option>
                 </select>
               </FormGroup>
             <ModalPhone open={open} setOpen={setOpen} handleClose={handleClose} />

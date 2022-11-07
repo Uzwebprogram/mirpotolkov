@@ -35,11 +35,11 @@ select{
     outline: none;
     position: absolute;
     top: 10px;
-    left: 43.5%;
+    left: 42%;
   }
   select:nth-child(2){
     position: absolute;
     top: 10px;
-    left: 23.5%;
+    left: 21.5%;
   }
 `

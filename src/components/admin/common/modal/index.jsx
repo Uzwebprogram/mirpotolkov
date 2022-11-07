@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 
-function ModalCommon({children , open , handleClose ,height , scroll}) {
+function ModalCommon({children , open , handleClose ,height , width ,  scroll}) {
     const style = {
         position: 'absolute',
         top: '50%',
@@ -15,7 +15,7 @@ function ModalCommon({children , open , handleClose ,height , scroll}) {
         boxShadow: 24,
         borderRadius : "10px",
         height : height,
-        width: 400,
+        width: width,
         overflowY : scroll,
       };
 

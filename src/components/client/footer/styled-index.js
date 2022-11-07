@@ -3,12 +3,15 @@ import footer from "../../../assets/images/client/footer.png";
 
 export const Section = styled.div`
   width: 100%;
-  padding-top: 87px;
+  padding-top: 197px;
   background: transparent url(${footer}) no-repeat scroll center top / cover;
   width: 100%;
   height: 250px;
   position: relative;
   z-index: 4;
+  @media only screen and (max-width: 1242px) {
+  height: 350px;
+  }
 `;
 
 export const PrivacyPolicy = styled.div`
@@ -24,7 +27,6 @@ export const PrivacyPolicy = styled.div`
 
   @media only screen and (max-width: 1242px) {
     width: 90%;
-    
     margin: 30px auto;
   }
 

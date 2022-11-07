@@ -61,6 +61,8 @@ function ChooseModal() {
         height="400px"
         handleClose={handleClose}
         open={open}
+        width={"400px"}
+
       >
         <ModalTop>
           <span>Добавить потолков</span>

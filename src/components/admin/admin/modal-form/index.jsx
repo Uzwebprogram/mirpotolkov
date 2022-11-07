@@ -13,7 +13,7 @@ function ModalForm() {
     const HandleSubmit = async (e) =>{
         e.preventDefault()
         try {
-           await fetch('https://x8ki-letl-twmt.n7.xano.io/api:it_fc8zg/auth/signup', {
+           await fetch('https://x8ki-letl-twmt.n7.xano.io/api:oMrL5JvU/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -48,7 +48,8 @@ function StretchModal() {
         <Wrapper>
         <button onClick={handleOpen}>Добавить потолков</button>
 
-        <ModalCommon scroll="scroll" height="400px"  handleClose={handleClose} open={open} >
+          
+        <ModalCommon width={"400px"} scroll="scroll" height="400px"  handleClose={handleClose} open={open} >
             <ModalTop>
                     <span>Добавить потолков</span>
                     <span onClick={handleClose}>&times;</span>

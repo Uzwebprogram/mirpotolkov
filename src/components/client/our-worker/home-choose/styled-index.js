@@ -1,13 +1,24 @@
 import styled from "styled-components";
-import grayBg1 from "../../../assets/images/client/sery1.png";
-import varBg from "../../../assets/images/client/var.png";
+import grayBg1 from "../../../../assets/images/client/sery1.png";
+import varBg from "../../../../assets/images/client/var.png";
 
 export const Section = styled.div`
   width: 100%;
-  padding-top: 100px;
+  padding-top: 20px;
+  /* height: 800px; */
+  background: transparent url(${grayBg1}) no-repeat scroll center top / cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
   @media only screen and (max-width: 1142px) {
     padding: 20px 0 50px 0;
   }
+
+  /* @media only screen and (max-width: 946px) {
+    padding: 20px 0 400px 0;
+  } */
+
   div {
     h2 {
       margin: 100px 0 34px 20px;
@@ -30,6 +41,7 @@ export const CardWrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0 0 0;
+  padding: 0 0 100px 0;
 
   @media only screen and (max-width: 914px) {
     display: flex;
@@ -83,10 +95,9 @@ export const Card = styled.div`
 `;
 
 export const CardHeader = styled.div`
-width: 80%;
   h4 {
     font-size: 20px;
-    margin: 0 50px 10px 40px;
+    margin: 0 20px 10px 40px;
     font-size: 20px;
     color: #224066;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -97,7 +108,11 @@ width: 80%;
 export const CardBody = styled.div`
   position: relative;
 
-
+  /* img {
+    @media only screen and (max-width: 375px) {
+      width: 341px;
+    }
+  } */
 `;
 
 export const Prise = styled.div`
@@ -110,6 +125,7 @@ export const Prise = styled.div`
   padding: 10px 18px;
   top: 126px;
   left: 43px;
+
   strike {
     font-size: 16px;
   }

@@ -1,14 +1,23 @@
 
+import { useContext } from "react"
+import { ContactContext } from "../../../../context/admin/contact_us/context"
+import { ChooseContext } from "../../../../context/client/choose/context"
+import { CommentContext } from "../../../../context/client/comment/context"
+import { StretchContext } from "../../../../context/client/stretch_ceilings/context"
 import {Wrapper} from "./styled-index"
 
 function CardBox() {
+    const {ChooseMap} = useContext(ChooseContext)
+    const {CommentMap} = useContext(CommentContext)
+    const {StretchMap} = useContext(StretchContext)
+    const {ContactMap} = useContext(ContactContext)
     return(
         <Wrapper>
         <div class="cardBox">
                 <div class="card">
                     <div>
-                        <div class="numbers">10</div>
-                        <div class="cardName">Команда</div>
+                        <div class="numbers">{ChooseMap.length}</div>
+                        <div class="cardName">Вариант потолков</div>
                     </div>
 
                     <div class="iconBx">
@@ -18,8 +27,8 @@ function CardBox() {
 
                 <div class="card">
                     <div>
-                        <div class="numbers">16</div>
-                        <div class="cardName">Наши работы</div>
+                        <div class="numbers">{CommentMap.length}</div>
+                        <div class="cardName">Натяжных потолков</div>
                     </div>
 
                     <div class="iconBx">
@@ -29,8 +38,8 @@ function CardBox() {
 
                 <div class="card">
                     <div>
-                        <div class="numbers">17</div>
-                        <div class="cardName">Наши клиенты</div>
+                        <div class="numbers">{StretchMap.length}</div>
+                        <div class="cardName">Примеры натяжных потолков</div>
                     </div>
 
                     <div class="iconBx">
@@ -40,8 +49,8 @@ function CardBox() {
 
                 <div class="card">
                     <div>
-                        <div class="numbers">20</div>
-                        <div class="cardName">Связаться с нами</div>
+                        <div class="numbers">{ContactMap.length}</div>
+                        <div class="cardName">Cвязаться с нами</div>
                     </div>
 
                     <div class="iconBx">

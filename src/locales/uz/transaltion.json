@@ -1,5 +1,111 @@
 {
     "Header":{
-        "0": "Salom"
+        "0": "Aktsiyalar",
+        "1": "Kalkulyator",
+        "2": "Foydalar",
+        "3": "Variantlar",
+        "4": "Bizning ishlarimiz",
+        "5": "Sharhlar",
+        "6": "Kontaktlar",
+        "7": "Biz shahar va viloyatda ishlaymiz",
+        "8": "O'lchagichni chaqirish",
+        "9": "Ish vaqti 9:00 dan 21:00 gacha"
+    },
+
+    "Home":{
+        "0": "30% gacha imtiyozli cho'zilgan shiftlar",
+        "1": "290 rubl / m2 dan - Biz sizning buyurtmangizni 5 daqiqada hisoblab chiqamiz!",
+        "2": "Telefon raqamingizni qoldiring",
+        "3": "Telefon raqami",
+        "4": "Xarajatlarni hisoblash",
+        "5": "Ushbu shaklni yuborish orqali men shaxsiy ma'lumotlarni qayta ishlashga rozilik bildiraman",
+        "6": "Biz Toshkent shaharida ishlaymiz Butun O'zbekiston bo'ylab xizmatlarimiz bor !"
+    },
+
+    "HomeCard":{
+        "0": "Aniq o'lcham",
+         "1": "Shahar bo'ylab bepul jo'nash",
+         "2": "Texnologning jo'nash uchun qulay vaqti",
+         "3": "Toza tahrirlash",
+         "4": "Biz o'zimizni tozalaymiz",
+         "5": "Biz ehtiyotkorlik bilan, ehtiyotkorlik bilan o'rnatamiz",
+         "6": "Xavfsizlik",
+         "7": "Yuqori sifatli material",
+         "8": "Texnologning jo'nash uchun qulay vaqti",
+         "9": "25 yil kafolat!",
+         "10": "Ish va material uchun kafolat",
+         "11": "15 yildan ortiq ishlagan"
+    },
+    "celing" : {
+        "0":"Qulay echimlar",
+         "1": "cho'zilgan shiftlar",
+         "2" : "Chegirma",
+         "3": "sum/m",
+         "4": "yillar",
+         "5" : "kafolatlar",
+         "6" : "O'rnatish narxi",
+         "7" : "Ko'proq",
+         "8": "soyalar",
+         "9" : "Buyurtma"
+    },
+    "HomeCeil": {
+        "0": "Arzon narxlardagi cho'zilgan ship echimlari"
+    },
+
+    "HomeCost": {
+        "0": "Tez xarajatlarni hisoblash",
+        "1": "Shift kengligi",
+         "2": "Siz bilan tez orada bog'lanadi",
+         "3": "Shift uzunligi",
+         "5": "Lyustralar soni",
+         "6": "Shift turi",
+         "7": "mat",
+         "8": "Yorqin",
+         "9": "atlas",
+         "10": "Ikki darajali",
+         "11": "sum",
+         "12":"Xona qo'shish"
+    },
+
+    "HomeAdvan":{
+        "0": "Bizning shiftlarimizning afzalliklari",
+        "1": "GO'ZAL. ZAMONAVIY DIZAYN , HAR QANDAY XONANI BEZADI",
+         "2": "TEZ. KALDIRGAN O'RNATISH 1 KUNGA CHUQ VA CHINTASIZ!",
+         "3": "AMALIY. YASSI SHIP YORIQ YO'Q - 25 YIL KAFOLAT!",
+         "4": "MUVOFIQ. ENG DAROFLI Shiftni tugatish usuli BUGUNGI KUNDA!"
+    },
+
+    "HomeCount": {
+        "0": "50% gacha chegirmali fotosuratlar chop etilgan shiftlar",
+         "1": "Aksiya aprel oyining oxirigacha amal qiladi"
+    },
+
+    "HomeInstall":{
+        "0": "Shahar va viloyatda o'rnatilgan shiftlarga misollar",
+        "1": "Ko'proq ko'rsatish"
+    },
+
+    "HomeSxema":{
+        "0": "Oddiy ish sxemasi",
+        "1": "Siz so'rov qoldirasiz, 5 daqiqadan so'ng menejerimiz siz bilan bog'lanadi",
+         "2": "Ustamiz keldi, xonani o'lchaydi",
+         "3": "Shartnoma tuzamiz, qulay usulda 50% to'laymiz",
+         "4": "O'rnatish guruhi cho'zilgan shiftlarni o'rnatadi va axlatni olib tashlaydi"
+    },
+
+    "HomeMap":{
+        "0": "Xarita"
+    },
+
+    "Footer": {
+        "0": "Maxfiylik siyosati"
+    },
+    "HomeChoose" : {
+        "0": "Shiftingiz variantini tanlang"
+    },
+    "HomeForm" :{
+        "0" : "SO'ROV QO'YING VA MENEJERIMIZ SIZGA QAYTA QO'ng'iroq qiladi",
+         "1" : "XARAJATNI HISOBLASH",
+         "2" :"Ushbu shaklni yuborish orqali men shaxsiy ma'lumotlarni qayta ishlashga roziman"
     }
 }

@@ -122,24 +122,6 @@ export const LinkItem = styled.div`
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    ::before {
-      content: "";
-      position: absolute;
-      transform: translateX(-40%) translateX(-50%);
-      display: block;
-      width: 230px;
-      left: 65.8%;
-      z-index: 1;
-      height: 40px;
-      border-radius: 50px;
-      animation-name: plus-borde;
-      -webkit-animation: pulse-borde 1500ms ease-out infinite;
-      animation: pulse-borde 1500ms ease-out infinite;
-      @media screen and (max-width : 768px) {
-        left: 99.5%;
-      }
-    }
-
     @keyframes pulse-borde {
       0% {
         transform: translateX(-100%) translateY(-1%) translateZ(0);

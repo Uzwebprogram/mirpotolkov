@@ -2,25 +2,22 @@ import { useRef, useState} from "react";
 import {Wrapper , ModalTop , Form} from "./styled-index"
 import ModalCommon from "../../../common/modal";
 function ModalPut({handleClose , open , PutBlog , Title , Element}) {
-    const titleuz  = useRef();
-    const titleen  = useRef();
-    const titleru  = useRef();
-    const money  = useRef();
-    const skidka  = useRef();
-    const shades  = useRef();
     const image  = useRef();
-    const load = useRef();
-    const [loading , setLoading] = useState(false)
-
+    const [titleuz , setTitleUz] = useState(Element)
+    const [titleen , setTitleEn] = useState(Element)
+    const [titleru , setTitleRu] = useState(Element)
+    const [money , setMoney] = useState(Element)
+    const [skidka , setSkidka] = useState(Element)
+    const [shades , setShades] = useState(Element)
     const HandleSubmit = async (e , id ) =>{
         e.preventDefault()
         let form = new FormData()
-        form.append("titleUz" , titleuz.current.value)
-        form.append("titleEn" , titleen.current.value)
-        form.append("titleRu" , titleru.current.value)
-        form.append("money" ,  money.current.value)
-        form.append("skidka" ,  skidka.current.value)
-        form.append("shades" ,  shades.current.value)
+        form.append("titleUz" , titleuz)
+        form.append("titleEn" , titleen)
+        form.append("titleRu" , titleru)
+        form.append("money" ,  money)
+        form.append("skidka" ,  skidka)
+        form.append("shades" ,  shades)
         form.append("image" ,  image.current.files[0])
         try {
            await fetch(`http://62.113.105.56:5000/stretch_ceilings/${id}`, {
@@ -29,12 +26,6 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
             })
             .then(res => res.text())
             .then(result => console.log(result));
-            e.target[0].value = null
-            e.target[1].value = null
-            e.target[2].value = null
-            e.target[3].value = null
-            e.target[4].value = null
-            e.target[5].value = null
           } catch(err) {
             console.log(err)
         }
@@ -52,12 +43,12 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
                     <span className="span-download"><ion-icon  name="cloud-download-outline"></ion-icon></span>
                 загрузить изображение
                 </label>
-                <input  ref={titleuz} type="text" placeholder={Element.titleuz}  required />
-                <input  ref={titleru} type="text" placeholder={Element.titleru}  required />
-                <input  ref={titleen} type="text" placeholder={Element.titleen} required />
-                <input  ref={money} type="text" placeholder={Element.money} required />
-                <input  ref={skidka} type="text" placeholder={Element.skidka} required />
-                <input  ref={shades} type="text" placeholder={Element.shades} required />
+                <input  type="text"  onChange={(e) => setTitleUz(e.target.value)} name="titleuz" value={titleuz.titleuz}  required />
+                <input   type="text" onChange={(e) => setTitleRu(e.target.value)}  value={titleru.titleru}  required />
+                <input   onChange={(e) => setTitleEn(e.target.value)} type="text" value={titleen.titleen} required />
+                <input  onChange={(e) => setMoney(e.target.value)} type="text" value={money.money} required />
+                <input   onChange={(e) => setSkidka(e.target.value)}  type="text" value={skidka.skidka} required />
+                <input  onChange={(e) => setShades(e.target.value)}  type="text" value={shades.shades} required />
                 <button type="submit">Сохранять</button>
             </Form>
         </ModalCommon>

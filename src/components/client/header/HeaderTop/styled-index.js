@@ -18,12 +18,10 @@ export const Section = styled.div`
 `;
 
 export const NavBar = styled.div`
-  /* width: 100%; */
   padding: 5px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   @media only screen and(max-width: 1042px) {
     display: none;
   }
@@ -91,9 +89,9 @@ export const SectionMobile = styled.div`
         width: 170px;
         height: 50px;
       }
-      @media only screen and (max-width: 425px) {
+      @media only screen and (max-width: 427px) {
         width: 170px;
-        height: 50px;
+        height: 43px;
       }
     }
   }
@@ -133,11 +131,11 @@ export const PhoneItem = styled.div`
       left: 95%;
       height: 25px;
     }
-    @media screen and (max-width: 376px) {
+    @media screen and (max-width: 396px) {
       width: 127px;
       left: 94%;
       height: 19px;
-    }
+      }
   }
 
   a {
@@ -146,14 +144,14 @@ export const PhoneItem = styled.div`
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
-    @media screen and (max-width: 376px) {
-      font-size: 11px !important;
+    @media screen and (max-width: 397px) {
+      font-size: 12px !important;
     }
     span {
       font-weight: bold;
-      font-size: 30px;
+      font-size: 25px;
 
-      @media screen and (max-width: 376px) {
+      @media screen and (max-width: 390px) {
         font-size: 11px !important;
       }
     }
@@ -163,7 +161,6 @@ export const PhoneItem = styled.div`
       span {
         font-size: 20px;
       }
-
       @keyframes pulse-bord {
         0% {
           transform: translateX(-100%) translateY(-1%) translateZ(0);

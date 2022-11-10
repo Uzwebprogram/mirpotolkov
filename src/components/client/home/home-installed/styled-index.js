@@ -130,6 +130,7 @@ export const CardHeader = styled.div`
     color: #224066;
     font-weight: 200;
     margin: 20px 0 30px;
+    text-transform: capitalize;
 
     @media only screen and (max-width: 516px) {
       font-size: 25px;
@@ -236,6 +237,7 @@ export const CardFooter = styled.div`
       font-size: 18px;
       color: #224066;
       margin-bottom: 14px;
+      text-transform: capitalize;
     }
     p {
       font-size: 18px;

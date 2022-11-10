@@ -82,7 +82,13 @@
 
     "HomeInstall":{
         "0": "Shahar va viloyatda o'rnatilgan shiftlarga misollar",
-        "1": "Ko'proq ko'rsatish"
+        "1": "Ko'proq ko'rsatish",
+        "2": "Shift yaratish",
+        "3": "kun",
+        "4": "Montaj",
+        "5": "Hajm",
+        "6": "Buyurtmachi",
+        "7": "so'm"
     },
 
     "HomeSxema":{

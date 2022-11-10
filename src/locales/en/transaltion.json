@@ -82,7 +82,13 @@
 
     "HomeInstall":{
         "0": "Examples of installed ceilings in the city and region",
-        "1": "Show more"
+        "1": "Show more",
+        "2": "Create canvas",
+         "3": "day",
+         "4": "Montaj",
+         "5": "Size",
+         "6": "Customer",
+         "7": "sum"
     },
 
     "HomeSxema":{

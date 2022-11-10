@@ -107,7 +107,9 @@
         "0": "Maxfiylik siyosati"
     },
     "HomeChoose" : {
-        "0": "Shiftingiz variantini tanlang"
+        "0": "Shiftingiz variantini tanlang",
+        "1" : "Buyurtma",
+        "2": "so'mda"
     },
     "HomeForm" :{
         "0" : "SO'ROV QO'YING VA MENEJERIMIZ SIZGA QAYTA QO'ng'iroq qiladi",

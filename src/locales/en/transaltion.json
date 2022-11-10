@@ -101,7 +101,9 @@
         "0": "Privacy Policy"
     },
     "HomeChoose":{
-        "0": "Choose your ceiling option"
+        "0": "Choose your ceiling option",
+        "1" : "Order",
+        "2": "in sum"
     },
     "HomeForm" :{
         "0" : "LEVE A REQUEST AND OUR MANAGER WILL CALL YOU BACK",

@@ -93,6 +93,7 @@ export const CardHeader = styled.div`
     margin: 0 20px 10px 40px;
     font-size: 20px;
     color: #224066;
+    text-transform: capitalize;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }

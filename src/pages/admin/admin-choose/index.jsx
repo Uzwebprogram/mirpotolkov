@@ -11,6 +11,8 @@ import OptionDeletPutComponent from "../../../components/admin/ceilling-option/o
 
 import AdminChoosCard from "./adminChoosCard";
 import { ChooseContext } from "../../../context/client/choose/context";
+import ChooseModal from "../../../components/admin/ceilling-option/modal-form";
+import CategoryModal from "../../../components/admin/ceilling-option/modal-form-category";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,11 +55,14 @@ const AdminChoose = () => {
   function getValue() {
     return window.localStorage.getItem("i18nextLng");
   }
-
-
   return (
     <>
       <Section>
+      <div style={{display: 'flex', position: 'absolute', top: '10px', right: '10px'}}>
+        <ChooseModal />
+        <CategoryModal />
+      </div>
+      <OptionDeletPutComponent/>
         <WrapperContainer>
           <Box sx={{ width: "100%" }} style={{ margin: "0 auto" }}>
             <Box sx={{ borderColor: "divider" }}>
@@ -77,7 +82,6 @@ const AdminChoose = () => {
                 ))}
               </Tabs>
             </Box>
-            <OptionDeletPutComponent/>
             {ChooseMap.map((elem, index) => (
               <>
               <TabPanel value={value} index={index}>

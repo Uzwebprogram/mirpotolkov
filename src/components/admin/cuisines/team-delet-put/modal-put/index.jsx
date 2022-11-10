@@ -20,7 +20,7 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
         form.append("shades" ,  shades.current.value)
         form.append("image" ,  image.current.files[0])
         try {
-           await fetch(`https://mebel-b.herokuapp.com/cuisine/${id}`, {
+           await fetch(`https://api.mirpotolkov.uz/cuisine/${id}`, {
                 method: 'PUT',
                 body: form
             })

@@ -9,27 +9,14 @@ import {
   FlagBox,
 } from "./styled-index";
 
-import ChooseModal from "../../../components/admin/ceilling-option/modal-form/index";
-import CategoryModal from "../../../components/admin/ceilling-option/modal-form-category/index";
 import CuinsinesDeletPutComponent from "../../../components/admin/cuisines/team-delet-put";
 
 import flag from "../../../assets/images/client/flag.png";
 
-import { ChooseContext } from "../../../context/client/choose/context";
 const AdminChoosCard = ({ Element }) => {
-  const { ChooseMap } = useContext(ChooseContext);
-  function getValue() {
-    return window.localStorage.getItem("i18nextLng");
-  }
-
-  // console.log(Element);
-
   return (
     <>
-      <div style={{display: 'flex', position: 'absolute', top: '10px', right: '10px'}}>
-        <ChooseModal />
-        <CategoryModal />
-      </div>
+
       <CardWrapper>
         {Element.cuisine?.map((elem) => (
           <Card>
@@ -38,7 +25,7 @@ const AdminChoosCard = ({ Element }) => {
             </CardHeader>
             <CardBody>
               <img
-                src={`https://mebel-b.herokuapp.com/static/${elem.image}`}
+                src={`https://api.mirpotolkov.uz/static/${elem.image}`}
                 width={360}
                 height={202}
                 alt="imagef"

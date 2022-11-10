@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     width: 80%;
     height: 100%;
-    background: #224066;
+    background: white;
     flex-direction: column;
     padding: 10px;
     left: -650px;
@@ -16,19 +16,19 @@ export const Wrapper = styled.div`
     top: 0;
     select{
         background-color: transparent;
-        color: white;
+        color: black;
         padding: 6px 8px;
         cursor: pointer;
         width: 78px;
         margin-bottom: 26px;
     }
     select option{
-        background-color: #737373;
+        background-color: white;
     }
     span{
         cursor: pointer;
         font-size: 34px;
-        color: white;
+        color: black;
         margin-left: auto;
     }
     ul{
@@ -57,18 +57,18 @@ export const Wrapper = styled.div`
         display: none;
     }
     ul li a{
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 23px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: black;
         text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
     a:nth-child(4){
         background: #d4665c;
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
@@ -79,6 +79,8 @@ export const Wrapper = styled.div`
         padding-bottom: 19px;
         text-align: center;
         text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
  }
 `   

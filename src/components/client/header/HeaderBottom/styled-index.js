@@ -44,6 +44,7 @@ export const LogoItem = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
+
 `;
 
 export const LocalItem = styled.div`
@@ -60,19 +61,19 @@ export const LocalItem = styled.div`
       font-size: 14px;
     }
   }
+
+ 
 `;
 export const PhoneItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   a {
     color: #fff;
     text-decoration: none;
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
-
     span {
       font-weight: bold;
       font-size: 30px;
@@ -84,6 +85,11 @@ export const PhoneItem = styled.div`
         font-size: 20px;
       }
     }
+    @media screen and (max-width : 426px) {
+        span{
+          font-size: 15px;
+        }
+      }
   }
 
   @media only screen and (max-width: 680px) {
@@ -95,7 +101,7 @@ export const LinkItem = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  button {
+  button {    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,8 +115,11 @@ export const LinkItem = styled.div`
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    border: 8px solid #d78f88;
-    box-shadow: -2px 2px 20px 2px rgb(56 53 51 / 36%);
+      animation: glow2 1s linear infinite;
+      -moz-animation: glow2 1s linear infinite;
+      -webkit-animation: glow2 1s linear infinite;
+      -o-animation: glow2 1s linear infinite;
+    color: #fff !important; 
 
     i {
       margin: 2px 0 0 20px;
@@ -118,4 +127,19 @@ export const LinkItem = styled.div`
       color: #fff;
     }
   }
+  @keyframes glow2 {
+  50% {
+    box-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 2vw #fff,
+      0 0 3vw #fff, 0 0 4vw #fff, 0 0 4vw #fff, 0 0 3vw #fff,
+      0 0 0.5vw #fff;
+  }
+  0%,
+  100% {
+    box-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 2vw #fff,
+      0 0 3vw #fff, 0 0 5vw #fff, 0 0 2vw #fff, 0 0 1vw #fff,
+      0 0 0.5vw #fff;
+    -webkit-box-stroke: 0.1px #fff;
+  }
+}
+
 `;

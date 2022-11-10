@@ -88,6 +88,7 @@ export const ReactPhoneInput = styled(PhoneInput)`
   }
    .form-control{
     padding-right: 0px !important;
+    padding-left: 61px;
   }
   .selected-flag{
     background-color: #d4665c !important;
@@ -99,7 +100,7 @@ export const ReactPhoneInput = styled(PhoneInput)`
     background-color: #d4665c !important;
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
-   color: white !important;
+    color: white !important;
   }
   .country-list .country{
     background-color: #d4665c !important;
@@ -108,7 +109,7 @@ export const ReactPhoneInput = styled(PhoneInput)`
     color: white;
   }
   .react-tel-input .flag-dropdown.open{
-   border-bottom-left-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
     border-top-left-radius: 25px !important;
   }
 `

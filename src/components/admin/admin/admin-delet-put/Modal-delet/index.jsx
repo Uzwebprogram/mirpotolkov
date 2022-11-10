@@ -13,7 +13,7 @@ function ModalDelete({open , HandleClose , DeleteId}) {
     };
     return(
         <Wrapper>
-                    <ModalCommon  open={open} handleClose={HandleClose}>
+                    <ModalCommon  width={"320px"} open={open} handleClose={HandleClose}>
                 <ModalContent>
                 <h3>Вы уверены, что хотите удалить данные?</h3>
                     <Buttons>

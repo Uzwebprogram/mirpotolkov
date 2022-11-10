@@ -40,7 +40,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
     formData.append("avatar_image", avatarimage.current.files[0]);
     formData.append("money", moneys.current.value);
     try {
-      await fetch(`https://mebel-b.herokuapp.com/client_comment/${id}`, {
+      await fetch(`https://api.mirpotolkov.uz/client_comment/${id}`, {
         method: "PUT",
         body: formData,
       })
@@ -106,7 +106,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <input type="text" placeholder={Element.titleen} ref={titleen} />
           <input type="text" placeholder={Element.client_comment_uz} ref={clientcommentuz} />
           <input type="text" placeholder={Element.client_comment_en} ref={clientcommenten} />
-          <input type="text" placeholder={Element.client_comment_en} ref={clientcommentru} />
+          <input type="text" placeholder={Element.client_comment_ru} ref={clientcommentru} />
           <input type="text" placeholder={Element.client_name_surname} ref={clientnamesurname} />
           <input type="text" placeholder={Element.money} ref={moneys} />
           <input type="text" placeholder={Element.mounting} ref={mounting} />

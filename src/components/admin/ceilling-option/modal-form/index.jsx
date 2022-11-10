@@ -34,7 +34,7 @@ function ChooseModal() {
     form.append("image", image.current.files[0]);
     form.append("ceiling_id", Number(ceilingId))
     try {
-      await fetch("https://mebel-b.herokuapp.com/cuisine", {
+      await fetch("https://api.mirpotolkov.uz/cuisine", {
         method: "POST",
         body: form,
       })
@@ -61,6 +61,8 @@ function ChooseModal() {
         height="400px"
         handleClose={handleClose}
         open={open}
+        width={"400px"}
+
       >
         <ModalTop>
           <span>Добавить потолков</span>

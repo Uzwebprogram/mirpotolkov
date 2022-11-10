@@ -43,11 +43,10 @@ function CommentModal() {
     formData.append("creating_canvas", creatingCanvas.current.value);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
-    const res = await fetch("https://mebel-b.herokuapp.com/client_comment", {
+    const res = await fetch("https://api.mirpotolkov.uz/client_comment", {
       method: "POST",
       body: formData,
     });
-
     let x= await res.json();
     e.target[0].value = null;
     e.target[1].value = null;
@@ -62,8 +61,6 @@ function CommentModal() {
     e.target[10].value = null;
     e.target[11].value = null;
     e.target[12].value = null;
-
-
     console.log(x);
   };
 
@@ -76,6 +73,7 @@ function CommentModal() {
           height="400px"
           handleClose={handleClose}
           open={open}
+          width={"400px"}
         >
           <ModalTop>
             <span>Добавить потолков</span>
@@ -110,17 +108,17 @@ function CommentModal() {
 
 
 
-            <input type="text" placeholder="tuz" ref={titleuz} />
-            <input type="text" placeholder="tru" ref={titleru} />
-            <input type="text" placeholder="ten" ref={titleen} />
-            <input type="text" placeholder="comuz" ref={clientcommentuz} />
-            <input type="text" placeholder="comen" ref={clientcommenten} />
-            <input type="text" placeholder="comre" ref={clientcommentru} />
-            <input type="text" placeholder="fname" ref={clientnamesurname} />
-            <input type="text" placeholder="mounting" ref={mounting} />
-            <input type="text" placeholder="volume" ref={volume} />
-            <input type="text" placeholder="ccanvas" ref={creatingCanvas} />
-            <input type="text" placeholder="money" ref={money} />
+            <input type="text" placeholder="потолоков уз" ref={titleuz} />
+            <input type="text" placeholder="потолоков ру" ref={titleru} />
+            <input type="text" placeholder="потолоков ен" ref={titleen} />
+            <input type="text" placeholder="Заказчик комментарий уз" ref={clientcommentuz} />
+            <input type="text" placeholder="Заказчик комментарий ру" ref={clientcommentru} />
+            <input type="text" placeholder="Заказчик комментарий ен" ref={clientcommenten} />
+            <input type="text" placeholder="Заказчик имя фамилия" ref={clientnamesurname} />
+            <input type="text" placeholder="Монтаж" ref={mounting} />
+            <input type="text" placeholder="Объем" ref={volume} />
+            <input type="text" placeholder="Создание полотна" ref={creatingCanvas} />
+            <input type="text" placeholder="Сум" ref={money} />
             <button type="submit">Сохранять</button>
           </Form>
         </ModalCommon>

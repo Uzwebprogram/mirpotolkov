@@ -21,13 +21,13 @@ const ChoosCard = ({ElementChoos}) => {
     <>
       <CardWrapper>
       <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
-        {ElementChoos?.cuisine.map((elem) => (
+        {ElementChoos?.cuisine.slice(0,6).map((elem) => (
           <Card>
             <CardHeader>
-              <h4>{getValue() == "ru" ? elem.titleCuisineRu: getValue() == "en" ? elem.titleCuisineEn: getValue() == "uz" ? elem.titleCuisineUz:null}</h4>
+              <h4>{getValue() == "ru" ? elem.titlecuisineru: getValue() == "en" ? elem.titlecuisineen: getValue() == "uz" ? elem.titlecuisineuz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} width={360} height={202} alt="image" />
+              <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="image" />
               <Prise>
                 <strike>от сум</strike>
                 <br />

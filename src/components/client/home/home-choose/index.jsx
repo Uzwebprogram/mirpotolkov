@@ -5,11 +5,13 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { WrapperContainer } from "../../../../style-App";
-import { Section } from "./styled-index";
+import { ChooseTop, Section } from "./styled-index";
 import "./styled-tab.css";
 
 import ChoosCard from "./homeChoosCard";
 import { ChooseContext } from "../../../../context/client/choose/context";
+import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,11 +54,15 @@ const HomeChoose = () => {
   function getValue() {
     return window.localStorage.getItem("i18nextLng");
   }
+  const {t, i18n} = useTranslation();
   return (
     <>
       <Section id="choose">
         <WrapperContainer>
-          <h2>Выбери свой вариант потолков</h2>
+          <ChooseTop>
+          <h2>{t("HomeChoose.0")}</h2>
+          <NavLink to={"/ourworks"} style={{textDecoration:"none" , marginTop:"75px"}} ><span>{t("HomeInstall.1")}</span></NavLink>
+          </ChooseTop>
           <Box sx={{ width: '100%'}} style={{margin: '0 auto'}}>
             <Box sx={{ borderColor: "divider" }}>
               <Tabs

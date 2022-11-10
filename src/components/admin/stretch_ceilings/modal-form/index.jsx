@@ -26,7 +26,7 @@ function StretchModal() {
         form.append("shades" ,  shades.current.value)
         form.append("image" ,  image.current.files[0])
         try {
-           await fetch('https://mebel-b.herokuapp.com/stretch_ceilings', {
+           await fetch('https://api.mirpotolkov.uz/stretch_ceilings', {
                 method: 'POST', 
                 body: form,
             })
@@ -46,9 +46,10 @@ function StretchModal() {
 
     return(
         <Wrapper>
-        <button onClick={handleOpen}>Добавить работника</button>
+        <button onClick={handleOpen}>Добавить потолков</button>
 
-        <ModalCommon scroll="scroll" height="400px"  handleClose={handleClose} open={open} >
+          
+        <ModalCommon width={"400px"} scroll="scroll" height="400px"  handleClose={handleClose} open={open} >
             <ModalTop>
                     <span>Добавить потолков</span>
                     <span onClick={handleClose}>&times;</span>

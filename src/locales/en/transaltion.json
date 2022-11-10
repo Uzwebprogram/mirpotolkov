@@ -7,19 +7,19 @@
         "4": "Our works",
         "5": "Reviews",
         "6": "Contacts",
-        "7": "We work in the city and region",
+        "7": "We work throughout Uzbekistan",
         "8": "Call measurer",
         "9": "Working hours from 9:00 to 21:00"
     },
 
     "Home": {
         "0": "Stretch ceilings with benefits up to 30%",
-        "1": "From 290 rubles/m2 - We will calculate your order in 5 minutes!",
+        "1": "- Consultation on the choice and installation of the ceiling - Measurement of the room - Conclusion of the contract and placing an order at your home",
         "2": "Just leave your phone number",
         "3": "Phone number",
         "4": "Calculate cost",
         "5": "By submitting this form, I agree to the processing of personal data",
-        "6": "We work in Tver, Tver region, Moscow and Moscow region"
+        "6": "We work in Tashkent. We have services all over Uzbekistan!"
     },
 
     "HomeCard": {
@@ -32,9 +32,9 @@
          "6": "Security",
          "7": "High quality material",
          "8": "Convenient time of departure of the technologist",
-         "9": "10 year warranty!",
+         "9": "25 year warranty!",
          "10": "Warranty for work and material",
-         "11": "Working for over 10 years"
+         "11": "Working for over 15 years"
     },
     "celing":{
         "0":"Favorable solutions",
@@ -53,15 +53,26 @@
     },
 
     "HomeCost": {
-        "0": "Quick cost calculation"
+        "0": "Quick cost calculation",
+        "1": "Ceiling width",
+         "2": "You will be contacted shortly",
+         "3": "Ceiling length",
+         "5": "Number of chandeliers",
+         "6": "Ceiling type",
+         "7": "Matte",
+         "8": "Glossy",
+         "9": "Satin",
+         "10": "Two-level",
+         "11": "Sum",
+         "12" :"Add room"
     },
 
     "HomeAdvan":{
         "0": "The advantages of our ceilings",
-        "1": "The amount after the conclusion of the contract does not change",
-         "2": "One of the lowest prices in the city and profitable promotions",
-         "3": "Guarantee for all works 10 years",
-         "4": "Free maintenance for 3 years"
+        "1": "BEAUTIFUL. MODERN DESIGN , DECORATES ANY ROOM ",
+        "2": "FAST. TURNKEY INSTALLATION WITHOUT DUST AND GARBAGE FOR 1 DAY!",
+        "3": "PRACTICAL. FLAT CEILING NO CRACKS - GUARANTEE 25 YEARS!",
+        "4": "FAVORABLE. MOST PROFITABLE CEILING FINISHING METHOD TO DATE!"
     },
 
     "HomeCount": {
@@ -70,14 +81,15 @@
     },
 
     "HomeInstall":{
-        "0": "Examples of installed ceilings in the city and region"
+        "0": "Examples of installed ceilings in the city and region",
+        "1": "Show more"
     },
 
     "HomeSxema":{
         "0": "Simple operation scheme",
-        "1": "You leave a request, we will call you back in 5 minutes",
+        "1": "You leave a request, after 5 minutes our manager will contact you",
          "2": "Our master arrives, measures the room",
-         "3": "We conclude a contract, pay 5-10% in a convenient way",
+         "3": "We conclude a contract, pay 50% in a convenient way",
          "4": "The installation team installs stretch ceilings and takes out the garbage"
     },
 
@@ -87,5 +99,16 @@
 
     "Footer": {
         "0": "Privacy Policy"
+    },
+    "HomeChoose":{
+        "0": "Choose your ceiling option"
+    },
+    "HomeForm" :{
+        "0" : "LEVE A REQUEST AND OUR MANAGER WILL CALL YOU BACK",
+        "1" : "CALCULATE COST",
+        "2" :"By submitting this form, I agree to the processing of personal data"
+    },
+    "Fixed" : {
+        "0" : "«Track your order»"
     }
 }

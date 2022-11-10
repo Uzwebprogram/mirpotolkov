@@ -24,35 +24,13 @@ function CategoryModal() {
       titleRu: titleru.current.value,
       titleEn: titleen.current.value
     }
-    const response = await axios.post("https://mebel-b.herokuapp.com/ceiling_option" , req)
+    const response = await axios.post("https://api.mirpotolkov.uz/ceiling_option" , req)
     // if (response) {
     // }
     console.log(response);
   }
 
 
- 
-  // const HandleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   let form = new FormData();
-  //   form.append("titleUz", titleuz.current.value);
-  //   form.append("titleRu", titleru.current.value);
-  //   form.append("titleEn", titleen.current.value);
-   
-  //   try {
-  //     await fetch("https://mebel-b.herokuapp.com/ceiling_option", {
-  //       method: "POST",
-  //       body: form,
-  //     })
-  //       .then((res) => res.text())
-  //       .then((result) => console.log(result));
-  //     e.target[0].value = null;
-  //     e.target[1].value = null;
-  //     e.target[2].value = null;
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
 
   return (
     <Wrapper>

@@ -4,22 +4,10 @@ import varBg from "../../../assets/images/client/var.png";
 
 export const Section = styled.div`
   width: 100%;
-  /* margin-top: -150px; */
   padding-top: 100px;
-  /* height: 800px; */
-  /* background: transparent url(${grayBg1}) no-repeat scroll center top / cover;
-  position: relative;
-  z-index: 1;
-  overflow: hidden; */
-
   @media only screen and (max-width: 1142px) {
     padding: 20px 0 50px 0;
   }
-
-  /* @media only screen and (max-width: 946px) {
-    padding: 20px 0 400px 0;
-  } */
-
   div {
     h2 {
       margin: 100px 0 34px 20px;
@@ -42,7 +30,6 @@ export const CardWrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0 0 0;
-  /* padding: 0 0 100px 0; */
 
   @media only screen and (max-width: 914px) {
     display: flex;
@@ -110,11 +97,7 @@ width: 80%;
 export const CardBody = styled.div`
   position: relative;
 
-  /* img {
-    @media only screen and (max-width: 375px) {
-      width: 341px;
-    }
-  } */
+
 `;
 
 export const Prise = styled.div`
@@ -127,7 +110,6 @@ export const Prise = styled.div`
   padding: 10px 18px;
   top: 126px;
   left: 43px;
-
   strike {
     font-size: 16px;
   }
@@ -142,7 +124,11 @@ export const FlagBox = styled.div`
   align-items: center;
   justify-content: center;
   margin: 10px 0 0 50px;
-
+  img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
   @media only screen and (max-width: 914px) {
     width: 50%;
   }

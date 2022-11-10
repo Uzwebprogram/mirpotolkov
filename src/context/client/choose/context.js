@@ -9,7 +9,7 @@ export const ChooseProvider = ({children})=>{
     const [ChooseMap , setChooseMap] = useState([])
 
     useEffect(() => {
-        fetch("https://mebel-b.herokuapp.com/ceiling_option")
+        fetch("https://api.mirpotolkov.uz/ceiling_option")
         .then(res => res.json())
         .then(result => setChooseMap(result))
     }, [ChooseMap])

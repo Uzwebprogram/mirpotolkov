@@ -1,10 +1,16 @@
-import { style } from "@mui/system";
 import styled from "styled-components";
 import primer from "../../../../assets/images/client/primer.png";
 
 export const Section = styled.div`
   width: 100%;
   div {
+    button{
+      border: transparent;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+    }
     h2 {
       margin-top: 120px;
       font-size: 46px;
@@ -33,7 +39,6 @@ export const Next = styled.div`
   background: #eeedf2;
   border-radius: 50px;
   padding: 10px;
-
   @media only screen and (max-width: 1118px) {
     width: 90%;
     margin: 0 auto;
@@ -45,6 +50,7 @@ export const Next = styled.div`
   }
 
   div {
+    width: 100%;
     a {
       display: flex;
       align-items: center;

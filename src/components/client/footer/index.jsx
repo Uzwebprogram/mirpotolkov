@@ -9,7 +9,15 @@ function Footer() {
         <WrapperContainer>
           <HeaderBottom logoWhite />
           <PrivacyPolicy>
-            <NavLink to="#">Политика конфиденциальности</NavLink>
+            <a href="https://www.facebook.com/mirpotolkovvuz">
+            <i class='bx bxl-facebook-circle'></i>
+            </a>
+            <a href="https://www.instagram.com/mirpotolkovuz/">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="https://t.me/mirpotolkov">
+              <i class="bx bxl-telegram"></i>
+            </a>
           </PrivacyPolicy>
         </WrapperContainer>
       </Section>

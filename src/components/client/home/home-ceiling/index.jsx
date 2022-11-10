@@ -38,11 +38,11 @@ const HomeCeiling = () => {
                 <CeilItem key={index}>
                   {ValueLang() == "ru" ? <h4>{elem.titleru}</h4> : ValueLang() == "uz" ? <h4>{elem.titleuz}</h4>:  ValueLang() == "en" ? <h4>{elem.titleen}</h4>:null}
                   
-                  <img src={`https://mebel-b.herokuapp.com/static/${elem.image}`} width={247} height={173} alt="images" />
+                  <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={247} height={173} alt="images" />
                   <Discount>
                     <DiscountItem>
                       <p>
-                      {t("celing.2")} {elem.skidka}
+                      {t("celing.2")} {elem.skidka}%
                         <br />
                         <span>
                         {elem.money} {t("celing.3")} <sup>2</sup>
@@ -52,7 +52,7 @@ const HomeCeiling = () => {
                     <DiscountItem>
                       <i class="bx bxs-check-shield"></i>
                       <p>
-                        <span>30 {t("celing.4")}</span> <br />
+                        <span>25 {t("celing.4")}</span> <br />
                          {t("celing.5")}
                       </p>
                     </DiscountItem>

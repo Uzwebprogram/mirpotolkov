@@ -45,7 +45,14 @@ export const CardSxemaWrapper = styled.div`
 
 export const CardSxema = styled.div`
   width: 211px;
-
+  img{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-top-left-radius: 5px  ;
+    border-top-right-radius: 30px  ;
+    border-bottom-right-radius: 30px  ;
+    border-bottom-left-radius: 30px  ;
+    background-color: white;
+  }
   @media only screen and (max-width: 840px) {
     width: 45%;
   }

@@ -6,6 +6,8 @@ export const Section = styled.div`
   z-index: 9999999;
   right: 0;
   left: 0;
+  top: 0;
+    padding: 5px 0;
   background-color: #fff;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   @media only screen and (max-width: 1042px) {
@@ -18,12 +20,10 @@ export const Section = styled.div`
 `;
 
 export const NavBar = styled.div`
-  /* width: 100%; */
   padding: 5px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   @media only screen and(max-width: 1042px) {
     display: none;
   }
@@ -91,9 +91,13 @@ export const SectionMobile = styled.div`
         width: 170px;
         height: 50px;
       }
-      @media only screen and (max-width: 425px) {
+      @media only screen and (max-width: 427px) {
         width: 170px;
-        height: 50px;
+        height: 43px;
+      }
+      @media screen and (max-width: 372px) {
+        width: 160px;
+        height: 37px;
       }
     }
   }
@@ -107,5 +111,69 @@ export const SectionMobile = styled.div`
       font-size: 35px;
       color: #224066;
     }
+  }
+`;
+
+export const PhoneItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: glow 1s linear infinite;
+  -moz-animation: glow 1s linear infinite;
+  -webkit-animation: glow 1s linear infinite;
+  -o-animation: glow 1s linear infinite;
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 7px;
+    font-weight: bold;
+    font-size: 20px;
+    @media screen and (max-width: 397px) {
+      font-size: 12px !important;
+    }
+    span {
+      font-weight: bold;
+      font-size: 25px;
+
+      @media screen and (max-width: 390px) {
+        font-size: 11px !important;
+      }
+      @media screen and (max-width: 372px) {
+        font-size: 10px !important;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+      span {
+        font-size: 20px;
+      }
+    }
+    @media screen and (max-width: 426px) {
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+  @keyframes glow {
+  50% {
+    box-shadow: 0 0 0.5vw #4a71a3, 0 0 4vw #4a71a3, 0 0 5vw #4a71a3,
+      0 0 7vw #4a71a3, 0 0 8vw #4a71a3, 0 0 9vw #4a71a3, 0 0 6vw #4a71a3,
+      0 0 0.5vw #4a71a3;
+    color: #4a71a3;
+  }
+  0%,
+  100% {
+    box-shadow: 0 0 0.5vw #4a71a3, 0 0 1vw #4a71a3, 0 0 2vw #4a71a3,
+      0 0 3vw #4a71a3, 0 0 5vw #4a71a3, 0 0 2vw #4a71a3, 0 0 1vw #4a71a3,
+      0 0 0.5vw #4a71a3;
+    color: #4a71a3;
+    -webkit-box-stroke: 0.1px #4a71a3;
+  }
+}
+
+
+  @media only screen and (max-width: 680px) {
+    margin: 10px 0;
   }
 `;

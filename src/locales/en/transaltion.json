@@ -7,14 +7,14 @@
         "4": "Our works",
         "5": "Reviews",
         "6": "Contacts",
-        "7": "We work in the city and region",
+        "7": "We work throughout Uzbekistan",
         "8": "Call measurer",
         "9": "Working hours from 9:00 to 21:00"
     },
 
     "Home": {
         "0": "Stretch ceilings with benefits up to 30%",
-        "1": "From 290 rubles/m2 - We will calculate your order in 5 minutes!",
+        "1": "- Consultation on the choice and installation of the ceiling - Measurement of the room - Conclusion of the contract and placing an order at your home",
         "2": "Just leave your phone number",
         "3": "Phone number",
         "4": "Calculate cost",
@@ -107,5 +107,8 @@
         "0" : "LEVE A REQUEST AND OUR MANAGER WILL CALL YOU BACK",
         "1" : "CALCULATE COST",
         "2" :"By submitting this form, I agree to the processing of personal data"
+    },
+    "Fixed" : {
+        "0" : "«Track your order»"
     }
 }

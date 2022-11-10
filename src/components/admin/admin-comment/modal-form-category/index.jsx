@@ -24,7 +24,7 @@ function CategoryModal() {
       titleRu: titleru.current.value,
       titleEn: titleen.current.value
     }
-    const response = await axios.post("http://62.113.105.56:5000/ceiling_option" , req)
+    const response = await axios.post("https://api.mirpotolkov.uz/ceiling_option" , req)
     console.log(response);
   }
 

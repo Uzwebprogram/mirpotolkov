@@ -26,7 +26,7 @@ function StretchModal() {
         form.append("shades" ,  shades.current.value)
         form.append("image" ,  image.current.files[0])
         try {
-           await fetch('http://62.113.105.56:5000/stretch_ceilings', {
+           await fetch('https://api.mirpotolkov.uz/stretch_ceilings', {
                 method: 'POST', 
                 body: form,
             })

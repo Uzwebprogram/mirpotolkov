@@ -54,8 +54,7 @@ const HeaderTop = ({ HandleClick }) => {
             marginRight: "20px",
           }}
         >
-         
-          <a href="tel:+99897750-11-33">
+          <a class="neon" href="tel:+99897750-11-33">
             +99897 <span>750-11-33</span>
           </a>
         </PhoneItem>

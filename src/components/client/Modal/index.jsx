@@ -26,7 +26,7 @@ const ModalPhone = ({ open, setOpen, handleClose }) => {
     const req = {
       telephone : numberValue
     }
-    const response = await axios.post("http://62.113.105.56:5000/contact_us" , req)
+    const response = await axios.post("https://api.mirpotolkov.uz/contact_us" , req)
     if (response) {
       setOpen(false)
     }

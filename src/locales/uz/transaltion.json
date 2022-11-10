@@ -7,14 +7,14 @@
         "4": "Bizning ishlarimiz",
         "5": "Sharhlar",
         "6": "Kontaktlar",
-        "7": "Biz shahar va viloyatda ishlaymiz",
+        "7": "Biz butun O'zbekiston bo'ylab ishlaymiz",
         "8": "O'lchagichni chaqirish",
         "9": "Ish vaqti 9:00 dan 21:00 gacha"
     },
 
     "Home":{
         "0": "30% gacha imtiyozli cho'zilgan shiftlar",
-        "1": "290 rubl / m2 dan - Biz sizning buyurtmangizni 5 daqiqada hisoblab chiqamiz!",
+        "1": "- Shiftni tanlash va o'rnatish bo'yicha maslahat - Xonani o'lchash - Shartnoma tuzish va uyingizda buyurtma berish",
         "2": "Telefon raqamingizni qoldiring",
         "3": "Telefon raqami",
         "4": "Xarajatlarni hisoblash",
@@ -107,5 +107,8 @@
         "0" : "SO'ROV QO'YING VA MENEJERIMIZ SIZGA QAYTA QO'ng'iroq qiladi",
          "1" : "XARAJATNI HISOBLASH",
          "2" :"Ushbu shaklni yuborish orqali men shaxsiy ma'lumotlarni qayta ishlashga roziman"
+    },
+    "Fixed" : {
+        "0" : "«Buyurtmangizni kuzatib boring»"
     }
 }

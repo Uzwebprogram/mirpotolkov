@@ -6,6 +6,8 @@ export const Section = styled.div`
   z-index: 9999999;
   right: 0;
   left: 0;
+  top: 0;
+    padding: 5px 0;
   background-color: #fff;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   @media only screen and (max-width: 1042px) {
@@ -93,6 +95,10 @@ export const SectionMobile = styled.div`
         width: 170px;
         height: 43px;
       }
+      @media screen and (max-width: 372px) {
+        width: 160px;
+        height: 37px;
+      }
     }
   }
 
@@ -112,32 +118,10 @@ export const PhoneItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ::before {
-    content: "";
-    position: absolute;
-    transform: translateX(-40%) translateX(-50%);
-    display: block;
-    width: 180px;
-    left: 97%;
-    z-index: 1;
-    height: 30px;
-    border-radius: 10px;
-    animation-name: plus-bord;
-    -webkit-animation: pulse-bord 1500ms ease-out infinite;
-    animation: pulse-bord 1500ms ease-out infinite;
-
-    @media screen and (max-width: 426px) {
-      width: 159px;
-      left: 95%;
-      height: 25px;
-    }
-    @media screen and (max-width: 396px) {
-      width: 127px;
-      left: 94%;
-      height: 19px;
-      }
-  }
-
+  animation: glow 1s linear infinite;
+  -moz-animation: glow 1s linear infinite;
+  -webkit-animation: glow 1s linear infinite;
+  -o-animation: glow 1s linear infinite;
   a {
     color: #fff;
     text-decoration: none;
@@ -154,24 +138,15 @@ export const PhoneItem = styled.div`
       @media screen and (max-width: 390px) {
         font-size: 11px !important;
       }
+      @media screen and (max-width: 372px) {
+        font-size: 10px !important;
+      }
     }
 
     @media only screen and (max-width: 768px) {
       font-size: 14px;
       span {
         font-size: 20px;
-      }
-      @keyframes pulse-bord {
-        0% {
-          transform: translateX(-100%) translateY(-1%) translateZ(0);
-          opacity: 1;
-          box-shadow: 0px 0px 0px 0px #224066;
-        }
-        100% {
-          transform: translateX(-100%) translateY(-1%) translateZ(0);
-          opacity: 0;
-          box-shadow: 0px 0px 0px 20px #224066;
-        }
       }
     }
     @media screen and (max-width: 426px) {
@@ -180,6 +155,23 @@ export const PhoneItem = styled.div`
       }
     }
   }
+  @keyframes glow {
+  50% {
+    box-shadow: 0 0 0.5vw #4a71a3, 0 0 4vw #4a71a3, 0 0 5vw #4a71a3,
+      0 0 7vw #4a71a3, 0 0 8vw #4a71a3, 0 0 9vw #4a71a3, 0 0 6vw #4a71a3,
+      0 0 0.5vw #4a71a3;
+    color: #4a71a3;
+  }
+  0%,
+  100% {
+    box-shadow: 0 0 0.5vw #4a71a3, 0 0 1vw #4a71a3, 0 0 2vw #4a71a3,
+      0 0 3vw #4a71a3, 0 0 5vw #4a71a3, 0 0 2vw #4a71a3, 0 0 1vw #4a71a3,
+      0 0 0.5vw #4a71a3;
+    color: #4a71a3;
+    -webkit-box-stroke: 0.1px #4a71a3;
+  }
+}
+
 
   @media only screen and (max-width: 680px) {
     margin: 10px 0;

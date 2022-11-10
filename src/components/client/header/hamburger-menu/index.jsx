@@ -14,12 +14,6 @@ function HamburgerMenu({HamburgerClick , HandleClickClose}) {
       }
       const data = [
           {
-              id : 1, 
-              title : "Header.0",
-              link : "#calculator",
-  
-          },
-          {
               id : 2, 
               title : "Header.1",
               link : "#calculator",

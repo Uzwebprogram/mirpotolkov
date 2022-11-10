@@ -43,7 +43,7 @@ function CommentModal() {
     formData.append("creating_canvas", creatingCanvas.current.value);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
-    const res = await fetch("http://62.113.105.56:5000/client_comment", {
+    const res = await fetch("https://api.mirpotolkov.uz/client_comment", {
       method: "POST",
       body: formData,
     });

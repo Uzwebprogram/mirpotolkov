@@ -3,7 +3,7 @@ import { Wrapper , ModalContent , Buttons } from "./styled-index"
 
 function ModalDelete({open , HandleClose , DeleteId}) {
     const DeleteBlog = (DeleteId) => {
-      const response = fetch(`http://62.113.105.56:5000/stretch_ceilings/${DeleteId}`, {
+      const response = fetch(`https://api.mirpotolkov.uz/stretch_ceilings/${DeleteId}`, {
             method: "DELETE",
         }).catch((DeleteId) => console.error(DeleteId));
         console.log(response);

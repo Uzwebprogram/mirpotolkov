@@ -27,7 +27,7 @@ const ChooseCard = ({ElementChoos}) => {
               <h4>{getValue() == "ru" ? elem.titlecuisineru: getValue() == "en" ? elem.titlecuisineen: getValue() == "uz" ? elem.titlecuisineuz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={`http://62.113.105.56:5000/static/${elem.image}`} width={360} height={202} alt="image" />
+              <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="image" />
               <FlagBox>
                 <img src={flag} alt="image" />
                 <p>{getValue() == "ru" ? elem.descriptionru: getValue() == "en" ? elem.descriptionen: getValue() == "uz" ? elem.descriptionuz:null}</p>

@@ -68,7 +68,6 @@ export const PhoneItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   a {
     color: #fff;
     text-decoration: none;
@@ -116,6 +115,11 @@ export const LinkItem = styled.div`
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      animation: glow2 1s linear infinite;
+      -moz-animation: glow2 1s linear infinite;
+      -webkit-animation: glow2 1s linear infinite;
+      -o-animation: glow2 1s linear infinite;
+    color: #fff !important; 
 
     i {
       margin: 2px 0 0 20px;
@@ -123,4 +127,19 @@ export const LinkItem = styled.div`
       color: #fff;
     }
   }
+  @keyframes glow2 {
+  50% {
+    box-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 2vw #fff,
+      0 0 3vw #fff, 0 0 4vw #fff, 0 0 4vw #fff, 0 0 3vw #fff,
+      0 0 0.5vw #fff;
+  }
+  0%,
+  100% {
+    box-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 2vw #fff,
+      0 0 3vw #fff, 0 0 5vw #fff, 0 0 2vw #fff, 0 0 1vw #fff,
+      0 0 0.5vw #fff;
+    -webkit-box-stroke: 0.1px #fff;
+  }
+}
+
 `;

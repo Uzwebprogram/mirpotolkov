@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import footer from "../../../assets/images/client/footer.png";
+import footer from "../../../assets/images/client/footer.svg";
 
 export const Section = styled.div`
   width: 100%;
@@ -16,7 +16,7 @@ export const Section = styled.div`
 
 export const PrivacyPolicy = styled.div`
   width: 100%;
-  background: #2b313f;
+  /* background: #2b313f; */
   display: flex;
   align-content: center;
   justify-content: center;
@@ -31,8 +31,10 @@ export const PrivacyPolicy = styled.div`
   }
 
   a {
-    color: #337ab7;
+    color: #fff;
     text-decoration: none;
+    font-size: 30px;
+    margin: 0 8px;
   }
 
   a:hover {

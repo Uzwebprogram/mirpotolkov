@@ -23,6 +23,7 @@ export const ButtonOk = styled.div`
   color: #fff;
   background: #d4665c;
   border-radius: 31px;
+  cursor: pointer;
   box-shadow: -2px 2px 20px 2px rgb(56 53 51 / 36%);
   cursor: pointer;
   display: block;
@@ -62,6 +63,7 @@ export const ButtonAdd = styled.button`
   color: #fff;
   position: relative;
   bottom: 167px;
+  cursor: pointer;
 `;
 
 export const FormGroup = styled.div`
@@ -116,29 +118,36 @@ export const LinkItem = styled.div`
     border: none;
     outline: none;
     background: #d4665c;
-    color: #fff;
     border-radius: 50px;
     font-weight: 500;
     text-transform: uppercase;
+    color: #fff !important; 
+    cursor: pointer;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    @keyframes pulse-borde {
-      0% {
-        transform: translateX(-100%) translateY(-1%) translateZ(0);
-        opacity: 1;
-        box-shadow: 0px 0px 0px 0px rgba(212, 102, 92);
-      }
-      100% {
-        transform: translateX(-100%) translateY(-1%) translateZ(0);
-        opacity: 0;
-        box-shadow: 0px 0px 0px 20px rgba(212, 102, 92);
-      }
-    }
-
+      animation: glow3 1s linear infinite;
+      -moz-animation: glow3 1s linear infinite;
+      -webkit-animation: glow3 1s linear infinite;
+      -o-animation: glow3 1s linear infinite;
     i {
       margin: 2px 0 0 20px;
       font-size: 25px;
       color: #fff;
     }
+  }
+  @keyframes glow {
+  50% {
+    box-shadow: 0 0 0.5vw #fff, 0 0 2vw #fff, 0 0 2vw #fff,
+      0 0 3vw #fff, 0 0 5vw #fff, 0 0 4vw #fff, 0 0 2vw #fff,
+      0 0 0.5vw #fff;
+  }
+  0%,
+  100% {
+    box-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 1vw #fff,
+      0 0 2vw #fff, 0 0 3vw #fff, 0 0 2vw #fff, 0 0 1vw #fff,
+      0 0 0.5vw #fff;
+      color: #fff;
+    -webkit-box-stroke: 0.1px #fff;
+  }
   }
 `;

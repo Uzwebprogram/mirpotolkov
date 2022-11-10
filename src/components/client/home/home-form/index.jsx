@@ -32,7 +32,7 @@ const HomeForm = ({ isText, isCost, isCount }) => {
     const req = {
       telephone : numberValue
     }
-    const response = await axios.post("http://62.113.105.56:5000/contact_us" , req)
+    const response = await axios.post("https://api.mirpotolkov.uz/contact_us" , req)
     if (response) {
       handleOpen2()
     }
@@ -130,7 +130,7 @@ const HomeForm = ({ isText, isCost, isCount }) => {
           </Box>
         </Modal>
             {isText ? (
-              <p>{t("Home.5")}</p>
+              <p></p>
             ) : (
               <p style={{ color: "#fff", opacity: "0.7" }}>{t("Home.5")}</p>
             )}

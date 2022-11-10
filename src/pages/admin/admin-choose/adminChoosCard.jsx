@@ -11,7 +11,7 @@ import {
 
 import CuinsinesDeletPutComponent from "../../../components/admin/cuisines/team-delet-put";
 
-import flag from "../../../assets/images/client/flag_uz.png";
+import flag from "../../../assets/images/client/flag.png";
 
 const AdminChoosCard = ({ Element }) => {
   return (
@@ -25,7 +25,7 @@ const AdminChoosCard = ({ Element }) => {
             </CardHeader>
             <CardBody>
               <img
-                src={`http://62.113.105.56:5000/static/${elem.image}`}
+                src={`https://api.mirpotolkov.uz/static/${elem.image}`}
                 width={360}
                 height={202}
                 alt="imagef"

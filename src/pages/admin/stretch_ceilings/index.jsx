@@ -21,7 +21,7 @@ function StretchCeilings() {
                     <tbody id="tbody">
                         {StretchMap.map((elem) =>
                       <tr>
-                        <td><img src={`http://62.113.105.56:5000/static/${elem.image}`} style={{marginRight : "20px"}} width={48} height={48} alt="img avatar" /><span>{elem.titleuz}</span> </td>
+                        <td><img src={`https://api.mirpotolkov.uz/static/${elem.image}`} style={{marginRight : "20px"}} width={48} height={48} alt="img avatar" /><span>{elem.titleuz}</span> </td>
                           <td>{elem.money} сум</td>
                           <td>{elem.skidka}</td>
                           <td>{elem.shades}</td>

@@ -10,7 +10,7 @@ export const CommentProvider = ({children})=>{
     const [CommentMap , setCommentMap] = useState([])
 
     useEffect(() => {
-        fetch("http://62.113.105.56:5000/client_comment")
+        fetch("https://api.mirpotolkov.uz/client_comment")
         .then(res => res.json())
         .then(result => setCommentMap(result))
     }, [CommentMap])

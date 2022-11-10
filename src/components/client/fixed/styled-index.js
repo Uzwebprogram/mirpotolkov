@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
 position: fixed;
-display: flex;
-justify-content: space-between;
-width: 100%;
 bottom: 0;
 z-index: 100;
 a:nth-child(1){
+   position: relative;
    background-color: #d4665c ;
    margin-bottom: 40px;
    margin-left: 40px;
@@ -28,8 +26,7 @@ a:nth-child(1){
     content: "";
     position: absolute;
     z-index: -1;
-    left: 7.8%;
-    right: 50%;
+    left: 80px;
     transform: translateX(-40%) translateX(-50%);
     display: block;
     width: 80px;
@@ -38,15 +35,13 @@ a:nth-child(1){
     border-radius: 50%;
     -webkit-animation: pulse-border 1500ms ease-out infinite;
     animation: pulse-border 1500ms ease-out infinite;
-    @media only  screen and (max-width:768px) {
-    width: 70px;
-    height: 70px;
-    left: 17.5%;
-    }
-    @media only  screen and (max-width:376px) {
-    left: 20%;
-    }
+    @media only screen and (max-width:768px) {
+    left: 63px;
+    width: 65px;
+    height: 65px;
    }
+   }
+   
    :focus{
     border: none;
     outline: none;
@@ -57,6 +52,7 @@ a:nth-child(1){
    }
 }
 a:nth-child(2){
+   position: relative;
    background-color: #224066;
    margin-bottom: 40px;
    margin-right: 40px;
@@ -75,7 +71,7 @@ a:nth-child(2){
     content: "";
     position: absolute;
     z-index: -1;
-    right: -2.5%;
+    left: 79px;
     transform: translateX(-50%) translateX(-50%);
     display: block;
     width: 80px;
@@ -87,10 +83,19 @@ a:nth-child(2){
     @media only  screen and (max-width:768px) {
     width: 70px;
     height: 70px;
-    right: -15%;
+    left: 66px;
+    }
+    @media only  screen and (max-width:425px) {
+    width: 65px;
+    height: 65px;
+    left: 62px;
+    }
+    @media only  screen and (max-width:386px) {
+    width: 65px;
+    height: 65px;
+
     }
     @media only  screen and (max-width:376px) {
-    right: -17%;
     }
    }
    :focus{

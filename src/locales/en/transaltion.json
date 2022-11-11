@@ -109,7 +109,9 @@
     "HomeChoose":{
         "0": "Choose your ceiling option",
         "1" : "Order",
-        "2": "in sum"
+        "2": "in sum",
+        "3": " sum"
+
     },
     "HomeForm" :{
         "0" : "LEVE A REQUEST AND OUR MANAGER WILL CALL YOU BACK",

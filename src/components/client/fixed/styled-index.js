@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-position: fixed;
-bottom: 0;
-z-index: 100;
+/* display: flex; */
+/* width: 100%; */
+/* justify-content: space-between; */
 a:nth-child(1){
-   position: relative;
+   position: fixed;
    background-color: #d4665c ;
-   margin-bottom: 40px;
+   margin-bottom: 20px;
    margin-left: 40px;
+   z-index: 100;
+   left: 10px;
+   bottom: 10px;
    width: 80px;
    height: 80px;
    display: flex;
@@ -52,9 +55,12 @@ a:nth-child(1){
    }
 }
 a:nth-child(2){
-   position: relative;
+   position: fixed;
    background-color: #224066;
-   margin-bottom: 40px;
+   right: 10px;
+   z-index: 100;
+   bottom: 10px;
+   margin-bottom: 20px;
    margin-right: 40px;
    width: 80px;
    height: 80px;

@@ -6,10 +6,10 @@ export const WrapperFixed = styled.div`
   top: 50%;
   transform: translate(0, -50%);
   background-color: rgb(34, 64, 102);
-  padding: 5px;
-  padding-top: 30px;
-  padding-left: 15px;
-  padding-bottom: 30px;
+  width: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   z-index: 1000;

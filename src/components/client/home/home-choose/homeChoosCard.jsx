@@ -33,11 +33,11 @@ const ChoosCard = ({ElementChoos}) => {
               <h4>{getValue() == "ru" ? elem.titlecuisineru: getValue() == "en" ? elem.titlecuisineen: getValue() == "uz" ? elem.titlecuisineuz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="image" />
+              <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="images" />
               <Prise>
                 <strike>{t("HomeChoose.2")}</strike>
                 <br />
-                <span>{getValue() == "ru" ? "от" :null} {elem.money} {t("HomeChoose.2")}</span>
+                <span>{getValue() == "ru" ? "от" :null} {elem.money} {t("HomeChoose.3")}</span>
               </Prise>
               <FlagBox>
                 <img src={flag} alt="image" />

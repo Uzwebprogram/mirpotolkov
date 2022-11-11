@@ -7,7 +7,9 @@ export const Section = styled.div`
   right: 0;
   left: 0;
   top: 0;
+
   padding: 5px 0;
+
   background-color: #fff;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   @media only screen and (max-width: 1042px) {

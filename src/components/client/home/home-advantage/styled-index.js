@@ -1,36 +1,48 @@
 import styled from "styled-components";
 
-
 export const CardImage = styled.div`
-  img:nth-child(1){
-    width: 200px;
-    height: 120px;
+  position: relative;
+  img:nth-child(1) {
+    /* width: 200px;
+    height: 120px; */
     border-top-left-radius: 5px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 30px;
     background-color: white;
-    position: relative;
-    top: 90px;
-}
-img:nth-child(2){
+    /* position: absolute;
+    top: 90px; */
+  }
+  img:nth-child(2) {
     width: 100px;
     height: 100px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-top-left-radius: 5px  ;
-    border-top-right-radius: 30px  ;
-    border-bottom-right-radius: 30px  ;
-    border-bottom-left-radius: 30px  ;
-    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    position: absolute;
     bottom: 70px;
-    right: 30px;
+    left: -20px;
     background-color: white;
-}
-@media only screen and (max-width: 470px) {
-        font-size: 36px;
-        padding-left: 40px;
-}
-`
+
+    @media only screen and (max-width: 1000px) {
+      position: absolute;
+      bottom: 140px;
+      left: -20px;
+    }
+    @media only screen and (max-width: 475px) {
+      position: absolute;
+      bottom: 140px;
+      left: -10px;
+    }
+  }
+  @media only screen and (max-width: 470px) {
+    font-size: 36px;
+    padding-left: 40px;
+  }
+`;
 
 export const Section = styled.div`
   width: 100%;
@@ -61,11 +73,18 @@ export const AdvantageCardWrapper = styled.div`
   align-items: top;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 
   @media only screen and (max-width: 1000px) {
     display: flex;
     align-items: top;
     justify-content: space-evenly;
+  }
+  @media only screen and (max-width: 590px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 `;
 
@@ -73,21 +92,23 @@ export const AdvantageCard = styled.div`
   width: 23%;
   padding: 0 10px;
   @media only screen and (max-width: 1000px) {
-    width: 35%;
+    width: 45%;
+    margin: 20px 0;
   }
-  @media only screen and (max-width: 470px) {
-    width: 100%;
-    margin: 10px 0;
-    padding: 0 50px;
+  @media only screen and (max-width: 667px) {
+    width: 50%;
+    margin: 50px 0;
+    /* padding: 0 50px; */
   }
-  @media only screen and (max-width: 375px) {
-    width: 100%;
-    margin: 10px 0;
+  @media only screen and (max-width: 475px) {
+    width: 90%;
+    margin: 40px 0;
     /* padding: 0 30px; */
   }
 
   img {
     width: 100%;
+    height: 151px;
 
     @media only screen and (max-width: 1000px) {
       width: 100%;
@@ -103,7 +124,7 @@ export const AdvantageCard = styled.div`
     }
     @media only screen and (max-width: 375px) {
       width: 100%;
-      /* height: 172px; */
+      height: 170px;
     }
   }
 

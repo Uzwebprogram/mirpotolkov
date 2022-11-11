@@ -11,6 +11,16 @@ export const WrapperNavBtm = styled.div`
     justify-content: space-around;
     margin: 10px 0 0 0;
   }
+  /* @media only screen and (max-width: 880px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+    padding: 0 0 0 23px;
+
+    width: 100%;
+  } */
   @media only screen and (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -25,6 +35,13 @@ export const WrapperNavBtm = styled.div`
     flex-direction: column;
     width: 90%;
     margin: 20px 0 0 20px;
+  }
+  @media only screen and (max-width: 320px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 30px 0 0 20px;
   }
 `;
 
@@ -74,9 +91,18 @@ export const PhoneItem = styled.div`
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
+    @media only screen and (max-width: 880px){
+      font-size: 16px !important;
+    }
     span {
       font-weight: bold;
       font-size: 30px;
+      @media only screen and (max-width: 880px){
+      font-size: 20px !important;
+    }
+    }
+    @media only screen and (max-width: 880px){
+      margin: 10px 0;
     }
 
     @media only screen and (max-width: 768px) {

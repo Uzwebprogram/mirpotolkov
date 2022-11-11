@@ -7,6 +7,9 @@ export const Section = styled.div`
   right: 0;
   left: 0;
   top: 0;
+
+  padding: 5px 0;
+
   background-color: #fff;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   @media only screen and (max-width: 1042px) {
@@ -59,18 +62,34 @@ export const SectionMobile = styled.div`
   justify-content: space-between;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   display: none;
+  overflow:hidden ;
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* Portrait and Landscape */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
 
   @media only screen and (max-width: 1042px) {
     display: flex;
   }
-
-  /* @media only screen and (max-width: 1220px) {
-    div {
-      a {
-        display: none !important;
-      }
-    }
-  } */
   @media only screen and (max-width: 425px) {
     a {
       margin: 0;
@@ -97,6 +116,12 @@ export const SectionMobile = styled.div`
       @media screen and (max-width: 372px) {
         width: 160px;
         height: 37px;
+      }
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        width: 110px;
+        height: 30px;
+        object-fit: cover;
       }
     }
   }
@@ -130,6 +155,9 @@ export const PhoneItem = styled.div`
     @media screen and (max-width: 397px) {
       font-size: 12px !important;
     }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 10px !important;
+    }
     span {
       font-weight: bold;
       font-size: 25px;
@@ -155,22 +183,21 @@ export const PhoneItem = styled.div`
     }
   }
   @keyframes glow {
-  50% {
-    box-shadow: 0 0 0.5vw #4a71a3, 0 0 4vw #4a71a3, 0 0 5vw #4a71a3,
-      0 0 7vw #4a71a3, 0 0 8vw #4a71a3, 0 0 9vw #4a71a3, 0 0 6vw #4a71a3,
-      0 0 0.5vw #4a71a3;
-    color: #4a71a3;
+    50% {
+      box-shadow: 0 0 0.5vw #4a71a3, 0 0 4vw #4a71a3, 0 0 5vw #4a71a3,
+        0 0 7vw #4a71a3, 0 0 8vw #4a71a3, 0 0 9vw #4a71a3, 0 0 6vw #4a71a3,
+        0 0 0.5vw #4a71a3;
+      color: #4a71a3;
+    }
+    0%,
+    100% {
+      box-shadow: 0 0 0.5vw #4a71a3, 0 0 1vw #4a71a3, 0 0 2vw #4a71a3,
+        0 0 3vw #4a71a3, 0 0 5vw #4a71a3, 0 0 2vw #4a71a3, 0 0 1vw #4a71a3,
+        0 0 0.5vw #4a71a3;
+      color: #4a71a3;
+      -webkit-box-stroke: 0.1px #4a71a3;
+    }
   }
-  0%,
-  100% {
-    box-shadow: 0 0 0.5vw #4a71a3, 0 0 1vw #4a71a3, 0 0 2vw #4a71a3,
-      0 0 3vw #4a71a3, 0 0 5vw #4a71a3, 0 0 2vw #4a71a3, 0 0 1vw #4a71a3,
-      0 0 0.5vw #4a71a3;
-    color: #4a71a3;
-    -webkit-box-stroke: 0.1px #4a71a3;
-  }
-}
-
 
   @media only screen and (max-width: 680px) {
     margin: 10px 0;

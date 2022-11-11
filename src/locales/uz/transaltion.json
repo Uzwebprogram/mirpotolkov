@@ -109,7 +109,9 @@
     "HomeChoose" : {
         "0": "Shiftingiz variantini tanlang",
         "1" : "Buyurtma",
-        "2": "so'mda"
+        "2": "so'mdan",
+        "3": " so'mdan"
+
     },
     "HomeForm" :{
         "0" : "SO'ROV QO'YING VA MENEJERIMIZ SIZGA QAYTA QO'ng'iroq qiladi",

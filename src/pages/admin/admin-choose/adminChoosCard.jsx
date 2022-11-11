@@ -31,7 +31,7 @@ const AdminChoosCard = ({ Element }) => {
                 alt="imagef"
               />
               <Prise>
-                <strike>от сум</strike>
+                <strike></strike>
                 <br />
                 <span>от {elem.money} сум</span>
               </Prise>

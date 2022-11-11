@@ -62,7 +62,7 @@ export const SectionMobile = styled.div`
   justify-content: space-between;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   display: none;
-  overflow:hidden ;
+  
 
   @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     display: flex;
@@ -84,7 +84,6 @@ export const SectionMobile = styled.div`
     z-index: 10;
     align-items: center;
     justify-content: space-between;
-    overflow-x: hidden;
   }
 
   @media only screen and (max-width: 1042px) {

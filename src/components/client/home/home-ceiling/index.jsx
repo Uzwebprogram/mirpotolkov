@@ -32,7 +32,7 @@ const HomeCeiling = () => {
       <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
         <WrapperContainer>
           <CeilCardWrapper>
-            <h2><span>{t("celing.0")}</span> {t("celing.1")}</h2>
+            <h2><span>{t("celing.0")}</span>   {t("celing.1")}</h2>
             <CeilCard>
               {StretchMap.map((elem , index) => (
                 <CeilItem key={index}>

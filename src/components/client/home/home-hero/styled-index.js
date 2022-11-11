@@ -63,13 +63,16 @@ export const FormP = styled.div`
     @media only screen and (max-width: 590px) {
       font-size: 16px;
     }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      color: #000;
+    }
     :nth-child(1) {
       font-size: 13px;
       margin: 2px 0 0 10px;
 
       @media only screen and (max-width: 750px) {
-      display: none;
-    }
+        display: none;
+      }
     }
   }
 `;

@@ -21,7 +21,7 @@ export const CeilCardWrapper = styled.div`
     font-family: sans-serif;
     color: #224066;
     @media only screen and (max-width: 1068px) {
-      padding-left: 40px;
+      padding-left: 30px;
     }
     @media only screen and (max-width: 812px) {
       font-size: 36px;
@@ -31,11 +31,7 @@ export const CeilCardWrapper = styled.div`
     span {
       font-weight: bold;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  
   }
 `;
 export const CeilCard = styled.div`

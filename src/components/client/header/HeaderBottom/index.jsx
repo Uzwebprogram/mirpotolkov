@@ -8,8 +8,8 @@ import {
 } from "./styled-index";
 import localIcon from "../../../../assets/images/client/point.png";
 import phoneIcon from "../../../../assets/images/client/tel.png";
-import Logo from "../../../../assets/images/client/M2.svg"
-import LogoWhite from "../../../../assets/images/client/M2.svg"
+import Logo from "../../../../assets/images/client/logomir.png"
+import LogoWhite from "../../../../assets/images/admin/logo.png"
 import { useTranslation } from "react-i18next";
 import ModalPhone from "../../Modal";
 

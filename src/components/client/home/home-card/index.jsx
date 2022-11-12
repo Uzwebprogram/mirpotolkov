@@ -3,7 +3,7 @@ import { WrapperContainer } from "../../../../style-App";
 import { Section, CardList, CardItem, CardContent, CardImg } from "./styled-index";
 
 import img1 from "../../../../assets/images/client/1.jpg";
-import img2 from "../../../../assets/images/client/2.jpg";
+import img2 from "../../../../assets/images/client/iconCard.svg";
 import img3 from "../../../../assets/images/client/3.jpg";
 import img4 from "../../../../assets/images/client/4.jpg";
 import { useTranslation } from "react-i18next";

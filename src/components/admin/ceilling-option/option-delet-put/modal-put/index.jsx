@@ -16,7 +16,9 @@ function ModalPut({ handleClose, open, PutBlog }) {
       titleEn: titleen.current.value
     }
     const response = await axios.put(`https://api.mirpotolkov.uz/ceiling_option/${id}` , req)
-    console.log(response);
+    if (response) {
+      handleClose()
+    }
   };
   return (
     <Wrapper>

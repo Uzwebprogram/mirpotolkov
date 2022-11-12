@@ -81,21 +81,21 @@ function CommentModal() {
           </ModalTop>
           <Form className="form" onSubmit={handleUpload}>
             <input type="file" id="fileImage" ref={image} />
-            <label for="fileImage" class="custom-file-upload">
+            {/* <label for="" class="custom-file-upload">
               <span className="span-download">
                 <ion-icon name="cloud-download-outline"></ion-icon>
               </span>
               загрузить изображение
-            </label>
+            </label> */}
 
             <hr />
             <input type="file" id="fileAvatar" ref={avatarimage} />
-            <label for="fileAvatar" class="custom-file-upload">
+            {/* <label for="fileAvatar" class="custom-file-upload">
               <span className="span-download">
                 <ion-icon name="cloud-download-outline"></ion-icon>
               </span>
               загрузить аватар
-            </label>
+            </label> */}
 
             {loading ? (
               <>

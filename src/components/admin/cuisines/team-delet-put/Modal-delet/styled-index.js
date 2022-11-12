@@ -21,7 +21,9 @@ export const Buttons = styled.div`
 button{
     margin: 0; 
     padding: 0;
-    background-color: #FFD700;
+    background-color: #F67263;
+    color: white;
+    border-radius: 15px;
     border: none;
     font-size: 30px;
     padding: 10px;

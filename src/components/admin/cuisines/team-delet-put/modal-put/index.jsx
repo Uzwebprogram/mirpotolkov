@@ -6,7 +6,9 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
     const titleen  = useRef();
     const titleru  = useRef();
     const money  = useRef();
-    const skidka  = useRef();
+    const descriptionru  = useRef();
+    const descriptionen  = useRef();
+    const descriptionuz  = useRef();
     const shades  = useRef();
     const image  = useRef();
     const HandleSubmit = async (e , id ) =>{
@@ -16,8 +18,9 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
         form.append("titleEn" , titleen.current.value)
         form.append("titleRu" , titleru.current.value)
         form.append("money" ,  money.current.value)
-        form.append("skidka" ,  skidka.current.value)
-        form.append("shades" ,  shades.current.value)
+        form.append("descriptionRu" ,  descriptionru.current.value)
+        form.append("descriptionUz" ,  descriptionuz.current.value)
+        form.append("descriptionEn" ,  descriptionen.current.value)
         form.append("image" ,  image.current.files[0])
         try {
            await fetch(`https://api.mirpotolkov.uz/cuisine/${id}`, {
@@ -38,23 +41,24 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
     }
     return(
         <Wrapper>
-        <ModalCommon height={400} scroll="scroll" handleClose={handleClose} open={open}>
+        <ModalCommon height={400} width={350} scroll="scroll" handleClose={handleClose} open={open}>
             <ModalTop>
                     <span>Изменить КЛИЕНТЫ</span>
                     <span onClick={handleClose}>&times;</span>
             </ModalTop>
-            <Form className="form" onSubmit={(e) => HandleSubmit(e , PutBlog)}>
+            <Form className="form"  onSubmit={(e) => HandleSubmit(e , PutBlog)}>
             <input type="file" id="file" ref={image}/>
                 <label for="file" class="custom-file-upload">
                     <span className="span-download"><ion-icon  name="cloud-download-outline"></ion-icon></span>
                 загрузить изображение
                 </label>
-                <input  ref={titleuz} type="text" placeholder={Element.titleuz}  required />
-                <input  ref={titleru} type="text" placeholder={Element.titleru}  required />
-                <input  ref={titleen} type="text" placeholder={Element.titleen} required />
+                <input  ref={titleuz} type="text" placeholder={Element.titlecuisineuz}  required />
+                <input  ref={titleru} type="text" placeholder={Element.titlecuisineru}  required />
+                <input  ref={titleen} type="text" placeholder={Element.titlecuisineen} required />
                 <input  ref={money} type="text" placeholder={Element.money} required />
-                <input  ref={skidka} type="text" placeholder={Element.skidka} required />
-                <input  ref={shades} type="text" placeholder={Element.shades} required />
+                <input  ref={descriptionru} type="text" placeholder={Element.descriptionru} required />
+                <input  ref={descriptionen} type="text" placeholder={Element.descriptionen} required />
+                <input  ref={descriptionuz} type="text" placeholder={Element.descriptionuz} required />
                 <button type="submit">Сохранять</button>
             </Form>
         </ModalCommon>

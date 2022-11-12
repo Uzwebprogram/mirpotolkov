@@ -4,10 +4,11 @@ import varBg from "../../../../assets/images/client/var.png";
 
 export const Section = styled.div`
   width: 100%;
-  padding-top: 20px;
+  padding: 50px 0 100px 0;
   /* height: 800px; */
   background: transparent url(${grayBg1}) no-repeat scroll center top / cover;
   position: relative;
+  /* background: #ECEBF0; */
   z-index: 1;
   overflow: hidden;
 
@@ -21,7 +22,7 @@ export const Section = styled.div`
 
   div {
     h2 {
-      margin: 100px 0 34px 20px;
+      margin: 0 0 34px 20px;
       font-size: 46px;
       color: #224066;
       text-align: left;
@@ -30,6 +31,44 @@ export const Section = styled.div`
       @media only screen and (max-width: 425px) {
         font-size: 36px;
       }
+    }
+  }
+`;
+
+export const Prev = styled.div`
+  margin-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  button {
+    padding: 7px 15px 7px 7px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border: none;
+    outline: none;
+    background: #d4665c;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    color: #fff !important;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    i {
+      margin: 0 5px 0 2px;
+      font-size: 25px;
+      color: #fff;
     }
   }
 `;
@@ -140,7 +179,7 @@ export const FlagBox = styled.div`
   align-items: center;
   justify-content: center;
   margin: 10px 0 0 50px;
-  img{
+  img {
     width: 24px;
     height: 24px;
     border-radius: 50%;

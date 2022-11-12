@@ -110,7 +110,8 @@
         "0": "Choose your ceiling option",
         "1" : "Order",
         "2": "in sum",
-        "3": " sum"
+        "3": " sum",
+        "4": "Home"
 
     },
     "HomeForm" :{

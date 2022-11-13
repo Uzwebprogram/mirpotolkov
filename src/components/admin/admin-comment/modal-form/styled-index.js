@@ -48,9 +48,6 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     padding:20px;
-    /* input[type="file"] {
-    display: none;
-} */
 label{
     border-style: dotted;
     text-align: center;

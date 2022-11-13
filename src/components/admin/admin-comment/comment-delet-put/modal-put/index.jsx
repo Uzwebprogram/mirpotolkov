@@ -74,23 +74,10 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <span>Добавить потолков</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
-        <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
-          <input type="file" id="fileImagePut" ref={image} />
-          <label for="fileImagePut" class="custom-file-upload">
-            <span className="span-download">
-              <ion-icon name="cloud-download-outline"></ion-icon>
-            </span>
-            загрузить изображение
-          </label>
-
+        <Form className="form" encType="multipart/form-data" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
+          <input type="file" accept="image/*" ref={image} />
           <hr />
-          <input type="file" id="fileAvatarPut" ref={avatarimage} />
-          <label for="fileAvatarPut" class="custom-file-upload">
-            <span className="span-download">
-              <ion-icon name="cloud-download-outline"></ion-icon>
-            </span>
-            загрузить аватар
-          </label>
+          <input type="file" accept="image/*" ref={avatarimage} />
 
           {loading ? (
             <>

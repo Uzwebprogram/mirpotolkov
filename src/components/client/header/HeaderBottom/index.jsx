@@ -23,7 +23,7 @@ const HeaderBottom = ({ isLocal , logoWhite }) => {
       <ModalPhone open={open} setOpen={setOpen} handleClose={handleClose} />
       <WrapperNavBtm>
         <LogoItem>
-          {logoWhite ? <img src={LogoWhite} width={200} height={70} alt="" />:<img src={Logo} width={200} height={50} alt="" />}
+          {logoWhite ? <img src={LogoWhite} width={200} height={50} alt="" />:<img src={Logo} width={210} height={40} alt="" />}
         </LogoItem>
         <LocalItem>
           <img src={localIcon} alt="image" />

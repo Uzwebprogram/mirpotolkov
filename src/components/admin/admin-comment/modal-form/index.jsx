@@ -76,23 +76,13 @@ function CommentModal() {
             <span>Добавить потолков</span>
             <span onClick={handleClose}>&times;</span>
           </ModalTop>
-          <Form className="form" onSubmit={handleUpload}>
-            <input type="file" id="fileImage" ref={image} />
-            {/* <label for="" class="custom-file-upload">
-              <span className="span-download">
-                <ion-icon name="cloud-download-outline"></ion-icon>
-              </span>
-              загрузить изображение
-            </label> */}
+          <Form className="form" encType="multipart/form-data" onSubmit={handleUpload}>
+            <input type="file" accept="image/*"  ref={image} />
+
 
             <hr />
-            <input type="file" id="fileAvatar" ref={avatarimage} />
-            {/* <label for="fileAvatar" class="custom-file-upload">
-              <span className="span-download">
-                <ion-icon name="cloud-download-outline"></ion-icon>
-              </span>
-              загрузить аватар
-            </label> */}
+            <input type="file" accept="image/*" ref={avatarimage} />
+
 
             {loading ? (
               <>

@@ -100,7 +100,6 @@ export const SectionMobile = styled.div`
   justify-content: space-between;
   box-shadow: 10px 0 25px rgb(0 0 0 / 20%);
   display: none;
-  
 
   @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     display: flex;
@@ -142,22 +141,9 @@ export const SectionMobile = styled.div`
     align-items: center;
 
     img {
-      @media only screen and (max-width: 452px) {
-        width: 170px;
-        height: 50px;
-      }
-      @media only screen and (max-width: 427px) {
-        width: 170px;
-        height: 43px;
-      }
-      @media screen and (max-width: 372px) {
-        width: 160px;
-        height: 37px;
-      }
-
       @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-        width: 110px;
-        height: 30px;
+        width: 160px;
+        height: 28.7px;
         object-fit: cover;
       }
     }

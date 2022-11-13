@@ -55,7 +55,7 @@ const HeaderTop = ({ HandleClick }) => {
           <button onClick={HandleClick}>
             <i class="bx bx-menu-alt-left"></i>
           </button>
-          <img src={Logo1} width={200} height={50} alt="image" />
+          <img src={Logo1}  alt="image" />
         </div>
         <PhoneItem
           style={{

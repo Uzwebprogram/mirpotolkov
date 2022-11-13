@@ -23,6 +23,7 @@ export const Section = styled.div`
   text-transform: uppercase;
   color: #224066;
   border: none;
+  cursor: pointer;
 }
 
 .dropdown {
@@ -39,11 +40,12 @@ export const Section = styled.div`
   padding-top: 15px;
 }
 
-.dropdown-content a {
+.dropdown-content span {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
 
 .dropdown-content a:hover {background-color: white;}

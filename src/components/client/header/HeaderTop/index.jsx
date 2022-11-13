@@ -5,10 +5,13 @@ import { NavLink } from "react-router-dom";
 import HeaderLang from "../header-language/index";
 import { useTranslation } from "react-i18next";
 import Logo1 from "../../../../assets/images/client/logomir.png";
-import phoneIcon from "../../../../assets/images/client/tel.png";
-
+import { useNavigate } from "react-router-dom";
 const HeaderTop = ({ HandleClick }) => {
   const [t, i18n] = useTranslation();
+  const navigate = useNavigate();
+  const HandleClickMore = () => {
+    navigate("/partners")
+  }
   return (
     <>
       <Section>
@@ -35,11 +38,11 @@ const HeaderTop = ({ HandleClick }) => {
                 <a href="#contact">{t("Header.6")}</a>
               </li>
               <div class="dropdown">
-                <button class="dropbtn">Наше партнери</button>
+                <button class="dropbtn">{t("Header.10")}</button>
                 <div class="dropdown-content">
-                  <a href="#">Ташкент</a>
-                  <a href="#">Сирдарё</a>
-                  <a href="#">Бухара</a>
+                  <span  onClick={HandleClickMore}>Ташкент</span>
+                  <span>Сирдарё</span>
+                  <span>Бухара</span>
                 </div>
               </div>
             </NavList>

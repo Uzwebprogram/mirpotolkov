@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 import { Prev } from "../../../components/client/our-worker/home-choose/styled-index"
 import { WrapperContainer} from "../../../style-App"
 import { Wrapper ,WrapperTop } from "./styled-index"
+import PartnerCard from "./../../../components/client/partners/index"
 function Partners() {
     const {t , i18n} = useTranslation(); 
     return(
@@ -17,6 +18,7 @@ function Partners() {
           </Prev>
             <h2>Ташкент</h2>
             </WrapperTop>
+            <PartnerCard/>
         </WrapperContainer>
     )
 }

@@ -7,7 +7,9 @@ import PartnerCard from "./../../../components/client/partners/index"
 function Partners() {
     const {t , i18n} = useTranslation(); 
     return(
-        <WrapperContainer>
+      <Wrapper>
+
+<WrapperContainer>
             <WrapperTop>
             <Prev>
             <button>
@@ -20,6 +22,7 @@ function Partners() {
             </WrapperTop>
             <PartnerCard/>
         </WrapperContainer>
+      </Wrapper>
     )
 }
 export default Partners

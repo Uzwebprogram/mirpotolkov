@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import grayBg from "../../../assets/images/client/sery.png";
 
 export const WrapperTop = styled.div`
     margin-top: 60px;
@@ -23,4 +24,10 @@ export const WrapperTop = styled.div`
     padding-right:20px;
     }
 }
+`
+export const Wrapper = styled.div`
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  background: transparent url(${grayBg}) no-repeat scroll center top / cover;
 `

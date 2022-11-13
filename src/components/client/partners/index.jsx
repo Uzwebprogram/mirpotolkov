@@ -10,6 +10,7 @@ import {
   DiscountItem,
   Line,
   LeftBlock,
+  WrapperUser
 } from "./styled-index";
 import { StretchContext } from "../../../context/client/stretch_ceilings/context";
 import { useTranslation } from "react-i18next";
@@ -31,39 +32,21 @@ const PartnerCard = () => {
       <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
         <WrapperContainer>
           <CeilCardWrapper>
-            <h2><span>{t("celing.0")}</span>   {t("celing.1")}</h2>
             <CeilCard>
               {StretchMap.map((elem , index) => (
                 <CeilItem key={index}>
-                  {ValueLang() == "ru" ? <h4>{elem.titleru}</h4> : ValueLang() == "uz" ? <h4>{elem.titleuz}</h4>:  ValueLang() == "en" ? <h4>{elem.titleen}</h4>:null}
+                  <h4>3Д Потолок</h4>
                   
                   <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={247} height={173} alt="images" />
-                  <Discount>
-                    <DiscountItem>
-                      <p>
-                      {t("celing.2")} {elem.skidka}%
-                        <br />
-                        <span>
-                        {elem.money} {t("celing.3")} <sup>2</sup>
-                        </span>
-                      </p>
-                    </DiscountItem>
-                    <DiscountItem>
-                      <i class="bx bxs-check-shield"></i>
-                      <p>
-                        <span>25 {t("celing.4")}</span> <br />
-                         {t("celing.5")}
-                      </p>
-                    </DiscountItem>
-                  </Discount>
-                  <LeftBlock>
-                    <p>{t("celing.6")}</p>
-                    <Line></Line>
-                    <p>{t("celing.7")} {elem.shades} {t("celing.8")} </p>
-                  </LeftBlock>
-                  <button onClick={handleOpen}>
-                  {t("celing.9")} <i class="bx bx-right-arrow-circle"></i>
-                  </button>
+                  
+                  <WrapperUser>
+                    <img src={"https://i0.wp.com/roohentertainment.com/wp-content/uploads/2018/06/user-avatar-1.png?ssl=1"} alt="" />
+                    <span>Алиса Иванова</span>
+                  </WrapperUser>
+
+                  <a href="tel:+998915039390" >
+                    +99891-503-93-90 <i class='bx bxs-phone-call'></i>
+                  </a>
                 </CeilItem>
               ))}
             </CeilCard>

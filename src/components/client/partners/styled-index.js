@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import grayBg from "../../../assets/images/client/sery.png";
 import vig from "../../../assets/images/client/vig.png";
 
 export const Section = styled.div`
@@ -111,7 +110,8 @@ export const CeilItem = styled.div`
     }
   }
 
-  button {
+  a {
+    text-decoration: none;
     background: #213a66;
     border-radius: 50px;
     display: flex;
@@ -123,11 +123,10 @@ export const CeilItem = styled.div`
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: 600;
-
+    width: 70%;
+      font-weight: 600;
     i {
       font-size: 25px;
-      margin-left: 20px;
     }
   }
 `;
@@ -191,3 +190,20 @@ export const LeftBlock = styled.div`
     font-family: sans-serif;
   }
 `;
+
+export const WrapperUser = styled.div`
+  display: flex;
+  margin-top: 20px;
+  img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 5px solid #213a66;
+  }
+  span{
+    font-size: 20px;
+    color: #213a66;
+    font-family: sans-serif;
+    text-transform: capitalize;
+  }
+`

@@ -64,6 +64,11 @@ export const ButtonAdd = styled.button`
   position: relative;
   bottom: 167px;
   cursor: pointer;
+  @media only screen and (max-width:380px) {
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -133,6 +138,14 @@ export const LinkItem = styled.div`
       margin: 2px 0 0 20px;
       font-size: 25px;
       color: #fff;
+    }
+    @media only screen and (max-width:380px) {
+    padding: 5px 5px 5px 30px;
+      font-size: 12px;
+    }
+    @media only screen and (max-width:330px) {
+    padding: 5px 5px 5px 25px;
+      font-size: 8px;
     }
   }
   @keyframes glow {

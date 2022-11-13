@@ -88,11 +88,12 @@ input[type="file"] {
         font-size: 18px;
         line-height: 23px;
         text-transform: uppercase;
-        color: #1B1B1B;
-        background: #FFD700;
+        color: white;
+        background: #F67263;
         padding: 23px 0px;
         border: transparent;
         cursor: pointer;
+        border-radius: 25px;
     }
     textarea{
         width: 300px;

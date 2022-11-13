@@ -7,7 +7,6 @@ export const Section = styled.div`
   right: 0;
   left: 0;
   top: 0;
-
   padding: 5px 0;
 
   background-color: #fff;
@@ -15,6 +14,45 @@ export const Section = styled.div`
   @media only screen and (max-width: 1042px) {
     display: none;
   }
+  .dropbtn {
+  background-color: white;
+  color: #224066;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #224066;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+  padding-top: 15px;
+}
+
+.dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: white;}
 
   @media only screen and (max-width: 680px) {
     overflow-x: hidden;
@@ -222,4 +260,5 @@ export const PhoneItem = styled.div`
   @media only screen and (max-width: 680px) {
     margin: 10px 0;
   }
+  
 `;

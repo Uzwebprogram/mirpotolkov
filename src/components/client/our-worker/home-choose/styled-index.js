@@ -41,7 +41,6 @@ export const Prev = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-
   button {
     padding: 7px 15px 7px 7px;
     margin-left: 20px;
@@ -53,9 +52,10 @@ export const Prev = styled.div`
     border-radius: 50px;
     font-weight: 500;
     text-transform: uppercase;
-
     color: #fff !important;
-
+    @media only screen and (max-width : 512px) {
+      font-size: 9px;
+    }
     a {
       text-decoration: none;
       color: #fff;

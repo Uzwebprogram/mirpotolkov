@@ -25,9 +25,9 @@ function CategoryModal() {
       titleEn: titleen.current.value
     }
     const response = await axios.post("https://api.mirpotolkov.uz/ceiling_option" , req)
-    // if (response) {
-    // }
-    console.log(response);
+    if (response) {
+      handleClose()
+    }
   }
 
 

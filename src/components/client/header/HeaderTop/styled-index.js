@@ -165,16 +165,38 @@ export const PhoneItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: glow 1s linear infinite;
-  -moz-animation: glow 1s linear infinite;
-  -webkit-animation: glow 1s linear infinite;
-  -o-animation: glow 1s linear infinite;
+
+  select {
+    background: "#224066";
+    color: #fff;
+    border: none;
+    outline: none;
+    animation: glow 1s linear infinite;
+    -moz-animation: glow 1s linear infinite;
+    -webkit-animation: glow 1s linear infinite;
+    -o-animation: glow 1s linear infinite;
+
+    option {
+      color: #000;
+    }
+  }
+
   a {
     color: #fff;
     text-decoration: none;
+    background: "#224066";
+    color: #fff;
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
+    animation: glow 1s linear infinite;
+    -moz-animation: glow 1s linear infinite;
+    -webkit-animation: glow 1s linear infinite;
+    -o-animation: glow 1s linear infinite;
+
+    i{
+      font-size: 16px;
+    }
     @media screen and (max-width: 397px) {
       font-size: 12px !important;
     }
@@ -210,14 +232,14 @@ export const PhoneItem = styled.div`
       box-shadow: 0 0 0.5vw #4a71a3, 0 0 4vw #4a71a3, 0 0 5vw #4a71a3,
         0 0 7vw #4a71a3, 0 0 8vw #4a71a3, 0 0 9vw #4a71a3, 0 0 6vw #4a71a3,
         0 0 0.5vw #4a71a3;
-      color: #4a71a3;
+      color: #fff;
     }
     0%,
     100% {
       box-shadow: 0 0 0.5vw #4a71a3, 0 0 1vw #4a71a3, 0 0 2vw #4a71a3,
         0 0 3vw #4a71a3, 0 0 5vw #4a71a3, 0 0 2vw #4a71a3, 0 0 1vw #4a71a3,
         0 0 0.5vw #4a71a3;
-      color: #4a71a3;
+      color: #fff;
       -webkit-box-stroke: 0.1px #4a71a3;
     }
   }

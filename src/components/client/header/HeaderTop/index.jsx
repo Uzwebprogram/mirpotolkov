@@ -34,6 +34,14 @@ const HeaderTop = ({ HandleClick }) => {
               <li>
                 <a href="#contact">{t("Header.6")}</a>
               </li>
+              <div class="dropdown">
+                <button class="dropbtn">Наше партнери</button>
+                <div class="dropdown-content">
+                  <a href="#">Ташкент</a>
+                  <a href="#">Сирдарё</a>
+                  <a href="#">Бухара</a>
+                </div>
+              </div>
             </NavList>
             <HeaderLang />
           </NavBar>

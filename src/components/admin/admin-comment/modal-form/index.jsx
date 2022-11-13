@@ -10,9 +10,6 @@ function CommentModal() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  const { CommentMap } = useContext(CommentContext);
-
   const titleuz = useRef();
   const titleen = useRef();
   const titleru = useRef();

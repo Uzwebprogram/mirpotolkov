@@ -22,6 +22,16 @@ const HomeHero = ({isText}) => {
               {t("Home.1")}
               </span>
             </p>
+            <p>
+              <span>
+              {t("Home.7")}
+              </span>
+            </p>
+            <p>
+              <span>
+              {t("Home.8")}
+              </span>
+            </p>
            <HomeForm isText={isText}/>
           </HomeContent>
         </WrapperContainer>

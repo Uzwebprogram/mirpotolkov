@@ -135,7 +135,6 @@ const HomeForm = ({ isText, isCost, isCount }) => {
               <p style={{ color: "#fff", opacity: "0.7" }}>{t("Home.5")}</p>
             )}
 
-            {isText ? <p>{t("Home.6")}</p> : null}
           </FormP>
         )}
       </Form>

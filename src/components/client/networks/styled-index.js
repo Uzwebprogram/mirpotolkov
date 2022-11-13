@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const WrapperFixed = styled.div`
   position: fixed;
   right: 0px;
-  top: 50%;
+  top: 65%;
   transform: translate(0, -50%);
   background-color: rgb(34, 64, 102);
   width: 40px;

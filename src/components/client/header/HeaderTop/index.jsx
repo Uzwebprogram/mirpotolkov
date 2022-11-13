@@ -1,6 +1,12 @@
 import React from "react";
 import { WrapperContainer } from "../../../../style-App";
-import { NavList, Section, NavBar, SectionMobile , PhoneItem} from "./styled-index";
+import {
+  NavList,
+  Section,
+  NavBar,
+  SectionMobile,
+  PhoneItem,
+} from "./styled-index";
 import { NavLink } from "react-router-dom";
 import HeaderLang from "../header-language/index";
 import { useTranslation } from "react-i18next";
@@ -8,9 +14,19 @@ import Logo1 from "../../../../assets/images/client/logomir.png";
 import { useNavigate } from "react-router-dom";
 const HeaderTop = ({ HandleClick }) => {
   const [t, i18n] = useTranslation();
+
+  const handleLang = (e) => {
+    const lang = e.target.value;
+    i18n.changeLanguage(lang);
+    window.location.reload();
+  };
+  function LanguValue() {
+    return window.localStorage.getItem("i18nextLng");
+
   const navigate = useNavigate();
   const HandleClickMore = () => {
     navigate("/partners")
+
   }
   return (
     <>
@@ -18,7 +34,6 @@ const HeaderTop = ({ HandleClick }) => {
         <WrapperContainer>
           <NavBar>
             <NavList>
-              
               <li>
                 <a href="#calculator">{t("Header.1")}</a>
               </li>
@@ -26,7 +41,9 @@ const HeaderTop = ({ HandleClick }) => {
                 <a href="#Advantage">{t("Header.2")}</a>
               </li>
               <li>
-                <a href="#choose" to="#">{t("Header.3")}</a>
+                <a href="#choose" to="#">
+                  {t("Header.3")}
+                </a>
               </li>
               <li>
                 <a href="#HomeInstalled">{t("Header.4")}</a>
@@ -59,15 +76,59 @@ const HeaderTop = ({ HandleClick }) => {
         </div>
         <PhoneItem
           style={{
-            background: "#224066",
+            // background: "#224066",
             borderRadius: "10px",
             padding: "3px 10px",
-            marginRight: "20px",
+            marginRight: "15px",
           }}
         >
-          <a class="neon" href="tel:+99897750-11-33">
-            +99897 <span>750-11-33</span>
+          <a
+            class="neon"
+            href="tel:+99897750-11-33"
+            style={{
+              background: "#224066",
+              borderRadius: "10px",
+              padding: "3px 10px",
+              marginRight: " 15px",
+            }}
+          >
+            <i class="bx bxs-phone-call"></i>
           </a>
+
+          <select
+            onChange={handleLang}
+            style={{
+              background: "#224066",
+              borderRadius: "10px",
+              padding: "3px 10px",
+            }}
+          >
+            {LanguValue() === "ru" ? (
+              <>
+                <option value="ru">RUS</option>
+                <option value="uz">UZB</option>
+                <option value="en">ENG</option>
+              </>
+            ) : LanguValue() === "uz" ? (
+              <>
+                <option value="uz">UZB</option>
+                <option value="ru">RUS</option>
+                <option value="en">ENG</option>
+              </>
+            ) : LanguValue() === "en" ? (
+              <>
+                <option value="en">ENG</option>
+                <option value="uz">UZB</option>
+                <option value="ru">RUS</option>
+              </>
+            ) : (
+              <>
+                <option value="ru">RUS</option>
+                <option value="en">ENG</option>
+                <option value="uz">UZB</option>
+              </>
+            )}
+          </select>
         </PhoneItem>
       </SectionMobile>
     </>

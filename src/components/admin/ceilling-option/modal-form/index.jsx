@@ -15,10 +15,6 @@ function ChooseModal() {
   const titleuz = useRef();
   const titleen = useRef();
   const titleru = useRef();
-  const descriptionuz = useRef();
-  const descriptionen = useRef();
-  const descriptionru = useRef();
-  const money = useRef();
   const image = useRef();
   const load = useRef();
   const HandleSubmit = async (e) => {
@@ -27,10 +23,6 @@ function ChooseModal() {
     form.append("titleCuisineUz", titleuz.current.value);
     form.append("titleCuisineEn", titleen.current.value);
     form.append("titleCuisineRu", titleru.current.value);
-    form.append("descriptionUz", descriptionuz.current.value);
-    form.append("descriptionEn", descriptionen.current.value);
-    form.append("descriptionRu", descriptionru.current.value);
-    form.append("money", money.current.value);
     form.append("image", image.current.files[0]);
     form.append("ceiling_id", Number(ceilingId))
     try {
@@ -113,25 +105,6 @@ function ChooseModal() {
             placeholder="название потолка ен"
             required
           />
-          <input
-            ref={descriptionuz}
-            type="text"
-            placeholder="название потолка уз"
-            required
-          />
-          <input
-            ref={descriptionru}
-            type="text"
-            placeholder="название потолка ру"
-            required
-          />
-          <input
-            ref={descriptionen}
-            type="text"
-            placeholder="название потолка ен"
-            required
-          />
-          <input ref={money} type="text" placeholder="Денги" required />
           <button type="submit">Сохранять</button>
         </Form>
       </ModalCommon>

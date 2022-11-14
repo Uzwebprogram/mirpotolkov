@@ -61,7 +61,7 @@ const HomeChoose = () => {
         <WrapperContainer>
           <ChooseTop>
           <h2>{t("HomeChoose.0")}</h2>
-          <NavLink to={"/ourworks"} style={{textDecoration:"none" , marginTop:"75px"}} ><span>{t("HomeInstall.1")}</span></NavLink>
+          <NavLink to={"/ourworks"} style={{textDecoration:"none"}} ><span>{t("HomeInstall.1")}</span></NavLink>
           </ChooseTop>
           <Box sx={{ width: '100%'}} style={{margin: '0 auto'}}>
             <Box sx={{ borderColor: "divider" }}>

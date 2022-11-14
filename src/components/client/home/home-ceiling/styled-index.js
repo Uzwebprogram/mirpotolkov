@@ -4,15 +4,29 @@ import vig from "../../../../assets/images/client/vig.png";
 
 export const Section = styled.div`
   width: 100%;
-  /* height: 840px; */
   z-index: 2;
   position: relative;
   background: transparent url(${grayBg}) no-repeat scroll center top / cover;
+  margin-top: -100px;
+
+  @media only screen and (max-width: 1125px) {
+    background-image: none;
+    background: #eeedf2;
+  }
+
+  @media only screen and (max-width: 573px) {
+    background-image: none;
+    background: #eeedf2;
+  }
 `;
 
 export const CeilCardWrapper = styled.div`
   width: 100%;
   padding: 0 0 70px 0;
+
+  @media only screen and (max-width: 1069px) {
+   padding: 0;
+  }
 
   h2 {
     font-size: 46px;
@@ -31,7 +45,6 @@ export const CeilCardWrapper = styled.div`
     span {
       font-weight: bold;
     }
-  
   }
 `;
 export const CeilCard = styled.div`

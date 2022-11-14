@@ -12,7 +12,7 @@ function HomeComponent(params) {
   return (
     <>
       <HomeHero isText={true} />
-      <HomeCard />
+      {/* <HomeCard /> */}
       <HomeCeiling />
       <HomeCost isCost={true} />
       <HomeAdvantage />

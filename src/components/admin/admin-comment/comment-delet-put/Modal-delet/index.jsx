@@ -3,7 +3,7 @@ import { Wrapper , ModalContent , Buttons } from "./styled-index"
 
 function ModalDelete({open , HandleClose , DeleteId}) {
     const DeleteBlog = (DeleteId) => {
-        fetch(`https://api.mirpotolkov.uz/client_comment/${DeleteId}`, {
+        fetch(`https://mebel-b.herokuapp.com/client_comment/${DeleteId}`, {
             method: "DELETE",
         }).catch((DeleteId) => console.error(DeleteId));
     };

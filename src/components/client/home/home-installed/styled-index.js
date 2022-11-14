@@ -141,8 +141,7 @@ export const CardHeader = styled.div`
 export const CardBody = styled.div`
   display: flex;
   align-items: top;
-  justify-content: flex-start;
-
+  justify-content: center;
   @media only screen and (max-width: 516px) {
     display: flex;
     align-items: flex-start;
@@ -156,13 +155,13 @@ export const CardBody = styled.div`
 `;
 
 export const CardImg = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media only screen and (max-width: 516px) {
     width: 100%;
-    /* padding: 0 20px; */
   }
-
   img {
-    margin: 5px 10px 0 0;
     width: 100%;
   }
 `;

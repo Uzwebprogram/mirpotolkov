@@ -36,25 +36,6 @@ const CardInstall = ({visible}) => {
                   <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} alt="imagee" width={63} height={35} />
                 </MiniImg>
               </CardImg>
-              <CardImgContent>
-                <p>{elem.date}</p>
-                <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                </div>
-                <p>
-                  {t("HomeInstall.2")} 
-                  : <br /> {elem.creating_canvas} {t("HomeInstall.3")} 
-                </p>
-                <p>{t("HomeInstall.4")} : {elem.mounting} {t("HomeInstall.3")} </p>
-                <p>
-                {t("HomeInstall.5")} : {elem.volume}m <sup>2</sup>
-                </p>
-                <p>{elem.money}  {t("HomeInstall.7")}</p>
-              </CardImgContent>
             </CardBody>
             <CardFooter>
               <img  style={{borderRadius:"50%" , boxShadow:"rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"}} src={`https://api.mirpotolkov.uz/static/${elem.avatar_image}`}  width={78} height={78} alt="imaged" />

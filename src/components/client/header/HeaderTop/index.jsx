@@ -69,7 +69,6 @@ const HeaderTop = ({ HandleClick }) => {
           </div>
           <PhoneItem
             style={{
-              // background: "#224066",
               borderRadius: "10px",
               padding: "3px 10px",
               marginRight: "15px",

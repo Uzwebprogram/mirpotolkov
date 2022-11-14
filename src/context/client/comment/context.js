@@ -10,7 +10,7 @@ export const CommentProvider = ({children})=>{
     const [CommentMap , setCommentMap] = useState([])
 
     useEffect(() => {
-        fetch("https://api.mirpotolkov.uz/client_comment")
+        fetch("https://mebel-b.herokuapp.com/client_comment")
         .then(res => res.json())
         .then(result => setCommentMap(result))
     }, [CommentMap])

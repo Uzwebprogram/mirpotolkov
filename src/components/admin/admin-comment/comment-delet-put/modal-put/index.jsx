@@ -10,13 +10,9 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
   const clientcommentuz = useRef();
   const clientcommentru = useRef();
   const clientcommenten = useRef();
-  const creatingCanvas = useRef();
-  const mounting = useRef();
   const image = useRef();
   const avatarimage = useRef();
-  const volume = useRef();
   const clientnamesurname = useRef();
-  const moneys = useRef()
   const load = useRef();
   const [loading, setLoading] = useState(false);
   const [ceilingId, setCeilingId] = useState("");
@@ -33,14 +29,10 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
     formData.append("client_comment_ru", clientcommentru.current.value);
     formData.append("client_comment_en", clientcommenten.current.value);
     formData.append("client_name_surname", clientnamesurname.current.value);
-    formData.append("Volume", volume.current.value);
-    formData.append("mounting", mounting.current.value);
-    formData.append("creating_canvas", creatingCanvas.current.value);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
-    formData.append("money", moneys.current.value);
     try {
-      await fetch(`https://api.mirpotolkov.uz/client_comment/${id}`, {
+      await fetch(`https://mebel-b.herokuapp.com/client_comment/${id}`, {
         method: "PUT",
         body: formData,
       })
@@ -74,10 +66,10 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <span>Добавить потолков</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
-        <Form className="form" encType="multipart/form-data" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
-          <input type="file" accept="image/*" ref={image} />
+        <Form className="form" encType="multipart/form-data"  onSubmit={(e) => HandleSubmit(e, PutBlog)}>
+          <input type="file" accept="image/*" ref={image} required />
           <hr />
-          <input type="file" accept="image/*" ref={avatarimage} />
+          <input type="file" accept="image/*" ref={avatarimage} required />
 
           {loading ? (
             <>
@@ -95,10 +87,6 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <input type="text" placeholder={Element.client_comment_en} ref={clientcommenten} />
           <input type="text" placeholder={Element.client_comment_ru} ref={clientcommentru} />
           <input type="text" placeholder={Element.client_name_surname} ref={clientnamesurname} />
-          <input type="text" placeholder={Element.money} ref={moneys} />
-          <input type="text" placeholder={Element.mounting} ref={mounting} />
-          <input type="text" placeholder={Element.volume} ref={volume} />
-          <input type="text" placeholder={Element.creating_canvas} ref={creatingCanvas} />
           <button type="submit">Сохранять</button>
         </Form>
       </ModalCommon>

@@ -6,6 +6,12 @@ export const dataSidebar = [
         icon : "customize"
     },
     {
+        id : 8,
+        title : "Наши Партнеры",
+        path : "/admin/partnersadmin",
+        icon : "user"
+    },
+    {
         id : 3,
         title : "Вариант потолков",
         path : "/admin/adminchoose",

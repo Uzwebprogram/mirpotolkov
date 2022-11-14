@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Wrapper } from "./styled-index";
-
+import Partners from "./partners";
 function HamburgerMenu({ HamburgerClick, HandleClickClose }) {
   const { t, i18n } = useTranslation();
   const handleLang = (e) => {
@@ -76,6 +76,7 @@ function HamburgerMenu({ HamburgerClick, HandleClickClose }) {
               </>
             )}
           </select>
+          <Partners HandleClickClose={HandleClickClose}/>
           <ul>
             {data.map((elem) => (
               <>
@@ -122,7 +123,7 @@ function HamburgerMenu({ HamburgerClick, HandleClickClose }) {
                 </li>
                 <hr />
               </>
-            ))}
+            ))} 
           </ul>
           <a href="tel:+998977501133">+99897 750-11-33</a>
         </Wrapper>

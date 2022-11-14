@@ -5,11 +5,11 @@ import grayBg from "../../../../assets/images/client/sery.png";
 export const Section = styled.div`
   width: 100%;
   margin-bottom: -150px;
-  padding-top: 100px;
+  padding: 50px 0;
   height: 700px;
-  background: transparent url(${grayBg}) no-repeat scroll center top / cover;
-  position: relative;
-  z-index: 1;
+  /* background: transparent url(${grayBg}) no-repeat scroll center top / cover; */
+  /* position: relative;
+  z-index: 1; */
 
   h2 {
     font-size: 46px;

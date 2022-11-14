@@ -16,9 +16,9 @@ export const Section = styled.div`
     background: transparent url(${blueBg}) no-repeat scroll center left / cover;
   }
 
-  @media only screen and (max-width: 813px) {
+  /* @media only screen and (max-width: 813px) {
     margin-top: -220px;
-  }
+  } */
 
   div {
     h2 {

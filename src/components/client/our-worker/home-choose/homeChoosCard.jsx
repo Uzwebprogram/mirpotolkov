@@ -10,6 +10,7 @@ import {
 } from "./styled-index";
 import flag from "../../../../assets/images/client/flag.png";
 import ModalPhone from "../../Modal";
+import { useTranslation } from "react-i18next";
 const ChooseCard = ({ElementChoos}) => {
   function getValue(){
     return window.localStorage.getItem("i18nextLng")
@@ -17,6 +18,7 @@ const ChooseCard = ({ElementChoos}) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const {t , i18n} = useTranslation();
   return (
     <>
       <CardWrapper>
@@ -28,14 +30,10 @@ const ChooseCard = ({ElementChoos}) => {
             </CardHeader>
             <CardBody>
               <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="image" />
-              <FlagBox>
-                <img src={flag} alt="image" />
-                <p>{getValue() == "ru" ? elem.descriptionru: getValue() == "en" ? elem.descriptionen: getValue() == "uz" ? elem.descriptionuz:null}</p>
-              </FlagBox>
             </CardBody>
             <CardFooter>
               <button onClick={handleOpen}>
-                Заказать <i class="bx bx-right-arrow-circle"></i>
+              {t("HomeChoose.1")} <i class="bx bx-right-arrow-circle"></i>
               </button>
             </CardFooter>
           </Card>

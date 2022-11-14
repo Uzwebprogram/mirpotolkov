@@ -40,5 +40,11 @@ export const dataSidebar = [
         title : "Добавить администратора",
         path : "/admin/adminadd",
         icon : "user-voice"
+    },
+    {
+        id : 7,
+        title : "Партнеры Баннер",
+        path : "/admin/banner",
+        icon : "user-voice"
     }
 ]

@@ -15,12 +15,14 @@
 
     "Home": {
         "0": "Stretch ceilings with benefits up to 30%",
-        "1": "- Consultation on the choice and installation of the ceiling - Measurement of the room - Conclusion of the contract and placing an order at your home",
+        "1": "- Consultation on the choice and installation of the ceiling ",
         "2": "Just leave your phone number",
         "3": "Phone number",
         "4": "Calculate cost",
         "5": "By submitting this form, I agree to the processing of personal data",
-        "6": "We work all over Uzbekistan!"
+        "6": "We work all over Uzbekistan!",
+        "7":"- Measurement of the room ",
+        "8":"- Conclusion of the contract and placing an order at your home"
     },
 
     "HomeCard": {

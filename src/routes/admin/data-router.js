@@ -6,6 +6,7 @@ import Contact from "../../pages/admin/contact_us";
 import AdminChoose from "../../pages/admin/admin-choose";
 import AdminInstalled from "../../pages/admin/admin-installed";
 import PartnersAdmin from "../../pages/admin/partners";
+import Banner from "../../pages/admin/banner_add";
 import Cookies from "universal-cookie"
 
 const cookies = new Cookies();
@@ -50,4 +51,9 @@ export const  AdminRouter = [
         path : cookies.get("access") ? "/admin/partnersadmin" : null,
         Element : <PartnersAdmin/>
     },
+    {
+        id : 9, 
+        path : cookies.get("access") ? "/admin/banner" : null,
+        Element : <Banner/>
+    }
 ]

@@ -171,10 +171,7 @@ export const PhoneItem = styled.div`
     color: #fff;
     border: none;
     outline: none;
-    animation: glow 1s linear infinite;
-    -moz-animation: glow 1s linear infinite;
-    -webkit-animation: glow 1s linear infinite;
-    -o-animation: glow 1s linear infinite;
+
 
     option {
       color: #000;
@@ -189,10 +186,7 @@ export const PhoneItem = styled.div`
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
-    animation: glow 1s linear infinite;
-    -moz-animation: glow 1s linear infinite;
-    -webkit-animation: glow 1s linear infinite;
-    -o-animation: glow 1s linear infinite;
+
 
     i{
       font-size: 16px;

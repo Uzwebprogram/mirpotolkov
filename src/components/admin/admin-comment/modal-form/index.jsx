@@ -16,12 +16,8 @@ function CommentModal() {
   const clientcommentuz = useRef();
   const clientcommentru = useRef();
   const clientcommenten = useRef();
-  const creatingCanvas = useRef();
-  const mounting = useRef();
   const image = useRef();
   const avatarimage = useRef();
-  const volume = useRef();
-  const money = useRef();
   const clientnamesurname = useRef();
   const load = useRef();
   const handleUpload = async (e) => {
@@ -34,13 +30,9 @@ function CommentModal() {
     formData.append("client_comment_ru", clientcommentru.current.value);
     formData.append("client_comment_en", clientcommenten.current.value);
     formData.append("client_name_surname", clientnamesurname.current.value);
-    formData.append("Volume", volume.current.value);
-    formData.append("money", money.current.value);
-    formData.append("mounting", mounting.current.value);
-    formData.append("creating_canvas", creatingCanvas.current.value);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
-    const res = await fetch("https://api.mirpotolkov.uz/client_comment", {
+    const res = await fetch("https://mebel-b.herokuapp.com/client_comment", {
       method: "POST",
       body: formData,
     });
@@ -76,23 +68,13 @@ function CommentModal() {
             <span>Добавить потолков</span>
             <span onClick={handleClose}>&times;</span>
           </ModalTop>
-          <Form className="form" onSubmit={handleUpload}>
-            <input type="file" id="fileImage" ref={image} />
-            {/* <label for="" class="custom-file-upload">
-              <span className="span-download">
-                <ion-icon name="cloud-download-outline"></ion-icon>
-              </span>
-              загрузить изображение
-            </label> */}
+          <Form className="form" encType="multipart/form-data" onSubmit={handleUpload}>
+            <input type="file" accept="image/*"  ref={image} required />
+
 
             <hr />
-            <input type="file" id="fileAvatar" ref={avatarimage} />
-            {/* <label for="fileAvatar" class="custom-file-upload">
-              <span className="span-download">
-                <ion-icon name="cloud-download-outline"></ion-icon>
-              </span>
-              загрузить аватар
-            </label> */}
+            <input type="file" accept="image/*" ref={avatarimage} required />
+
 
             {loading ? (
               <>
@@ -112,10 +94,6 @@ function CommentModal() {
             <input type="text" placeholder="Заказчик комментарий ру" ref={clientcommentru} />
             <input type="text" placeholder="Заказчик комментарий ен" ref={clientcommenten} />
             <input type="text" placeholder="Заказчик имя фамилия" ref={clientnamesurname} />
-            <input type="text" placeholder="Монтаж" ref={mounting} />
-            <input type="text" placeholder="Объем" ref={volume} />
-            <input type="text" placeholder="Создание полотна" ref={creatingCanvas} />
-            <input type="text" placeholder="Сум" ref={money} />
             <button type="submit">Сохранять</button>
           </Form>
         </ModalCommon>

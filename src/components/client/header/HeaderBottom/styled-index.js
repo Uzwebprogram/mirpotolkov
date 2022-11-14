@@ -5,6 +5,7 @@ export const WrapperNavBtm = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
   @media only screen and (max-width: 1042px) {
     display: flex;
     align-items: center;

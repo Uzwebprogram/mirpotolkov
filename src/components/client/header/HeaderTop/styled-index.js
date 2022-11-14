@@ -141,22 +141,9 @@ export const SectionMobile = styled.div`
     align-items: center;
 
     img {
-      @media only screen and (max-width: 452px) {
-        width: 170px;
-        height: 50px;
-      }
-      @media only screen and (max-width: 427px) {
-        width: 170px;
-        height: 43px;
-      }
-      @media screen and (max-width: 372px) {
-        width: 160px;
-        height: 37px;
-      }
-
       @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-        width: 110px;
-        height: 30px;
+        width: 160px;
+        height: 28.7px;
         object-fit: cover;
       }
     }
@@ -184,10 +171,7 @@ export const PhoneItem = styled.div`
     color: #fff;
     border: none;
     outline: none;
-    animation: glow 1s linear infinite;
-    -moz-animation: glow 1s linear infinite;
-    -webkit-animation: glow 1s linear infinite;
-    -o-animation: glow 1s linear infinite;
+
 
     option {
       color: #000;
@@ -202,10 +186,7 @@ export const PhoneItem = styled.div`
     margin: 0 7px;
     font-weight: bold;
     font-size: 20px;
-    animation: glow 1s linear infinite;
-    -moz-animation: glow 1s linear infinite;
-    -webkit-animation: glow 1s linear infinite;
-    -o-animation: glow 1s linear infinite;
+
 
     i{
       font-size: 16px;

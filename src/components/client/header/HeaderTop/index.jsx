@@ -1,12 +1,6 @@
 import React from "react";
 import { WrapperContainer } from "../../../../style-App";
-import {
-  NavList,
-  Section,
-  NavBar,
-  SectionMobile,
-  PhoneItem,
-} from "./styled-index";
+import { NavList, Section, NavBar, SectionMobile , PhoneItem} from "./styled-index";
 import { NavLink } from "react-router-dom";
 import HeaderLang from "../header-language/index";
 import { useTranslation } from "react-i18next";
@@ -22,7 +16,7 @@ const HeaderTop = ({ HandleClick }) => {
   };
   function LanguValue() {
     return window.localStorage.getItem("i18nextLng");
-
+  }
     const navigate = useNavigate();
     const HandleClickMore = () => {
       navigate("/partners");
@@ -75,7 +69,6 @@ const HeaderTop = ({ HandleClick }) => {
           </div>
           <PhoneItem
             style={{
-              // background: "#224066",
               borderRadius: "10px",
               padding: "3px 10px",
               marginRight: "15px",
@@ -133,6 +126,5 @@ const HeaderTop = ({ HandleClick }) => {
       </>
     );
   }
-};
 
 export default HeaderTop;

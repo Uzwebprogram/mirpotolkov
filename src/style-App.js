@@ -24,4 +24,5 @@ export const WrapperContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   z-index: 10000;
+  
 `;

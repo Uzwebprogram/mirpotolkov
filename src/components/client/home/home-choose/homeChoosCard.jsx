@@ -34,15 +34,6 @@ const ChoosCard = ({ElementChoos}) => {
             </CardHeader>
             <CardBody>
               <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="images" />
-              <Prise>
-                <strike>{t("HomeChoose.2")}</strike>
-                <br />
-                <span>{getValue() == "ru" ? "от" :null} {elem.money} {t("HomeChoose.3")}</span>
-              </Prise>
-              <FlagBox>
-                <img src={flag} alt="image" />
-                <p>{getValue() == "ru" ? elem.descriptionru: getValue() == "en" ? elem.descriptionen: getValue() == "uz" ? elem.descriptionuz:null}</p>
-              </FlagBox>
             </CardBody>
             <CardFooter>
               <button onClick={handleOpen}>

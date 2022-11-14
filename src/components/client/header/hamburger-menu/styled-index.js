@@ -2,6 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     display: none;
+    .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
+    padding: 0 !important;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root{
+    box-shadow: none !important;
+    border-bottom: 1px solid #d1d1d1;
+}
+
  @media only screen and (max-width : 768px) {
     position: fixed;
     display: flex;
@@ -67,7 +75,7 @@ export const Wrapper = styled.div`
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
-    a:nth-child(4){
+    a:nth-child(5){
         background: #d4665c;
         font-style: normal;
         font-weight: 400;

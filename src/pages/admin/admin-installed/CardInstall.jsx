@@ -34,24 +34,6 @@ const CardInstall = () => {
                   <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} alt="imagee" width={63} height={35} />
                 </MiniImg>
               </CardImg>
-              <CardImgContent>
-                <p>{elem.date}</p>
-                <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                </div>
-                <p>
-                  Создание полотна: <br /> {elem.creating_canvas}
-                </p>
-                <p>Монтаж: {elem.mounting}</p>
-                <p>
-                  Объем: {elem.volume} <sup>2</sup>
-                </p>
-                <p>{elem.money}сум</p>
-              </CardImgContent>
             </CardBody>
             <CardFooter>
               <img style={{borderRadius: "50%", objectFit: 'cover'}} src={`https://api.mirpotolkov.uz/static/${elem.avatar_image}`} width={78} height={78} alt="image" />

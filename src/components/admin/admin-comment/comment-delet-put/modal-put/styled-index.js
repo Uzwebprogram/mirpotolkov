@@ -52,9 +52,9 @@ export const Form = styled.form`
     padding-bottom: 15px;
     cursor: pointer;
   }
-  input[type="file"] {
+  /* input[type="file"] {
     display: none;
-  }
+  } */
   .span-download {
     font-size: 22px;
     position: relative;

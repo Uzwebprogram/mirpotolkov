@@ -30,15 +30,6 @@ const AdminChoosCard = ({ Element }) => {
                 height={202}
                 alt="imagef"
               />
-              <Prise>
-                <strike></strike>
-                <br />
-                <span>от {elem.money} сум</span>
-              </Prise>
-              <FlagBox>
-                <img src={flag} alt="image" />
-                <p>{elem.descriptionru}</p>
-              </FlagBox>
             </CardBody>
             <CardFooter>
               <CuinsinesDeletPutComponent

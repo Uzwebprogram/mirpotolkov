@@ -32,7 +32,7 @@ function CommentModal() {
     formData.append("client_name_surname", clientnamesurname.current.value);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
-    const res = await fetch("https://mebel-b.herokuapp.com/client_comment", {
+    const res = await fetch("https://api.mirpotolkov.uz/client_comment", {
       method: "POST",
       body: formData,
     });

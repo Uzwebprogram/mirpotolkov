@@ -40,11 +40,13 @@ export const Section = styled.div`
   padding-top: 15px;
 }
 
-.dropdown-content span {
+.dropdown-content button {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  background-color: white;
+  border: transparent;
   cursor: pointer;
 }
 

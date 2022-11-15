@@ -15,10 +15,12 @@ import {
 import { StretchContext } from "../../../context/client/stretch_ceilings/context";
 import { useTranslation } from "react-i18next";
 import ModalPhone from "../Modal";
+import { RegionContext } from "../../../context/client/region/context";
 const card = [1, 2, 3, 4];
 
 const PartnerCard = () => {
   const {StretchMap} = useContext(StretchContext)
+  const {RegionMap} = useContext(RegionContext)
   const [t,i18n] = useTranslation()
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);

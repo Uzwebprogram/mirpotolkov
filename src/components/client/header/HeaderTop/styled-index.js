@@ -76,11 +76,11 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: flex-start;
   list-style-type: none;
-  padding: 0 0 0 50px;
+  /* padding: 0 0 0 50px; */
   margin: 0;
 
   li {
-    margin: 0 20px;
+    margin: 0 10px;
 
     a {
       text-decoration: none;
@@ -88,6 +88,10 @@ export const NavList = styled.ul`
       font-weight: bold;
       text-transform: uppercase;
       color: #224066;
+
+      img{
+        margin: 0 20px 0 0;
+      }
     }
   }
 `;

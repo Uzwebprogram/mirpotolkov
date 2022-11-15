@@ -13,7 +13,7 @@ import LogoWhite from "../../../../assets/images/admin/logo.png"
 import { useTranslation } from "react-i18next";
 import ModalPhone from "../../Modal";
 
-const HeaderBottom = ({ isLocal , logoWhite }) => {
+const HeaderBottom = ({ isLocal , logoWhite, isLogo }) => {
   const [t, i18n] = useTranslation();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -22,9 +22,11 @@ const HeaderBottom = ({ isLocal , logoWhite }) => {
     <>
       <ModalPhone open={open} setOpen={setOpen} handleClose={handleClose} />
       <WrapperNavBtm>
-        <LogoItem>
-          {logoWhite ? <img src={LogoWhite} width={200} height={50} alt="" />:<img src={Logo} width={210} height={40} alt="" />}
-        </LogoItem>
+       {isLogo ? (
+         <LogoItem>
+         {logoWhite ? <img src={LogoWhite} width={200} height={70} alt="" />:<img src={Logo} width={210} height={40} alt="" />}
+       </LogoItem>
+       ): null}
         <LocalItem>
           <img src={localIcon} alt="image" />
           {isLocal ? <p>{t("Header.7")}</p> : <p>{t("Header.9")}</p>}

@@ -4,8 +4,14 @@ import { Prev } from "../../../components/client/our-worker/home-choose/styled-i
 import { WrapperContainer} from "../../../style-App"
 import { Wrapper ,WrapperTop } from "./styled-index"
 import PartnerCard from "./../../../components/client/partners/index"
+import { useContext } from "react"
+import { RegionContext } from "../../../context/client/region/context"
 function Partners() {
     const {t , i18n} = useTranslation(); 
+    const {RegionMap } = useContext(RegionContext)
+    function GetValueLanguage() {
+      return window.localStorage.getItem("i18nextLng")
+    }
     return(
       <Wrapper>
 
@@ -18,7 +24,9 @@ function Partners() {
               </NavLink>
             </button>
           </Prev>
-            <h2>Ташкент</h2>
+          {RegionMap.map(elem => window.localStorage.getItem("MoreId") == elem.id ?
+            <h2>{GetValueLanguage() === "uz" ? elem.region_name_uz : GetValueLanguage() === "ru" ? elem.region_name_ru :  GetValueLanguage() === "en" ? elem.region_name_en:null} </h2>:null 
+            )}
             </WrapperTop>
             <PartnerCard/>
         </WrapperContainer>

@@ -17,7 +17,7 @@ function BannerPut({PutBlog}) {
         let form = new FormData()
         form.append("image" ,  image.current.files[0])
         try {
-           await fetch(`https://mebel-b.herokuapp.com/banners/${id}`, {
+           await fetch(`https://api.mirpotolkov.uz/banners/${id}`, {
                 method: 'PUT',
                 body: form
             })

@@ -8,6 +8,7 @@ import { StretchProvider } from "./context/client/stretch_ceilings/context";
 import { ChooseProvider } from "./context/client/choose/context";
 import { ContactProvider } from "./context/admin/contact_us/context";
 import { CommentProvider } from "./context/client/comment/context";
+import { RegionProvider } from "./context/client/region/context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -17,7 +18,9 @@ root.render(
           <ChooseProvider>
             <ContactProvider>
               <CommentProvider>
+                <RegionProvider>
                 <App />
+                </RegionProvider>
               </CommentProvider>
             </ContactProvider>
           </ChooseProvider>

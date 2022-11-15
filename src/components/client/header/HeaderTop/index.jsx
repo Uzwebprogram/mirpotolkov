@@ -6,9 +6,11 @@ import HeaderLang from "../header-language/index";
 import { useTranslation } from "react-i18next";
 import Logo1 from "../../../../assets/images/client/logomir.png";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { RegionContext } from "../../../../context/client/region/context";
 const HeaderTop = ({ HandleClick }) => {
   const [t, i18n] = useTranslation();
-
+  const {RegionMap} = useContext(RegionContext)
   const handleLang = (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
@@ -18,7 +20,8 @@ const HeaderTop = ({ HandleClick }) => {
     return window.localStorage.getItem("i18nextLng");
   }
     const navigate = useNavigate();
-    const HandleClickMore = () => {
+    const HandleClickMore = (e) => {
+      window.localStorage.setItem("MoreId" , e.target.value)
       navigate("/partners");
     };
     return (
@@ -50,9 +53,9 @@ const HeaderTop = ({ HandleClick }) => {
                 <div class="dropdown">
                   <button class="dropbtn">{t("Header.10")}</button>
                   <div class="dropdown-content">
-                    <span onClick={HandleClickMore}>Ташкент</span>
-                    <span>Сирдарё</span>
-                    <span>Бухара</span>
+                    {RegionMap.map((elem , index) =>
+                    LanguValue() === "uz" ?<button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_uz}</button>
+                    :LanguValue() === "ru" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_ru}</button>:LanguValue() === "en" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_en}</button>:null)}
                   </div>
                 </div>
               </NavList>

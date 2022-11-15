@@ -13,6 +13,11 @@ export const Section = styled.div`
   @media only screen and (max-width: 1142px) {
     padding: 20px 0 50px 0;
   }
+
+  @media only screen and (max-width: 915px) {
+    background-image: none;
+    background: #eeedf2;
+  }
   div {
     h2 {
       margin: 100px 0 34px 20px;
@@ -21,7 +26,10 @@ export const Section = styled.div`
       text-align: left;
       font-weight: 200;
       @media only screen and (max-width: 425px) {
-        font-size: 24px;
+        font-size: 36px;
+      }
+      @media only screen and (max-width: 910px) {
+        margin: 50px 0 34px 20px;
       }
     }
   }
@@ -53,8 +61,8 @@ export const Card = styled.div`
   }
 
   @media only screen and (max-width: 914px) {
-    width: 100%;
-    margin: 30px -300px 30px 0;
+    width: 50%;
+    margin: 0 auto;
   }
 
   @media only screen and (max-width: 650px) {
@@ -101,7 +109,7 @@ export const CardHeader = styled.div`
 
 export const CardBody = styled.div`
   position: relative;
-  
+
   img {
     @media only screen and (max-width: 425px) {
       width: 341px;
@@ -134,7 +142,7 @@ export const FlagBox = styled.div`
   align-items: center;
   justify-content: center;
   margin: 10px 0 0 50px;
-  img{
+  img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -182,11 +190,21 @@ export const CardFooter = styled.div`
 `;
 
 export const ChooseTop = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-span{
-   background: #213a66;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 832px){
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    a{
+      margin: 0 0 20px 20px;
+    }
+  }
+ 
+  span {
+    background: #213a66;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -198,24 +216,24 @@ span{
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
-}
-@media only screen and (max-width: 426px) {
-  span{
-   background: #213a66;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    padding: 10px 10px;
-    text-align: center;
-    margin-right: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
-}
-}
-`
+  }
+  @media only screen and (max-width: 426px) {
+    span {
+      background: #213a66;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      padding: 10px 10px;
+      text-align: center;
+      margin-right: 10px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+`;

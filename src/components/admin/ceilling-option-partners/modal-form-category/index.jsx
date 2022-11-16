@@ -13,18 +13,18 @@ function CategoryRegionModal() {
 
  
  
-  const titleuz = useRef();
-  const titleru = useRef();
-  const titleen = useRef();
+  const regionuz = useRef();
+  const regionru = useRef();
+  const regionen = useRef();
   const load = useRef();
   const HandleSubmit = async (e)=>{
     e.preventDefault();
     const req = {
-      titleUz: titleuz.current.value,
-      titleRu: titleru.current.value,
-      titleEn: titleen.current.value
+      region_name_uz: regionuz.current.value,
+      region_name_ru: regionru.current.value,
+      region_name_en: regionen.current.value
     }
-    const response = await axios.post("https://api.mirpotolkov.uz/ceiling_option" , req)
+    const response = await axios.post("https://api.mirpotolkov.uz/region" , req)
     if (response) {
       handleClose()
     }
@@ -34,7 +34,7 @@ function CategoryRegionModal() {
 
   return (
     <Wrapper>
-      <button style={{marginLeft: '10px'}} onClick={handleOpen}>Добавить категория</button>
+      <button style={{marginLeft: '10px'}} onClick={handleOpen}>Добавить region</button>
 
       <ModalCommon
         scroll="scroll"
@@ -43,7 +43,7 @@ function CategoryRegionModal() {
         open={open}
       >
         <ModalTop>
-          <span>Добавить категория</span>
+          <span>Добавить region</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
         <hr />
@@ -53,21 +53,21 @@ function CategoryRegionModal() {
           onSubmit={HandleSubmit}
         >
           <input
-            ref={titleuz}
+            ref={regionuz}
             type="text"
-            placeholder="название потолка уз"
+            placeholder="название region уз"
             required
           />
           <input
-            ref={titleru}
+            ref={regionru}
             type="text"
-            placeholder="название потолка ру"
+            placeholder="название region ру"
             required
           />
           <input
-            ref={titleen}
+            ref={regionen}
             type="text"
-            placeholder="название потолка ен"
+            placeholder="название region ен"
             required
           />
           

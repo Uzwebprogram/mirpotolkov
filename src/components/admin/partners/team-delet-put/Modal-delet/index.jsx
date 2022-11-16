@@ -4,7 +4,7 @@ import {ModalTop} from '../modal-put/styled-index'
  
 function ModalDelete({ open, HandleClose, DeleteId }) {
   const DeleteBlog = (DeleteId) => {
-    const response = fetch(`https://api.mirpotolkov.uz/cuisine/${DeleteId}`, {
+    const response = fetch(`https://api.mirpotolkov.uz/partners/${DeleteId}`, {
       method: "DELETE",
     }).catch((DeleteId) => console.error(DeleteId));
     console.log(response);

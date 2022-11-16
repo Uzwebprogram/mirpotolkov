@@ -42,10 +42,10 @@ const HomeCeiling = () => {
                   <Discount>
                     <DiscountItem>
                       <p>
-                      {t("celing.2")} {elem.skidka}%
+                       {elem.skidka} M <sup>2</sup>
                         <br />
                         <span>
-                        {elem.money} {t("celing.3")} <sup>2</sup>
+                        {elem.money} {t("celing.3")} 
                         </span>
                       </p>
                     </DiscountItem>

@@ -176,6 +176,7 @@ export const CardFooter = styled.div`
     color: #fff;
     padding: 10px 10px 10px 35px;
     margin: 7px 0 0 45px;
+    margin-top: 25px;
     outline: none;
     border: none;
     cursor: pointer;

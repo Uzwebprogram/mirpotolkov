@@ -38,6 +38,7 @@ export const Section = styled.div`
   min-width: 160px;
   z-index: 1;
   padding-top: 15px;
+
 }
 
 .dropdown-content button {

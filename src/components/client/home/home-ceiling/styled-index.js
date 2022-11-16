@@ -106,7 +106,7 @@ export const CeilItem = styled.div`
     font-size: 22px;
     color: #213a66;
     font-family: sans-serif;
-    text-transform: capitalize;
+    width: 250px;
   }
 
   img {

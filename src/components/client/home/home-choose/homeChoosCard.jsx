@@ -33,7 +33,7 @@ const ChoosCard = ({ElementChoos}) => {
               <h4>{getValue() == "ru" ? elem.titlecuisineru: getValue() == "en" ? elem.titlecuisineen: getValue() == "uz" ? elem.titlecuisineuz:null}</h4>
             </CardHeader>
             <CardBody>
-              <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={202} alt="images" />
+              <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={360} height={255} alt="images" />
             </CardBody>
             <CardFooter>
               <button onClick={handleOpen}>

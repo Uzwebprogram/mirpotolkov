@@ -46,6 +46,7 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
                     <span>Изменить КЛИЕНТЫ</span>
                     <span onClick={handleClose}>&times;</span>
             </ModalTop>
+            <hr />
             <Form className="form"  onSubmit={(e) => HandleSubmit(e , PutBlog)}>
             <input type="file" id="file" ref={image}/>
                 <label for="file" class="custom-file-upload">

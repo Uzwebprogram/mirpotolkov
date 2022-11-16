@@ -30,9 +30,10 @@ function ModalPut({ handleClose, open, PutBlog }) {
         open={open}
       >
         <ModalTop>
-          <span>Добавить потолков</span>
+          <span>Изменить категория</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
+        <hr />
         <Form
           className="form"
           onSubmit={(e) => HandleSubmit(e , PutBlog)}

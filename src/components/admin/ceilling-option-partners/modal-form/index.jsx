@@ -58,16 +58,17 @@ function PartnersModal() {
 
       <ModalCommon
         scroll="scroll"
-        height="400px"
+        height="450px"
         handleClose={handleClose}
         open={open}
-        width={"400px"}
+        width={"600px"}
 
       >
         <ModalTop>
-          <span>Добавить потолков</span>
+          <span>Добавить Партнеры</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
+        <hr />
         <Form
           className="form"
           enctype="multipart/form-data"

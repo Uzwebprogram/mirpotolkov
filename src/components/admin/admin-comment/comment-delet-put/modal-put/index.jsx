@@ -4,15 +4,15 @@ import ModalCommon from "../../../common/modal";
 import { ChooseContext } from "../../../../../context/client/choose/context";
 
 function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
-  const titleuz = useRef();
-  const titleen = useRef();
-  const titleru = useRef();
-  const clientcommentuz = useRef();
-  const clientcommentru = useRef();
-  const clientcommenten = useRef();
+  const [titleuz, setTitleUz] = useState(Element);
+  const [titleru, setTitleRu] = useState(Element);
+  const [titleen, setTitleEn] = useState(Element);
+  const [clientcommentuz, setClientcommentuz] = useState(Element);
+  const [clientcommentru, setClientcommentru] = useState(Element);
+  const [clientcommenten, setClientcommenten] = useState(Element);
   const image = useRef();
   const avatarimage = useRef();
-  const clientnamesurname = useRef();
+  const [clientnamesurname, setClientnamesurname] = useState(Element);
   const load = useRef();
   const [loading, setLoading] = useState(false);
   const [ceilingId, setCeilingId] = useState("");
@@ -22,13 +22,13 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     let formData = new FormData();
-    formData.append("titleUz", titleuz.current.value);
-    formData.append("titleRu", titleru.current.value);
-    formData.append("titleEn", titleen.current.value);
-    formData.append("client_comment_uz", clientcommentuz.current.value);
-    formData.append("client_comment_ru", clientcommentru.current.value);
-    formData.append("client_comment_en", clientcommenten.current.value);
-    formData.append("client_name_surname", clientnamesurname.current.value);
+    formData.append("titleUz", titleuz);
+    formData.append("titleRu", titleru);
+    formData.append("titleEn", titleen);
+    formData.append("client_comment_uz", clientcommentuz);
+    formData.append("client_comment_ru", clientcommentru);
+    formData.append("client_comment_en", clientcommenten);
+    formData.append("client_name_surname", clientnamesurname);
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
     try {
@@ -66,6 +66,7 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
           <span>Добавить потолков</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
+        <hr />
         <Form className="form" encType="multipart/form-data"  onSubmit={(e) => HandleSubmit(e, PutBlog)}>
           <input type="file" accept="image/*" ref={image} required />
           <hr />
@@ -80,13 +81,13 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
             загрузка...
           </span>
 
-          <input type="text" placeholder={Element.titleuz} ref={titleuz} />
-          <input type="text" placeholder={Element.titleru} ref={titleru} />
-          <input type="text" placeholder={Element.titleen} ref={titleen} />
-          <input type="text" placeholder={Element.client_comment_uz} ref={clientcommentuz} />
-          <input type="text" placeholder={Element.client_comment_en} ref={clientcommenten} />
-          <input type="text" placeholder={Element.client_comment_ru} ref={clientcommentru} />
-          <input type="text" placeholder={Element.client_name_surname} ref={clientnamesurname} />
+          <input type="text" onChange={(e) => setTitleUz(e.target.value)} name='titleuz' value={titleuz.titleuz} required />
+          <input type="text" onChange={(e) => setTitleRu(e.target.value)} name='titleru' value={titleru.titleru} required />
+          <input type="text" onChange={(e) => setTitleEn(e.target.value)} name='titleen' value={titleen.titleen} required />
+          <input type="text" onChange={(e) => setClientcommentuz(e.target.value)} name='clientcommentuz' value={clientcommentuz.client_comment_uz} required />
+          <input type="text" onChange={(e) => setClientcommenten(e.target.value)} name='clientcommenten' value={clientcommenten.client_comment_en} required />
+          <input type="text" onChange={(e) => setClientcommentru(e.target.value)} name='clientcommentru' value={clientcommentru.client_comment_ru} required />
+          <input type="text" onChange={(e) => setClientnamesurname(e.target.value)} name='clientnamesurname' value={clientnamesurname.client_name_surname} />
           <button type="submit">Сохранять</button>
         </Form>
       </ModalCommon>

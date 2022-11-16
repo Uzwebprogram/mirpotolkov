@@ -12,13 +12,14 @@ import HeaderLang from "../header-language/index";
 import { useTranslation } from "react-i18next";
 import Logo1 from "../../../../assets/images/client/logomir.png";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { RegionContext } from "../../../../context/client/region/context";
 import Logo from "../../../../assets/images/client/logomir.png"
 import LogoWhite from "../../../../assets/images/admin/logo.png"
-const HeaderTop = ({ HandleClick, logoWhite }) => {
+import { useContext } from "react";
+import { RegionContext } from "../../../../context/client/region/context";
+const HeaderTop = ({ HandleClick , logoWhite }) => {
+
   const [t, i18n] = useTranslation();
-  const {RegionMap} = useContext(RegionContext)
+  const { RegionMap } = useContext(RegionContext);
   const handleLang = (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
@@ -40,11 +41,11 @@ const HeaderTop = ({ HandleClick, logoWhite }) => {
               <NavList>
               <li>
                 <a href="/">
-                    {logoWhite ? (
-                      <img src={LogoWhite} width={200} height={50} alt="" />
-                    ) : (
-                      <img src={Logo} width={180} height={30} alt="" />
-                    )}
+                  {logoWhite ? (
+                    <img src={LogoWhite} width={200} height={50} alt="" />
+                  ) : (
+                    <img src={Logo} width={180} height={30} alt="" />
+                  )}
                 </a>
               </li>
               <li>
@@ -74,7 +75,6 @@ const HeaderTop = ({ HandleClick, logoWhite }) => {
                     LanguValue() === "uz" ?<button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_uz}</button>
                     :LanguValue() === "ru" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_ru}</button>:LanguValue() === "en" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_en}</button>:null)}
                   </div>
-
                   </div>
             </NavList>
             <HeaderLang />

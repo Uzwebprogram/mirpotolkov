@@ -46,6 +46,7 @@ function CategoryRegionModal() {
           <span>Добавить категория</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
+        <hr />
         <Form
           className="form"
           enctype="multipart/form-data"

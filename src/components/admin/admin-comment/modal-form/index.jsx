@@ -68,6 +68,7 @@ function CommentModal() {
             <span>Добавить потолков</span>
             <span onClick={handleClose}>&times;</span>
           </ModalTop>
+          <hr />
           <Form className="form" encType="multipart/form-data" onSubmit={handleUpload}>
             <input type="file" accept="image/*"  ref={image} required />
 

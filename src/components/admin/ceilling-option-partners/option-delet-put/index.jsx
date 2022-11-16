@@ -46,7 +46,7 @@ function OptionRegionDeletPutComponent({}) {
                 ))}
               </select>
                 </div>
-            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId}/>
+            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId} ChooseMap={ChooseMap}/>
             <ModalPut open={open} handleClose={HandleClose} Element={Elements} PutBlog={PutBlog} />
         </Wrapper>
     )

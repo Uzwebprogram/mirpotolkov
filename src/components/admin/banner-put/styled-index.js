@@ -3,26 +3,26 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   button {
     display: flex;
-    justify-content: center;
+    margin-left: auto;
     font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
     text-transform: uppercase;
-    color: #1b1b1b;
-    background: #ffd700;
-    padding: 23px 0px;
-    margin-top: 20px;
+    color: white;
+    border: none;
+    background: #F67263;
+    padding: 23px 100px;
+    margin:10px 0 25px 0;
     cursor: pointer;
-    width: 100%;
-
-}
+    border-radius: 20px;
+  }
 `;
 export const ModalTop = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 10px 20px;
   span:nth-child(1) {
     font-family: sans-serif;
     font-style: normal;
@@ -31,6 +31,9 @@ export const ModalTop = styled.div`
     line-height: 22px;
     color: black;
     margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #224066;
   }
   span:nth-child(2) {
     font-family: sans-serif;
@@ -53,6 +56,12 @@ export const Form = styled.form`
     padding-top: 10px;
     padding-bottom: 15px;
     cursor: pointer;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
   }
   input[type="file"] {
     display: none;
@@ -81,7 +90,7 @@ export const Form = styled.form`
     margin-bottom: 20px;
   }
   button {
-    margin-top: 40px;
+    margin-top: 90px;
     font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -94,6 +103,12 @@ export const Form = styled.form`
     padding: 23px 0px;
     border: transparent;
     cursor: pointer;
+  }
+  select {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
   textarea {
     width: 300px;

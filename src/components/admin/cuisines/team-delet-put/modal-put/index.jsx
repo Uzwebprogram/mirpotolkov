@@ -2,16 +2,17 @@ import { useRef, useState} from "react";
 import {Wrapper , ModalTop , Form} from "./styled-index"
 import ModalCommon from "../../../common/modal";
 function ModalPut({handleClose , open , PutBlog , Title , Element}) {
-    const titleuz  = useRef();
-    const titleen  = useRef();
-    const titleru  = useRef();
+    const [titleuz, setTitleUz]  = useState(Element);
+    const [titleru, setTitleRu]  = useState(Element);
+    const [titleen, setTitleEn]  = useState(Element);
+
     const image  = useRef();
     const HandleSubmit = async (e , id ) =>{
         e.preventDefault()
         let form = new FormData()
-        form.append("titleUz" , titleuz.current.value)
-        form.append("titleEn" , titleen.current.value)
-        form.append("titleRu" , titleru.current.value)
+        form.append("titlecuisineuz" , titleuz)
+        form.append("titlecuisineen" , titleen)
+        form.append("titlecuisineru" , titleru)
         form.append("image" ,  image.current.files[0])
         try {
            await fetch(`https://api.mirpotolkov.uz/cuisine/${id}`, {
@@ -37,15 +38,16 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
                     <span>Изменить КЛИЕНТЫ</span>
                     <span onClick={handleClose}>&times;</span>
             </ModalTop>
+            <hr />
             <Form className="form"  onSubmit={(e) => HandleSubmit(e , PutBlog)}>
             <input type="file" id="file" ref={image}/>
                 <label for="file" class="custom-file-upload">
                     <span className="span-download"><ion-icon  name="cloud-download-outline"></ion-icon></span>
                 загрузить изображение
                 </label>
-                <input  ref={titleuz} type="text" placeholder={Element.titlecuisineuz}  required />
-                <input  ref={titleru} type="text" placeholder={Element.titlecuisineru}  required />
-                <input  ref={titleen} type="text" placeholder={Element.titlecuisineen} required />
+                <input  value={titleuz.titlecuisineuz} name='titleuz' onChange={(e) => setTitleUz(e.target.value)} type="text"  required />
+                <input  value={titleru.titlecuisineru} name='titleru' onChange={(e) => setTitleRu(e.target.value)} type="text"  required />
+                <input  value={titleen.titlecuisineen} name='titleen' onChange={(e) => setTitleEn(e.target.value)} type="text" required />
                 <button type="submit">Сохранять</button>
             </Form>
         </ModalCommon>

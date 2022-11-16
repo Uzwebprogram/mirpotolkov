@@ -4,20 +4,24 @@ import ModalCommon from "../../../common/modal";
 import { ChooseContext } from "../../../../../context/client/choose/context";
 import axios from "axios";
 
-function ModalPut({ handleClose, open, PutBlog }) {
-    const titleuz = useRef();
-    const titleen = useRef();
-    const titleru = useRef();
+function ModalPut({ handleClose, open, PutBlog, Element }) {
+  const regionuz = useRef();
+  const regionru =useRef();
+  const regionen = useRef()
+ 
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {
-      titleUz: titleuz.current.value,
-      titleRu: titleru.current.value,
-      titleEn: titleen.current.value
-    }
-    const response = await axios.put(`https://api.mirpotolkov.uz/ceiling_option/${id}` , req)
+      region_name_uz: regionuz.current.value,
+      region_name_ru: regionru.current.value,
+      region_name_en: regionen.current.value,
+    };
+    const response = await axios.put(
+      `https://api.mirpotolkov.uz/region/${id}`,
+      req
+    );
     if (response) {
-      handleClose()
+      handleClose();
     }
   };
   return (
@@ -30,30 +34,27 @@ function ModalPut({ handleClose, open, PutBlog }) {
         open={open}
       >
         <ModalTop>
-          <span>Изменить категория</span>
+          <span>Изменить region</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
         <hr />
-        <Form
-          className="form"
-          onSubmit={(e) => HandleSubmit(e , PutBlog)}
-        >
-                    <input
-            ref={titleuz}
+        <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
+          <input
+            ref={regionuz}
             type="text"
-            placeholder="название потолка уз"
+            placeholder='region_name_uz'
             required
           />
           <input
-            ref={titleru}
+            ref={regionru}
             type="text"
-            placeholder="название потолка ру"
+            placeholder='region_name_ru'
             required
           />
           <input
-            ref={titleen}
+            ref={regionen}
             type="text"
-            placeholder="название потолка ен"
+            placeholder='region_name_en'
             required
           />
           <button type="submit">Сохранять</button>

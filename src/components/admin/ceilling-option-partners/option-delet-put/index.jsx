@@ -2,16 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import ModalDelete from "./Modal-delet";
 import { Wrapper} from "./styled-index";
 import ModalPut from "./modal-put";
-import { ChooseContext } from "../../../../context/client/choose/context";
+import { RegionContext } from "../../../../context/client/region/context";
 function OptionRegionDeletPutComponent({}) {
     const [open , SetOpen] = useState(false)
     const [open2 , SetOpen2] = useState(false)
     const [DeletId , setDeleteId] = useState(); 
     const [PutBlog , setPutBlog] = useState();
     const [Elements , setElement] = useState();
-    const {ChooseMap} = useContext(ChooseContext);
+    const {RegionMap} = useContext(RegionContext);
     useEffect(() => {
-        ChooseMap.map(elem =>
+      RegionMap.map(elem =>
             setElement(elem)
             )
     }, [Elements])
@@ -34,19 +34,19 @@ function OptionRegionDeletPutComponent({}) {
         <Wrapper>
                 <div >
                 <select onChange={HandleOpen2}>
-                <option  selected disabled> Категория Удалить</option>
-                {ChooseMap.map((elem, index) => (
-                  <option key={index} value={elem.id}>{elem.titleru}</option>
+                <option  selected disabled> Region Удалить</option>
+                {RegionMap.map((elem, index) => (
+                  <option key={index} value={elem.id}>{elem.region_name_ru}</option>
                 ))}
               </select>
               <select onChange={HandleOpen}>
-                <option  selected disabled> Категория Изминеть</option>
-                {ChooseMap.map((elem, index) => (
-                  <option key={index}  value={elem.id}>{elem.titleru}</option>
+                <option  selected disabled> Region Изминеть</option>
+                {RegionMap.map((elem, index) => (
+                  <option key={index}  value={elem.id}>{elem.region_name_ru}</option>
                 ))}
               </select>
                 </div>
-            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId} ChooseMap={ChooseMap}/>
+            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId}/>
             <ModalPut open={open} handleClose={HandleClose} Element={Elements} PutBlog={PutBlog} />
         </Wrapper>
     )

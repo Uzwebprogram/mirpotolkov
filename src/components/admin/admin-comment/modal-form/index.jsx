@@ -37,19 +37,19 @@ function CommentModal() {
       body: formData,
     });
     let x= await res.json();
-    e.target[0].value = null;
-    e.target[1].value = null;
-    e.target[2].value = null;
-    e.target[3].value = null;
-    e.target[4].value = null;
-    e.target[5].value = null;
-    e.target[6].value = null;
-    e.target[7].value = null;
-    e.target[8].value = null;
-    e.target[9].value = null;
-    e.target[10].value = null;
-    e.target[11].value = null;
-    e.target[12].value = null;
+    // e.target[0].value = null;
+    // e.target[1].value = null;
+    // e.target[2].value = null;
+    // e.target[3].value = null;
+    // e.target[4].value = null;
+    // e.target[5].value = null;
+    // e.target[6].value = null;
+    // e.target[7].value = null;
+    // e.target[8].value = null;
+    // e.target[9].value = null;
+    // e.target[10].value = null;
+    // e.target[11].value = null;
+    // e.target[12].value = null;
     console.log(x);
   };
 

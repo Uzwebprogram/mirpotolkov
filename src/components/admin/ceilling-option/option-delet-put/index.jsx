@@ -14,7 +14,6 @@ function OptionDeletPutComponent({}) {
   useEffect(() => {
     ChooseMap.map((elem) => console.log(elem));
   }, [Elements]);
-  console.log(Elements);
 
   const HandleOpen = (e) => {
     SetOpen(true);
@@ -35,7 +34,6 @@ function OptionDeletPutComponent({}) {
       <div>
         <select onChange={HandleOpen2}>
           <option selected disabled>
-            {" "}
             Категория Удалить
           </option>
           {ChooseMap.map((elem, index) => (
@@ -46,7 +44,6 @@ function OptionDeletPutComponent({}) {
         </select>
         <select onChange={HandleOpen}>
           <option selected disabled>
-            {" "}
             Категория Изминеть
           </option>
           {ChooseMap.map((elem, index) => (

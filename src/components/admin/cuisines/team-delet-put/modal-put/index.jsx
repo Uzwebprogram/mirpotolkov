@@ -2,10 +2,9 @@ import { useRef, useState} from "react";
 import {Wrapper , ModalTop , Form} from "./styled-index"
 import ModalCommon from "../../../common/modal";
 function ModalPut({handleClose , open , PutBlog , Title , Element}) {
-    const [titleuz, setTitleUz]  = useState(Element);
-    const [titleru, setTitleRu]  = useState(Element);
-    const [titleen, setTitleEn]  = useState(Element);
-
+    const titleuz  = useRef();
+    const titleru  = useRef();
+    const titleen  = useRef();
     const image  = useRef();
     const HandleSubmit = async (e , id ) =>{
         e.preventDefault()
@@ -45,9 +44,9 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
                     <span className="span-download"><ion-icon  name="cloud-download-outline"></ion-icon></span>
                 загрузить изображение
                 </label>
-                <input  value={titleuz.titlecuisineuz} name='titleuz' onChange={(e) => setTitleUz(e.target.value)} type="text"  required />
-                <input  value={titleru.titlecuisineru} name='titleru' onChange={(e) => setTitleRu(e.target.value)} type="text"  required />
-                <input  value={titleen.titlecuisineen} name='titleen' onChange={(e) => setTitleEn(e.target.value)} type="text" required />
+                <input  ref={titleuz} placeholder={Element.titlecuisineuz} name='titleuz' type="text"  />
+                <input  ref={titleru} placeholder={Element.titlecuisineru} name='titleru' type="text"  />
+                <input  ref={titleen} placeholder={Element.titlecuisineen} name='titleen' type="text" />
                 <button type="submit">Сохранять</button>
             </Form>
         </ModalCommon>

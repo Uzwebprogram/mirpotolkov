@@ -5,24 +5,22 @@ import { ChooseContext } from "../../../../../context/client/choose/context";
 import axios from "axios";
 
 function ModalPut({ handleClose, open, PutBlog, Element }) {
-  const [titleuz, setTitleUz] = useState(Element);
-  const [titleru, setTitleRu] = useState(Element);
-  const [titleen, setTitleEn] = useState(Element);
-console.log(Element);
+  const titleuz = useRef();
+  const titleru = useRef();
+  const titleen = useRef();
+
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {
-      titleUz: titleuz,
-      titleRu: titleru,
-      titleEn: titleen,
+      titleUz: titleuz.current.value,
+      titleRu: titleru.current.value,
+      titleEn: titleen.current.value,
     };
     const response = await axios.put(
       `https://api.mirpotolkov.uz/ceiling_option/${id}`,
       req
     );
-    if (response) {
-      handleClose();
-    }
+    console.log(response);
   };
   return (
     <Wrapper>
@@ -38,30 +36,29 @@ console.log(Element);
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
         <hr />
-        {/* <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
+        <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
           <input
-            value={titleuz.titleUz}
+            ref={titleuz}
             name="titleuz"
-            onChange={(e) => setTitleUz(e.target.value)}
+            placeholder="категория_uz"
             type="text"
-            required
+            
           />
           <input
-            value={titleru.titleRu}
+            ref={titleru}
             name="titleru"
-            onChange={(e) => setTitleRu(e.target.value)}
+            placeholder="категория_ru"
             type="text"
-            required
           />
           <input
-            value={titleen.titleEn}
+            ref={titleen}
             name="titleen"
-            onChange={(e) => setTitleEn(e.target.value)}
+            placeholder="категория_en"
             type="text"
-            required
+            
           />
           <button type="submit">Сохранять</button>
-        </Form> */}
+        </Form>
       </ModalCommon>
     </Wrapper>
   );

@@ -8,14 +8,14 @@ function ClientRouterComponent() {
     return(
         <>
         <FixedNetwork/>
-        <Header/>
+        <Header />
         <Networks/>
             <Routes>
                 {ClientRouter.map((elem , index) =>
                     <Route key={index} path={elem.path}  element={elem.Element} />
                 )}
             </Routes>
-        <Footer/>
+        <Footer isLogo={true}/>
         </>
     )
 }

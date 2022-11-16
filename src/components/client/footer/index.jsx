@@ -2,12 +2,12 @@ import HeaderBottom from "../header/HeaderBottom/index";
 import { Section, PrivacyPolicy } from "./styled-index";
 import { WrapperContainer } from "../../../style-App";
 import { NavLink } from "react-router-dom";
-function Footer() {
+function Footer({isLogo}) {
   return (
     <>
       <Section id="contact">
         <WrapperContainer>
-          <HeaderBottom logoWhite />
+          <HeaderBottom logoWhite isLogo={isLogo} />
           <PrivacyPolicy>
             <a href="https://www.facebook.com/mirpotolkovvuz">
             <i class='bx bxl-facebook-circle'></i>

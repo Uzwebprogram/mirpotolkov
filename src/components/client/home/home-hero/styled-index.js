@@ -18,6 +18,8 @@ export const HomeContent = styled.div`
     color: #fff;
     font-weight: bold;
     margin: 20px 0;
+    text-shadow: 2px 0 rgb(34,64,102), -2px 0 rgb(34,64,102), 0 2px rgb(34,64,102), 0 -2px rgb(34,64,102),
+             1px 1px rgb(34,64,102), -1px -1px rgb(34,64,102), 1px -1px rgb(34,64,102), -1px 1px rgb(34,64,102);
     @media only screen and (max-width: 768px) {
       font-size: 50px;
     }
@@ -34,6 +36,8 @@ export const HomeContent = styled.div`
   p {
     font-size: 24px;
     color: #000;
+    text-shadow: 1px 0 white, -1px 0 white, 0 1px white, 0 -1px white,
+             1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white;
     @media only screen and (max-width: 750px) {
       font-size: 20px;
     }

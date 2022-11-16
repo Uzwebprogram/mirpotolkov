@@ -12,16 +12,6 @@ export const WrapperNavBtm = styled.div`
     justify-content: space-around;
     margin: 10px 0 0 0;
   }
-  /* @media only screen and (max-width: 880px) {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 20px 0 0 0;
-    padding: 0 0 0 23px;
-
-    width: 100%;
-  } */
   @media only screen and (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -71,10 +61,9 @@ export const LocalItem = styled.div`
   justify-content: space-between;
 
   p {
-    color: #fff;
+    color: #000;
     margin: 0 7px;
     font-size: 18px;
-
     @media only screen and (max-width: 768px) {
       font-size: 14px;
     }
@@ -87,7 +76,7 @@ export const PhoneItem = styled.div`
   align-items: center;
   justify-content: space-between;
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     margin: 0 7px;
     font-weight: bold;

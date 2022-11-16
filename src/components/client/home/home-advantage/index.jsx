@@ -24,21 +24,21 @@ const HomeAdvantage = () => {
           <AdvantageCardWrapper>
             <AdvantageCard>
               <CardImage>
-              <img src={priem5} alt="imagee" />
+              <img src={priem7} alt="imagee" />
               <img src={priem1} alt="image" />
               </CardImage>
               <p>{t("HomeAdvan.1")}</p>
             </AdvantageCard>
             <AdvantageCard>
             <CardImage>
-              <img src={priem6} alt="imagee" />
+              <img src={priem5} alt="imagee" />
               <img src={priem2} alt="image" />
               </CardImage>
               <p>{t("HomeAdvan.2")}</p>
             </AdvantageCard>
             <AdvantageCard>
             <CardImage>
-              <img src={priem7} alt="imagee" />
+              <img src={priem6} alt="imagee" />
               <img src={priem3} alt="image" />
               </CardImage>
               <p>{t("HomeAdvan.3")}</p>

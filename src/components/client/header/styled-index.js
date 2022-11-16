@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import headerBg from "../../../assets/images/client/header.jpg";
+import headerBg from "../../../assets/images/client/hero.jpg";
 
 export const WrapperHero = styled.div`
   background-color: #999;
@@ -12,8 +12,6 @@ export const Section = styled.div`
   background-position: center -20px;
   background-repeat: no-repeat;
   background-size: cover;
-
-
   @media only screen and (max-width: 320px) {
     width: 100%;
     padding: 50px 0 120px 0;

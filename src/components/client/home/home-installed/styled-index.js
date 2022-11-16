@@ -158,11 +158,12 @@ export const CardImg = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   @media only screen and (max-width: 516px) {
     width: 100%;
   }
   img {
-    width: 100%;
+    width: 70%;
   }
 `;
 

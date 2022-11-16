@@ -3,12 +3,20 @@ import { Wrapper, ModalTop, Form } from "./styled-index";
 import ModalCommon from "../../../common/modal";
 import { ChooseContext } from "../../../../../context/client/choose/context";
 import axios from "axios";
+import { useEffect } from "react";
 
 function ModalPut({ handleClose, open, PutBlog, Element }) {
+
   const titleuz = useRef();
   const titleru = useRef();
   const titleen = useRef();
 
+
+  const [titleuz, setTitleUz] = useState(Element);
+  const [titleru, setTitleRu] = useState(Element);
+  const [titleen, setTitleEn] = useState(Element);
+  const [data , setData] = useState([]);
+    let newState = Element.map((e) => e); 
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {
@@ -38,20 +46,28 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
         <hr />
         <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
           <input
+
             ref={titleuz}
+
+            value={titleuz.titleuz}
             name="titleuz"
             placeholder="категория_uz"
             type="text"
             
           />
           <input
+
             ref={titleru}
+
+            value={titleru.titleru}
             name="titleru"
             placeholder="категория_ru"
             type="text"
           />
           <input
             ref={titleen}
+
+            value={titleen.titleen}
             name="titleen"
             placeholder="категория_en"
             type="text"

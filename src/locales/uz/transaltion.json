@@ -123,6 +123,7 @@
          "2" :"Ushbu shaklni yuborish orqali men shaxsiy ma'lumotlarni qayta ishlashga roziman"
     },
     "Fixed" : {
-        "0" : "«Buyurtmangizni kuzatib boring»"
+        "0" : "«Buyurtmangizni kuzatib boring»",
+        "1" : "Bizning mijozlarimiz"
     }
 }

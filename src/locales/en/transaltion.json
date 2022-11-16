@@ -123,6 +123,7 @@
         "2" :"By submitting this form, I agree to the processing of personal data"
     },
     "Fixed" : {
-        "0" : "«Track your order»"
+        "0" : "«Track your order»",
+        "1" : "Our clients"
     }
 }

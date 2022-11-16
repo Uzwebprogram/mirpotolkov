@@ -28,6 +28,35 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
         .then((result) => console.log(result));
     } catch (err) {
       console.log(err);
+
+function ModalPut({handleClose , open , PutBlog , Title , Element}) {
+    const image  = useRef("");
+    const [titleuz , setTitleUz] = useState(Element)
+    const [titleen , setTitleEn] = useState(Element)
+    const [titleru , setTitleRu] = useState(Element)
+    const [money , setMoney] = useState(Element)
+    const [skidka , setSkidka] = useState(Element)
+    const [shades , setShades] = useState(Element)
+    const HandleSubmit = async (e , id ) =>{
+        e.preventDefault()
+        let form = new FormData()
+        form.append("titleUz" , titleuz)
+        form.append("titleEn" , titleen)
+        form.append("titleRu" , titleru)
+        form.append("money" ,  money)
+        form.append("skidka" ,  skidka)
+        form.append("shades" ,  shades)
+        form.append("image" ,  image.current.files[0])
+        try {
+           await fetch(`https://api.mirpotolkov.uz/stretch_ceilings/${id}`, {
+                method: 'PUT',
+                body: form
+            })
+            .then(res => res.text())
+            .then(result => console.log(result));
+          } catch(err) {
+            console.log(err)
+        }
     }
   };
   return (

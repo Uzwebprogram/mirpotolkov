@@ -8,6 +8,7 @@ import HomeChoose from "./home-choose";
 import HomeInstalled from "./home-installed";
 import HomeSxema from "./home-sxema";
 import HomeMap from "./home-maps";
+import Banners from "./banners";
 function HomeComponent(params) {
   return (
     <>
@@ -19,6 +20,7 @@ function HomeComponent(params) {
       <HomeChoose/>
       <HomeInstalled/>
       <HomeSxema/>
+      <Banners/>
       <HomeMap/>
     </>
   );

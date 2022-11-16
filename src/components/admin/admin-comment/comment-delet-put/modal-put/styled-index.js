@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 export const ModalTop = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 10px 20px;
   span:nth-child(1) {
     font-family: sans-serif;
     font-style: normal;
@@ -29,6 +29,9 @@ export const ModalTop = styled.div`
     line-height: 22px;
     color: black;
     margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #224066;
   }
   span:nth-child(2) {
     font-family: sans-serif;
@@ -52,9 +55,7 @@ export const Form = styled.form`
     padding-bottom: 15px;
     cursor: pointer;
   }
-  /* input[type="file"] {
-    display: none;
-  } */
+  
   .span-download {
     font-size: 22px;
     position: relative;

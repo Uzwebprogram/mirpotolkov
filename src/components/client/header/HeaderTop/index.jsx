@@ -13,16 +13,14 @@ import { useTranslation } from "react-i18next";
 import Logo1 from "../../../../assets/images/client/logomir.png";
 import { useNavigate } from "react-router-dom";
 
-import Logo from "../../../../assets/images/client/logomir.png"
-import LogoWhite from "../../../../assets/images/admin/logo.png"
-const HeaderTop = ({ HandleClick, logoWhite }) => {
+import Logo from "../../../../assets/images/client/logomir.png";
+import LogoWhite from "../../../../assets/images/admin/logo.png";
 
 import { useContext } from "react";
 import { RegionContext } from "../../../../context/client/region/context";
-const HeaderTop = ({ HandleClick }) => {
-
+const HeaderTop = ({ HandleClick,logoWhite }) => {
   const [t, i18n] = useTranslation();
-  const {RegionMap} = useContext(RegionContext)
+  const { RegionMap } = useContext(RegionContext);
   const handleLang = (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
@@ -44,11 +42,11 @@ const HeaderTop = ({ HandleClick }) => {
             <NavList>
               <li>
                 <a href="/">
-                    {logoWhite ? (
-                      <img src={LogoWhite} width={200} height={50} alt="" />
-                    ) : (
-                      <img src={Logo} width={180} height={30} alt="" />
-                    )}
+                  {logoWhite ? (
+                    <img src={LogoWhite} width={200} height={50} alt="" />
+                  ) : (
+                    <img src={Logo} width={180} height={30} alt="" />
+                  )}
                 </a>
               </li>
               <li>
@@ -74,45 +72,33 @@ const HeaderTop = ({ HandleClick }) => {
               <div class="dropdown">
                 <button class="dropbtn">{t("Header.10")}</button>
                 <div class="dropdown-content">
-                  <span onClick={HandleClickMore}>Ташкент</span>
-                  <span>Сирдарё</span>
-                  <span>Бухара</span>
-
-   
-    return (
-      <>
-        <Section>
-          <WrapperContainer>
-            <NavBar>
-              <NavList>
-                <li>
-                  <a href="#calculator">{t("Header.1")}</a>
-                </li>
-                <li>
-                  <a href="#Advantage">{t("Header.2")}</a>
-                </li>
-                <li>
-                  <a href="#choose" to="#">
-                    {t("Header.3")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#HomeInstalled">{t("Header.4")}</a>
-                </li>
-                <li>
-                  <a href="#HomeSxema">{t("Header.5")}</a>
-                </li>
-                <li>
-                  <a href="#contact">{t("Header.6")}</a>
-                </li>
-                <div class="dropdown">
-                  <button class="dropbtn">{t("Header.10")}</button>
-                  <div class="dropdown-content">
-                    {RegionMap.map((elem , index) =>
-                    LanguValue() === "uz" ?<button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_uz}</button>
-                    :LanguValue() === "ru" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_ru}</button>:LanguValue() === "en" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_en}</button>:null)}
-                  </div>
-
+                  {RegionMap.map((elem, index) =>
+                    LanguValue() === "uz" ? (
+                      <button
+                        value={elem.id}
+                        key={index}
+                        onClick={HandleClickMore}
+                      >
+                        {elem.region_name_uz}
+                      </button>
+                    ) : LanguValue() === "ru" ? (
+                      <button
+                        value={elem.id}
+                        key={index}
+                        onClick={HandleClickMore}
+                      >
+                        {elem.region_name_ru}
+                      </button>
+                    ) : LanguValue() === "en" ? (
+                      <button
+                        value={elem.id}
+                        key={index}
+                        onClick={HandleClickMore}
+                      >
+                        {elem.region_name_en}
+                      </button>
+                    ) : null
+                  )}
                 </div>
               </div>
             </NavList>

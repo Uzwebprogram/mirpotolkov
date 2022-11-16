@@ -11,12 +11,12 @@ function ModalCommon({children , open , handleClose ,height , width ,  scroll}) 
         left: '50%',
         transform: 'translate(-50%, -50%)',
         bgcolor: 'background.paper',
-        border: '2px solid white',
+        // border: '2px solid white',
         boxShadow: 24,
-        borderRadius : "10px",
-        height : height,
-        width: width,
-        overflowY : scroll,
+        borderRadius : "25px",
+        height : 560,
+        width: 650,
+        overflowY : 'auto',
       };
 
     return(

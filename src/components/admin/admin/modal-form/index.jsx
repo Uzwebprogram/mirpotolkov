@@ -47,6 +47,7 @@ function ModalForm() {
                     <span>Добавить администратора</span>
                     <span onClick={handleClose}>&times;</span>
             </ModalTop>
+            <hr />
             <Form className="form" onSubmit={HandleSubmit}>
                 <input ref={adminName} type="text" placeholder="Имя" required />
                 <input ref={email} type="email" placeholder="Эл. адрес" required />

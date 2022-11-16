@@ -23,7 +23,7 @@ export const Wrapper =styled.div`
 export const ModalTop = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 10px 20px;
     span:nth-child(1){
         font-family: sans-serif;
         font-style: normal;
@@ -32,6 +32,9 @@ export const ModalTop = styled.div`
         line-height: 22px;
         color: black;
         margin-left: 20px;
+        color: #213a66;
+        font-weight: bold;
+        text-transform: uppercase;
     }
     span:nth-child(2){
         font-family: sans-serif;
@@ -82,7 +85,7 @@ label{
         margin-bottom: 20px;
     }
     button{
-        margin-top: 40px;
+        margin-top: 140px;
         font-family: sans-serif;
         font-style: normal;
         font-weight: 400;

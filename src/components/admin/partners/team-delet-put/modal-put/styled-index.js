@@ -22,15 +22,17 @@ export const Wrapper =styled.div`
 export const ModalTop = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 10px 20px;
     span:nth-child(1){
         font-family: sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 18px;
         line-height: 22px;
-        color: black;
+        color: #213a66;
         margin-left: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
     }
     span:nth-child(2){
         font-family: sans-serif;

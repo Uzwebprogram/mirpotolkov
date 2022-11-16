@@ -4,20 +4,24 @@ import ModalCommon from "../../../common/modal";
 import { ChooseContext } from "../../../../../context/client/choose/context";
 import axios from "axios";
 
-function ModalPut({ handleClose, open, PutBlog }) {
-    const titleuz = useRef();
-    const titleen = useRef();
-    const titleru = useRef();
+function ModalPut({ handleClose, open, PutBlog, Element }) {
+  const [titleuz, setTitleUz] = useState(Element);
+  const [titleru, setTitleRu] = useState(Element);
+  const [titleen, setTitleEn] = useState(Element);
+console.log(Element);
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {
-      titleUz: titleuz.current.value,
-      titleRu: titleru.current.value,
-      titleEn: titleen.current.value
-    }
-    const response = await axios.put(`https://api.mirpotolkov.uz/ceiling_option/${id}` , req)
+      titleUz: titleuz,
+      titleRu: titleru,
+      titleEn: titleen,
+    };
+    const response = await axios.put(
+      `https://api.mirpotolkov.uz/ceiling_option/${id}`,
+      req
+    );
     if (response) {
-      handleClose()
+      handleClose();
     }
   };
   return (
@@ -30,33 +34,34 @@ function ModalPut({ handleClose, open, PutBlog }) {
         open={open}
       >
         <ModalTop>
-          <span>Добавить потолков</span>
+          <span>Изменить категория</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
-        <Form
-          className="form"
-          onSubmit={(e) => HandleSubmit(e , PutBlog)}
-        >
-                    <input
-            ref={titleuz}
+        <hr />
+        {/* <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
+          <input
+            value={titleuz.titleUz}
+            name="titleuz"
+            onChange={(e) => setTitleUz(e.target.value)}
             type="text"
-            placeholder="название потолка уз"
             required
           />
           <input
-            ref={titleru}
+            value={titleru.titleRu}
+            name="titleru"
+            onChange={(e) => setTitleRu(e.target.value)}
             type="text"
-            placeholder="название потолка ру"
             required
           />
           <input
-            ref={titleen}
+            value={titleen.titleEn}
+            name="titleen"
+            onChange={(e) => setTitleEn(e.target.value)}
             type="text"
-            placeholder="название потолка ен"
             required
           />
           <button type="submit">Сохранять</button>
-        </Form>
+        </Form> */}
       </ModalCommon>
     </Wrapper>
   );

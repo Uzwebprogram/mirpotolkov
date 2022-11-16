@@ -54,6 +54,7 @@ function StretchModal() {
                     <span>Добавить потолков</span>
                     <span onClick={handleClose}>&times;</span>
             </ModalTop>
+            <hr />
             <Form className="form" enctype="multipart/form-data" onSubmit={HandleSubmit}>
                 <input type="file" id="file" ref={image} />
                 <label for="file" class="custom-file-upload">

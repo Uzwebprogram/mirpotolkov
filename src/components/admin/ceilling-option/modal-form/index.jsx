@@ -60,6 +60,7 @@ function ChooseModal() {
           <span>Добавить потолков</span>
           <span onClick={handleClose}>&times;</span>
         </ModalTop>
+        <hr />
         <Form
           className="form"
           enctype="multipart/form-data"

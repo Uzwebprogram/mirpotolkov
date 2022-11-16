@@ -4,13 +4,14 @@ import CategoryRegionModal from "../../../components/admin/ceilling-option-partn
 import OptionRegionDeletPutComponent from "../../../components/admin/ceilling-option-partners/option-delet-put"
 import PartnersDeletPutComponent from "../../../components/admin/partners/team-delet-put"
 import { CeilCard, CeilCardWrapper, CeilItem, WrapperUser } from "../../../components/client/partners/styled-index"
-import { StretchContext } from "../../../context/client/stretch_ceilings/context"
+import { RegionContext } from "../../../context/client/region/context"
 import { WrapperContainer } from "../../../style-App"
 import { Wrapper } from "./styled-index"
 
 
 function PartnersAdmin() {
-    const {StretchMap} = useContext(StretchContext)
+    const {RegionMap} = useContext(RegionContext)
+    console.log(RegionMap);
     return(
         <>
     <Wrapper>
@@ -22,19 +23,19 @@ function PartnersAdmin() {
         <WrapperContainer>
           <CeilCardWrapper>
             <CeilCard>
-              {StretchMap.map((elem , index) => (
+              {RegionMap.partners.map((elem , index) => (
                 <CeilItem key={index}>
-                  <h4>3Д Потолок</h4>
+                  <h4>{elem.titleuz}</h4>
                   
                   <img src={`https://api.mirpotolkov.uz/static/${elem.image}`} width={247} height={173} alt="images" />
                   
                   <WrapperUser>
                     <img src={"https://i0.wp.com/roohentertainment.com/wp-content/uploads/2018/06/user-avatar-1.png?ssl=1"} alt="" />
-                    <span>Алиса Иванова</span>
+                    <span>{elem.partner_name}</span>
                   </WrapperUser>
 
                   <a href="tel:+998915039390" >
-                    +99891-503-93-90 <i class='bx bxs-phone-call'></i>
+                    {elem.phone}<i class='bx bxs-phone-call'></i>
                   </a>
                   <PartnersDeletPutComponent
                 Element={elem}

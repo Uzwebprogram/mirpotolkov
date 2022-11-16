@@ -14,11 +14,9 @@ import Logo1 from "../../../../assets/images/client/logomir.png";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { RegionContext } from "../../../../context/client/region/context";
-
 import Logo from "../../../../assets/images/client/logomir.png"
 import LogoWhite from "../../../../assets/images/admin/logo.png"
 const HeaderTop = ({ HandleClick, logoWhite }) => {
-
   const [t, i18n] = useTranslation();
   const {RegionMap} = useContext(RegionContext)
   const handleLang = (e) => {
@@ -49,26 +47,26 @@ const HeaderTop = ({ HandleClick, logoWhite }) => {
                     )}
                 </a>
               </li>
-                <li>
-                  <a href="#calculator">{t("Header.1")}</a>
-                </li>
-                <li>
-                  <a href="#Advantage">{t("Header.2")}</a>
-                </li>
-                <li>
-                  <a href="#choose" to="#">
-                    {t("Header.3")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#HomeInstalled">{t("Header.4")}</a>
-                </li>
-                <li>
-                  <a href="#HomeSxema">{t("Header.5")}</a>
-                </li>
-                <li>
-                  <a href="#contact">{t("Header.6")}</a>
-                </li>
+              <li>
+                <a href="#calculator">{t("Header.1")}</a>
+              </li>
+              <li>
+                <a href="#Advantage">{t("Header.2")}</a>
+              </li>
+              <li>
+                <a href="#choose" to="#">
+                  {t("Header.3")}
+                </a>
+              </li>
+              <li>
+                <a href="#HomeInstalled">{t("Header.4")}</a>
+              </li>
+              <li>
+                <a href="#HomeSxema">{t("Header.5")}</a>
+              </li>
+              <li>
+                <a href="#contact">{t("Header.6")}</a>
+              </li>
                 <div class="dropdown">
                   <button class="dropbtn">{t("Header.10")}</button>
                   <div class="dropdown-content">
@@ -77,7 +75,7 @@ const HeaderTop = ({ HandleClick, logoWhite }) => {
                     :LanguValue() === "ru" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_ru}</button>:LanguValue() === "en" ? <button value={elem.id} key={index} onClick={HandleClickMore}>{elem.region_name_en}</button>:null)}
                   </div>
 
-            </div>
+                  </div>
             </NavList>
             <HeaderLang />
           </NavBar>

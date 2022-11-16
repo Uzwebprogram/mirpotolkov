@@ -2,7 +2,7 @@ import { useRef, useState} from "react";
 import {Wrapper , ModalTop , Form} from "./styled-index"
 import ModalCommon from "../../../common/modal";
 function ModalPut({handleClose , open , PutBlog , Title , Element}) {
-    const image  = useRef();
+    const image  = useRef("");
     const [titleuz , setTitleUz] = useState(Element)
     const [titleen , setTitleEn] = useState(Element)
     const [titleru , setTitleRu] = useState(Element)

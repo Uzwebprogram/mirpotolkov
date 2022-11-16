@@ -16,6 +16,7 @@ import { StretchContext } from "../../../context/client/stretch_ceilings/context
 import { useTranslation } from "react-i18next";
 import ModalPhone from "../Modal";
 import { RegionContext } from "../../../context/client/region/context";
+import { useEffect } from "react";
 const card = [1, 2, 3, 4];
 
 const PartnerCard = () => {
@@ -25,6 +26,12 @@ const PartnerCard = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  useEffect(() => {
+      fetch(`https://api.mirpotolkov.uz/region/${window.localStorage.getItem("MoreId")}`)
+      .then(res => res.json())
+      .then(result => console.log(result))
+  }, [])
+  
   function ValueLang() {
     return window.localStorage.getItem("i18nextLng")
   }

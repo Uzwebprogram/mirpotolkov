@@ -44,7 +44,7 @@ const HeaderTop = ({ HandleClick , logoWhite }) => {
                   {logoWhite ? (
                     <img src={LogoWhite} width={200} height={50} alt="" />
                   ) : (
-                    <img src={Logo} width={180} height={30} alt="" />
+                    <img src={Logo} width={180} height={33} alt="" />
                   )}
                 </a>
               </li>

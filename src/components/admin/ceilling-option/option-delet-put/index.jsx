@@ -3,19 +3,13 @@ import ModalDelete from "./Modal-delet";
 import { Wrapper} from "./styled-index";
 import ModalPut from "./modal-put";
 import { ChooseContext } from "../../../../context/client/choose/context";
-function OptionDeletPutComponent({}) {
+function OptionDeletPutComponent() {
     const [open , SetOpen] = useState(false)
     const [open2 , SetOpen2] = useState(false)
     const [DeletId , setDeleteId] = useState(); 
     const [PutBlog , setPutBlog] = useState();
-    const [Elements , setElement] = useState();
     const {ChooseMap} = useContext(ChooseContext);
-    useEffect(() => {
-        ChooseMap.map(elem =>
-            setElement(elem)
-            )
-    }, [Elements])
-    
+
     const HandleOpen = (e) => {
         SetOpen(true)
         setPutBlog(e.target.value)
@@ -42,12 +36,15 @@ function OptionDeletPutComponent({}) {
               <select onChange={HandleOpen}>
                 <option  selected disabled> Категория Изминеть</option>
                 {ChooseMap.map((elem, index) => (
-                  <option key={index}  value={elem.id}>{elem.titleru}</option>
+                    <>
+                          <option key={index}  value={elem.id}>{elem.titleru}</option>
+
+                    </>
                 ))}
               </select>
                 </div>
-            <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId}/>
-            <ModalPut open={open} handleClose={HandleClose} Element={Elements} PutBlog={PutBlog} />
+                <ModalDelete open={open2} HandleClose={HandleClose2}   DeleteId={DeletId}/>
+              <ModalPut open={open} handleClose={HandleClose} Element={ChooseMap} PutBlog={PutBlog} />
         </Wrapper>
     )
 }

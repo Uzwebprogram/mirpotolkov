@@ -1,9 +1,7 @@
-import { useContext, useRef, useState } from "react";
+import {useRef } from "react";
 import { Wrapper, ModalTop, Form } from "./styled-index";
 import ModalCommon from "../../../common/modal";
-import { ChooseContext } from "../../../../../context/client/choose/context";
 import axios from "axios";
-import { useEffect } from "react";
 
 function ModalPut({ handleClose, open, PutBlog, Element }) {
   const titleuz = useRef();

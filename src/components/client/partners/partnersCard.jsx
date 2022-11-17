@@ -3,10 +3,7 @@ import {
   CeilCardWrapper,
   CeilCard,
   CeilItem,
-  Discount,
-  DiscountItem,
-  Line,
-  LeftBlock,
+
   WrapperUser,
 } from "./styled-index";
 

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef} from "react";
 import { Wrapper, ModalTop, Form } from "./styled-index";
 import ModalCommon from "../../../common/modal";
 function ModalPut({ handleClose, open, PutBlog, Title, Element }) {

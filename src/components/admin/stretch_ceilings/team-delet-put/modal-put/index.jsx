@@ -4,21 +4,21 @@ import ModalCommon from "../../../common/modal";
 
 function ModalPut({handleClose , open , PutBlog , Title , Element}) {
     const image  = useRef("");
-    const [titleuz , setTitleUz] = useState(Element)
-    const [titleen , setTitleEn] = useState(Element)
-    const [titleru , setTitleRu] = useState(Element)
-    const [money , setMoney] = useState(Element)
-    const [skidka , setSkidka] = useState(Element)
-    const [shades , setShades] = useState(Element)
+    const titleuz = useRef()
+    const titleen = useRef()
+    const titleru = useRef()
+    const money = useRef()
+    const skidka = useRef()
+    const shades = useRef()
     const HandleSubmit = async (e , id ) =>{
         e.preventDefault()
         let form = new FormData()
-        form.append("titleUz" , titleuz)
-        form.append("titleEn" , titleen)
-        form.append("titleRu" , titleru)
-        form.append("money" ,  money)
-        form.append("skidka" ,  skidka)
-        form.append("shades" ,  shades)
+        form.append("titleuz" , titleuz.current.value)
+        form.append("titleen" , titleen.current.value)
+        form.append("titleru" , titleru.current.value)
+        form.append("money" ,  money.current.value)
+        form.append("skidka" ,  skidka.current.value)
+        form.append("shades" ,  shades.current.value)
         form.append("image" ,  image.current.files[0])
         try {
            await fetch(`https://api.mirpotolkov.uz/stretch_ceilings/${id}`, {

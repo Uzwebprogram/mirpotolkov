@@ -33,29 +33,29 @@ function CommentModal() {
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
     const res = await fetch("https://api.mirpotolkov.uz/client_comment", {
-      mode: 'no-cors',
+      // mode: 'no-cors',
       method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-        "Accept": "application/json",
-        "type": "formData"
-      },
+      // headers: {
+      //   "Content-Type": "multipart/form-data",
+      //   "Accept": "application/json",
+      //   "type": "formData"
+      // },
       body: formData,
     });
     let x= await res.json();
-    // e.target[0].value = null;
-    // e.target[1].value = null;
-    // e.target[2].value = null;
-    // e.target[3].value = null;
-    // e.target[4].value = null;
-    // e.target[5].value = null;
-    // e.target[6].value = null;
-    // e.target[7].value = null;
-    // e.target[8].value = null;
-    // e.target[9].value = null;
-    // e.target[10].value = null;
-    // e.target[11].value = null;
-    // e.target[12].value = null;
+    e.target[0].value = '';
+    e.target[1].value = '';
+    e.target[2].value = '';
+    e.target[3].value = '';
+    e.target[4].value = '';
+    e.target[5].value = '';
+    e.target[6].value = '';
+    e.target[7].value = '';
+    e.target[8].value = '';
+    e.target[9].value = '';
+    e.target[10].value = '';
+    e.target[11].value = '';
+    e.target[12].value = '';
     console.log(x);
   };
 

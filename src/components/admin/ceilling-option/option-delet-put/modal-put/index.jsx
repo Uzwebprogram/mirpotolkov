@@ -6,25 +6,22 @@ import axios from "axios";
 import { useEffect } from "react";
 
 function ModalPut({ handleClose, open, PutBlog, Element }) {
-  const [titleuz, setTitleUz] = useState(Element);
-  const [titleru, setTitleRu] = useState(Element);
-  const [titleen, setTitleEn] = useState(Element);
-  const [data , setData] = useState([]);
-    let newState = Element.map((e) => e); 
+  const titleuz = useRef();
+  const titleru = useRef();
+  const titleen = useRef();
+
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {
-      titleUz: titleuz,
-      titleRu: titleru,
-      titleEn: titleen,
+      titleUz: titleuz.current.value,
+      titleRu: titleru.current.value,
+      titleEn: titleen.current.value,
     };
     const response = await axios.put(
       `https://api.mirpotolkov.uz/ceiling_option/${id}`,
       req
     );
-    if (response) {
-      handleClose();
-    }
+    console.log(response);
   };
   return (
     <Wrapper>
@@ -42,25 +39,24 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
         <hr />
         <Form className="form" onSubmit={(e) => HandleSubmit(e, PutBlog)}>
           <input
-            value={titleuz.titleuz}
+            ref={titleuz}
             name="titleuz"
-            onChange={(e) => setTitleUz(e.target.value)}
+            placeholder="категория_uz"
             type="text"
-            required
+            
           />
           <input
-            value={titleru.titleru}
+            ref={titleru}
             name="titleru"
-            onChange={(e) => setTitleRu(e.target.value)}
+            placeholder="категория_ru"
             type="text"
-            required
           />
           <input
-            value={titleen.titleen}
+            ref={titleen}
             name="titleen"
-            onChange={(e) => setTitleEn(e.target.value)}
+            placeholder="категория_en"
             type="text"
-            required
+            
           />
           <button type="submit">Сохранять</button>
         </Form>

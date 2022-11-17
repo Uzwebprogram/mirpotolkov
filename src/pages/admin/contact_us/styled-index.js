@@ -22,8 +22,9 @@ table{
   }
   th, td{
 	padding: .8rem;
-	font-size: 1.4rem;
+	font-size: 12px;
 	text-align: center;
+	text-transform: uppercase;
     color: white;
   }
     img{

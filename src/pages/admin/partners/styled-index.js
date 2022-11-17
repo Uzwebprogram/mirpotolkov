@@ -90,10 +90,11 @@ export const CeilItem = styled.div`
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 18px;
     color: #213a66;
     font-family: sans-serif;
     text-transform: capitalize;
+    font-weight: bold;
   }
 
   img {
@@ -120,6 +121,7 @@ export const CeilItem = styled.div`
     border-radius: 50px;
     display: flex;
     align-items: center;
+    font-size: 16px;
     justify-content: space-between;
     color: #fff;
     padding: 10px 10px 10px 35px;
@@ -205,8 +207,9 @@ export const WrapperUser = styled.div`
     border: 5px solid #213a66;
   }
   span {
-    font-size: 20px;
+    font-size: 16px;
     color: #213a66;
+    font-weight: bold;
     font-family: sans-serif;
     text-transform: capitalize;
   }

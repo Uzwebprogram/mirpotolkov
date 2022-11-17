@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import ModalDelete from "./Modal-delet";
-import { Wrapper } from "./styled-index";
+import { Wrapper, SelectWrapper } from "./styled-index";
 import ModalPut from "./modal-put";
 import { ChooseContext } from "../../../../context/client/choose/context";
 function OptionDeletPutComponent({}) {
@@ -31,7 +31,7 @@ function OptionDeletPutComponent({}) {
   };
   return (
     <Wrapper>
-      <div>
+      <SelectWrapper>
         <select onChange={HandleOpen2}>
           <option selected disabled>
             Категория Удалить
@@ -52,7 +52,7 @@ function OptionDeletPutComponent({}) {
             </option>
           ))}
         </select>
-      </div>
+      </SelectWrapper>
       <ModalDelete open={open2} HandleClose={HandleClose2} DeleteId={DeletId} />
       <ModalPut
         open={open}

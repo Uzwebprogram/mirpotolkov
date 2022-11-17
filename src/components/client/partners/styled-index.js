@@ -8,8 +8,8 @@ export const Section = styled.div`
 `;
 
 export const CeilCardWrapper = styled.div`
-  width: 100%;
-  padding: 0 0 70px 0;
+  width: 100% !important;
+  padding: 0 0 80px 0;
   h2 {
     font-size: 46px;
     font-weight: 200;

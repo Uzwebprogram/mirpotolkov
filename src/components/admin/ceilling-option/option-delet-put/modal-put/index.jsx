@@ -10,13 +10,6 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
   const titleuz = useRef();
   const titleru = useRef();
   const titleen = useRef();
-
-
-  const [titleuz, setTitleUz] = useState(Element);
-  const [titleru, setTitleRu] = useState(Element);
-  const [titleen, setTitleEn] = useState(Element);
-  const [data , setData] = useState([]);
-    let newState = Element.map((e) => e); 
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {
@@ -48,8 +41,6 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
           <input
 
             ref={titleuz}
-
-            value={titleuz.titleuz}
             name="titleuz"
             placeholder="категория_uz"
             type="text"
@@ -58,16 +49,12 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
           <input
 
             ref={titleru}
-
-            value={titleru.titleru}
             name="titleru"
             placeholder="категория_ru"
             type="text"
           />
           <input
             ref={titleen}
-
-            value={titleen.titleen}
             name="titleen"
             placeholder="категория_en"
             type="text"

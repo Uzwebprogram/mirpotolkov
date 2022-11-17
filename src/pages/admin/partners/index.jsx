@@ -86,7 +86,7 @@ function PartnersAdmin() {
             </Box>
             {RegionMap.map((elem, index) => (
               <>
-              <TabPanel value={value} index={index}>
+              <TabPanel className='tabpanel' value={value} index={index}>
                 <AdminPartnersCard Element={elem} />
               </TabPanel>
               </>

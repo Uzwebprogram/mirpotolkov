@@ -1,33 +1,6 @@
 import { useRef, useState } from "react";
 import { Wrapper, ModalTop, Form } from "./styled-index";
 import ModalCommon from "../../../common/modal";
-function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
-  const image = useRef();
-  const titleuz = useRef();
-  const titleen = useRef();
-  const titleru = useRef();
-  const money = useRef();
-  const skidka = useRef();
-  const shades = useRef();
-  const HandleSubmit = async (e, id) => {
-    e.preventDefault();
-    let form = new FormData();
-    form.append("titleUz", titleuz.current.value);
-    form.append("titleEn", titleen.current.value);
-    form.append("titleRu", titleru.current.value);
-    form.append("money", money.current.value);
-    form.append("skidka", skidka.current.value);
-    form.append("shades", shades.current.value);
-    form.append("image", image.current.files[0]);
-    try {
-      await fetch(`https://api.mirpotolkov.uz/stretch_ceilings/${id}`, {
-        method: "PUT",
-        body: form,
-      })
-        .then((res) => res.text())
-        .then((result) => console.log(result));
-    } catch (err) {
-      console.log(err);
 
 function ModalPut({handleClose , open , PutBlog , Title , Element}) {
     const image  = useRef("");
@@ -58,7 +31,7 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
             console.log(err)
         }
     }
-  };
+
   return (
     <Wrapper>
       <ModalCommon

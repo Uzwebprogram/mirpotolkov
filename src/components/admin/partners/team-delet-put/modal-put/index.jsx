@@ -61,11 +61,11 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
             </span>
             загрузить аватар
           </label>
-          <input ref={titleuz} placeholder={Element.titleuz} type="text" required />
-          <input ref={titleru} placeholder={Element.titleru} type="text" required />
-          <input ref={titleen} placeholder={Element.titleen} type="text" required />
-          <input ref={phone} placeholder={Element.phone} type="tel" required />
-          <input ref={partnerName} placeholder={Element.partner_name} type="text" required />
+          <input ref={titleuz} placeholder={Element.titleuz} type="text" />
+          <input ref={titleru} placeholder={Element.titleru} type="text" />
+          <input ref={titleen} placeholder={Element.titleen} type="text" />
+          <input ref={phone} placeholder={Element.phone} type="tel" />
+          <input ref={partnerName} placeholder={Element.partner_name} type="text" />
           <button type="submit">Сохранять</button>
         </Form>
       </ModalCommon>

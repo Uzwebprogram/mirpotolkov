@@ -84,7 +84,7 @@ const AdminChoose = () => {
             </Box>
             {ChooseMap.map((elem, index) => (
               <>
-              <TabPanel value={value} index={index}>
+              <TabPanel className='tabpanel' value={value} index={index}>
                 <AdminChoosCard Element={elem} />
               </TabPanel>
               </>

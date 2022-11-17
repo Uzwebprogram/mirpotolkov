@@ -13,9 +13,12 @@ table{
   }
   th, td{
 	padding: .8rem;
-	font-size: 1.4rem;
+	font-size: 12px;
 	text-align: center;
     color: white;
+  }
+  th{
+	text-transform: uppercase;
   }
   
   tbody tr td {

@@ -33,7 +33,13 @@ function CommentModal() {
     formData.append("image", image.current.files[0]);
     formData.append("avatar_image", avatarimage.current.files[0]);
     const res = await fetch("https://api.mirpotolkov.uz/client_comment", {
+      mode: 'no-cors',
       method: "POST",
+      headers: {
+        "Content-Type": "multipart/form-data",
+        "Accept": "application/json",
+        "type": "formData"
+      },
       body: formData,
     });
     let x= await res.json();

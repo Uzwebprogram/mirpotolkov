@@ -85,8 +85,8 @@ export const Card = styled.div`
 export const CardHeader = styled.div`
 width: 80%;
   h4 {
-    font-size: 20px;
-    margin: 0 50px 10px 40px;
+    font-size: 18px;
+    margin: 0 10px 10px 10px;
     font-size: 20px;
     color: #224066;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

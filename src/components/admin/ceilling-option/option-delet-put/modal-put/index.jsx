@@ -7,7 +7,6 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
   const titleuz = useRef();
   const titleru = useRef();
   const titleen = useRef();
-
   const HandleSubmit = async (e, id) => {
     e.preventDefault();
     const req = {

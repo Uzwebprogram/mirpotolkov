@@ -4,7 +4,10 @@ import primer from "../../../assets/images/client/primer.png";
 
 export const Section = styled.div`
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
+  /* overflow-y: scroll;
+  height: 730px; */
+
   div {
     h2 {
       margin-top: 120px;
@@ -69,7 +72,28 @@ export const CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  overflow-y: scroll;
+  height: 690px;
   flex-wrap: wrap;
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   @media only screen and (max-width: 516px) {
     display: flex;
     align-items: center;

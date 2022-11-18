@@ -1,7 +1,7 @@
 import { useRef} from "react";
 import { Wrapper, ModalTop, Form } from "./styled-index";
 import ModalCommon from "../../../common/modal";
-function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
+function ModalPut({ handleClose, open, PutBlog,Element }) {
   const image = useRef();
   const titleuz = useRef();
   const titleen = useRef();
@@ -29,7 +29,6 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
     } catch (err) {
       console.log(err);
     }
-  };
   return (
     <Wrapper>
       <ModalCommon
@@ -86,5 +85,6 @@ function ModalPut({ handleClose, open, PutBlog, Title, Element }) {
       </ModalCommon>
     </Wrapper>
   );
+}
 }
 export default ModalPut;

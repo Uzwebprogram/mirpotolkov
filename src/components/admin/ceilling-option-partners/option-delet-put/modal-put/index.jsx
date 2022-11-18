@@ -43,19 +43,16 @@ function ModalPut({ handleClose, open, PutBlog, Element }) {
             ref={regionuz}
             type="text"
             placeholder='region_name_uz'
-            required
           />
           <input
             ref={regionru}
             type="text"
             placeholder='region_name_ru'
-            required
           />
           <input
             ref={regionen}
             type="text"
             placeholder='region_name_en'
-            required
           />
           <button type="submit">Сохранять</button>
         </Form>

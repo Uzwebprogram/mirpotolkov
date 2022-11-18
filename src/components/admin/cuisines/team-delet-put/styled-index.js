@@ -4,11 +4,11 @@ export const Wrapper = styled.div`
 div{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 button{
     background-color: #F67263;
-    padding: 10px 50px;
+    padding: 10px 30px;
     text-align: center;
     cursor: pointer;
     text-transform: capitalize;

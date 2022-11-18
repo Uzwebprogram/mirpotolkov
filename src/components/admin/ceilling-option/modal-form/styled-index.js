@@ -7,13 +7,13 @@ export const Wrapper = styled.div`
     font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 12px;
+    /* line-height: 23px; */
     text-transform: uppercase;
     color: white;
     border: none;
     background: #f67263;
-    padding: 15px 30px;
+    padding: 10px 20px;
     margin-bottom: 20px;
     cursor: pointer;
     border-radius: 20px;

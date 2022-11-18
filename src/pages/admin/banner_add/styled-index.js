@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   overflow-y: scroll;
-  height: 800px;
-
+  /* height: 800px; */
+  overflow-x: hidden;
   /* width */
   ::-webkit-scrollbar {
     width: 0;

@@ -77,7 +77,7 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: flex-start;
   list-style-type: none;
-  /* padding: 0 0 0 50px; */
+  padding: 0;
   margin: 0;
 
   li {

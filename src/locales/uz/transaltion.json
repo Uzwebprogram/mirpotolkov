@@ -14,7 +14,7 @@
     },
 
     "Home":{
-        "0": "30% gacha imtiyozli cho'zilgan shiftlar",
+        "0": "Hoziroq yo'lga chiqishga tayyor!",
         "1": "- Shiftni tanlash va o'rnatish bo'yicha maslahat ",
         "2": "Telefon raqamingizni qoldiring",
         "3": "Telefon raqami",
@@ -40,8 +40,8 @@
          "11": "15 yildan ortiq ishlagan"
     },
     "celing" : {
-        "0":"Qulay echimlar",
-         "1": "cho'zilgan shiftlar",
+        "0":"Cho'zilgan shiftlar ",
+         "1": "Narxlari",
          "2" : "Chegirma",
          "3": "sum/m",
          "4": "yillar",
@@ -97,7 +97,7 @@
     "HomeSxema":{
         "0": "Oddiy ish sxemasi",
         "1": "Siz so'rov qoldirasiz, 5 daqiqadan so'ng menejerimiz siz bilan bog'lanadi",
-         "2": "Ustamiz keldi, xonani o'lchaydi",
+         "2": "Bizning menejerimiz 5 daqiqadan so'ng qo'ng'iroq qiladi",
          "3": "Shartnoma tuzamiz, qulay usulda 50% to'laymiz",
          "4": "O'rnatish guruhi cho'zilgan shiftlarni o'rnatadi va axlatni olib tashlaydi"
     },

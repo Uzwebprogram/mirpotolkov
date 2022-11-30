@@ -3,10 +3,9 @@ import { WrapperContainer } from "../../../../style-App";
 import { Section, AdvantageCardWrapper, AdvantageCard , CardImage } from "./styled-index";
 
 import priem1 from "../../../../assets/images/client/icon_1.png";
-import priem2 from "../../../../assets/images/client/icon_2.png";
-import priem3 from "../../../../assets/images/client/icon_3.png";
-import priem4 from "../../../../assets/images/client/icon_4.png";
-
+import priem2 from "../../../../assets/images/client/work_icon2.png";
+import priem3 from "../../../../assets/images/client/work_icon3.png";
+import priem4 from "../../../../assets/images/client/work_icon4.png";
 import priem5 from "../../../../assets/images/client/add1.png";
 import priem6 from "../../../../assets/images/client/add2.png";
 import priem7 from "../../../../assets/images/client/add3.png";

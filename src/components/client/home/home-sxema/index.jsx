@@ -1,7 +1,7 @@
 import React from "react";
 import { WrapperContainer } from "../../../../style-App";
 import {Section, CardSxemaWrapper, CardSxema} from './styled-index'
-import work_icon from "../../../../assets/images/client/work_icon1.png";
+import work_icon from "../../../../assets/images/client/icon_1.png";
 import work_icon2 from "../../../../assets/images/client/work_icon2.png";
 import work_icon3 from "../../../../assets/images/client/work_icon3.png";
 import work_icon4 from "../../../../assets/images/client/work_icon4.png";

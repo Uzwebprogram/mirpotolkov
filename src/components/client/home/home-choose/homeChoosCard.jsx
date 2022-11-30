@@ -27,7 +27,7 @@ const ChoosCard = ({ElementChoos}) => {
     <>
       <CardWrapper>
       <ModalPhone open={open} handleOpen={handleOpen} handleClose={handleClose}/>
-        {ElementChoos?.cuisine.slice(0,6).map((elem) => (
+        {ElementChoos?.cuisine.slice(0,3).map((elem) => (
           <Card>
             <CardHeader>
               <h4>{getValue() == "ru" ? elem.titlecuisineru: getValue() == "en" ? elem.titlecuisineen: getValue() == "uz" ? elem.titlecuisineuz:null}</h4>

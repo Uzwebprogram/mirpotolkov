@@ -7,9 +7,9 @@ import {
   LinkItem,
 } from "./styled-index";
 import localIcon from "../../../../assets/images/client/point.svg";
-import localIconWhite from "../../../../assets/images/client/point.png";
+import localIconWhite from "../../../../assets/images/client/point2.svg";
 import phoneIcon from "../../../../assets/images/client/tel.svg";
-import phoneIconWhite from "../../../../assets/images/client/tel.png";
+import phoneIconWhite from "../../../../assets/images/client/tel2.svg";
 import Logo from "../../../../assets/images/client/logomir.png"
 import LogoWhite from "../../../../assets/images/admin/logo.png"
 import { useTranslation } from "react-i18next";
@@ -31,12 +31,12 @@ const HeaderBottom = ({ isLocal , logoWhite, isLogo }) => {
        ): null}
         <LocalItem>
           
-          {isLocal ?  <img src={localIcon} alt="imager" />: <img src={localIconWhite} alt="images" />}
+          {isLocal ?  <img src={phoneIcon} alt="imager" />: <img src={localIconWhite} alt="images" />}
           {isLocal ?  <p >{t("Header.7")}</p> : <p style={{color:"white"}}>{t("Header.9")}</p>}
         </LocalItem>
         <PhoneItem>
           
-          {isLocal ?  <img src={phoneIcon} alt="images" />: <img src={phoneIconWhite  } alt="images" />}
+          {isLocal ?  <img src={localIcon} alt="images" />: <img src={phoneIconWhite  } alt="images" />}
       {logoWhite ?           <a href="tel:+99897750-11-33" style={{color:"white"}}>
             +99897 <span>750-11-33</span>
           </a>:           <a href="tel:+99897750-11-33">

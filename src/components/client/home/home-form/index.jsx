@@ -87,7 +87,9 @@ const HomeForm = ({ isText, isCost, isCount }) => {
       <Form>
         {isCost ? (
           <div>
-            <BlueLine></BlueLine>
+            <BlueLine>
+              
+            </BlueLine>
             <FormCost>
               <FormGroup>
                 <label htmlFor="square">{t("HomeCost.1")}</label>

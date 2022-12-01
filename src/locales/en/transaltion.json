@@ -67,7 +67,8 @@
          "9": "Satin",
          "10": "Two-level",
          "11": "Sum",
-         "12" :"Add room"
+         "12" :"Add room",
+         "13": "Note: The price of a stretch ceiling is calculated individually for each application, taking into account not only the type of fabric, but also other factors. These include the manufacturer of components, the configuration of your premises, the availability of communications, design complexity, additional work, etc."
     },
 
     "HomeAdvan":{
@@ -95,10 +96,10 @@
     },
 
     "HomeSxema":{
-        "0": "Simple operation scheme",
+        "0": "You leave a request",
         "1": "You leave a request, after 5 minutes our manager will contact you",
-         "2": "Our manager will call in 5 minutes",
-         "3": "We conclude a contract, pay 50% in a convenient way",
+         "2": "Our manager will contact you within 5 minutes",
+         "3": "We conclude a contract, pay 80% in a convenient way ",
          "4": "The installation team installs stretch ceilings and takes out the garbage"
     },
 

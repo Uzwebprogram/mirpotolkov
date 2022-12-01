@@ -40,8 +40,8 @@
          "11": "15 yildan ortiq ishlagan"
     },
     "celing" : {
-        "0":"Cho'zilgan shiftlar ",
-         "1": "Narxlari",
+        "0":"Cho'zilgan shiftlarning narxi ",
+         "1": "narxi",
          "2" : "Chegirma",
          "3": "sum/m",
          "4": "yillar",
@@ -67,7 +67,8 @@
          "9": "atlas",
          "10": "Ikki darajali",
          "11": "sum",
-         "12":"Xona qo'shish"
+         "12":"Xona qo'shish",
+         "13": "Eslatma: Stretch shiftining narxi nafaqat mato turini, balki boshqa omillarni ham hisobga olgan holda har bir dastur uchun alohida hisoblanadi. Bularga komponentlar ishlab chiqaruvchisi, sizning binolaringiz konfiguratsiyasi, mavjudligi kiradi. kommunikatsiyalar, dizayn murakkabligi, qo'shimcha ish va boshqalar."
     },
 
     "HomeAdvan":{
@@ -84,7 +85,7 @@
     },
 
     "HomeInstall":{
-        "0": "Shahar va viloyatda o'rnatilgan shiftlarga misollar",
+        "0": "Mijozlarimizdan fikr-mulohazalar",
         "1": "Ko'proq ko'rsatish",
         "2": "Shift yaratish",
         "3": "kun",
@@ -96,9 +97,9 @@
 
     "HomeSxema":{
         "0": "Oddiy ish sxemasi",
-        "1": "Siz so'rov qoldirasiz, 5 daqiqadan so'ng menejerimiz siz bilan bog'lanadi",
-         "2": "Bizning menejerimiz 5 daqiqadan so'ng qo'ng'iroq qiladi",
-         "3": "Shartnoma tuzamiz, qulay usulda 50% to'laymiz",
+        "1": "Siz so'rov qoldirasiz",
+         "2": "Bizning menejerimiz siz bilan 5 daqiqa ichida bog'lanadi",
+         "3": "Biz shartnoma tuzamiz, 80% ni qulay tarzda to'laymiz",
          "4": "O'rnatish guruhi cho'zilgan shiftlarni o'rnatadi va axlatni olib tashlaydi"
     },
 

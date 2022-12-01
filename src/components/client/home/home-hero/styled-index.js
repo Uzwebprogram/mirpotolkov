@@ -14,14 +14,15 @@ export const HomeContent = styled.div`
     padding: 0 20px;
   }
   h2 {
-    font-size: 68px;
+    font-size: 60px;
     color: #fff;
     font-weight: bold;
     margin: 20px 0;
     text-shadow: 2px 0 rgb(34,64,102), -2px 0 rgb(34,64,102), 0 2px rgb(34,64,102), 0 -2px rgb(34,64,102),
              1px 1px rgb(34,64,102), -1px -1px rgb(34,64,102), 1px -1px rgb(34,64,102), -1px 1px rgb(34,64,102);
     margin-bottom: 100px;
-    margin-top: 210px ;
+    margin-top: 180px ;
+    padding-left: 110px;
     @media only screen and (max-width: 768px) {
       font-size: 50px;
     }

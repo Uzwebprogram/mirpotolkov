@@ -14,8 +14,8 @@ export const CardImage = styled.div`
     top: 90px; */
   }
   img:nth-child(2) {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-top-left-radius: 5px;
@@ -23,7 +23,7 @@ export const CardImage = styled.div`
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     position: absolute;
-    bottom: 70px;
+    bottom: 105px;
     left: -20px;
     background-color: white;
 

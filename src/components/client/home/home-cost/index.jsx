@@ -1,6 +1,6 @@
 import React, { useRef, useState, useTransition } from "react";
 import { WrapperContainer } from "../../../../style-App";
-import { Section } from "./styled-index";
+import { Section, Note } from "./styled-index";
 import HomeForm from "../home-form";
 import { useTranslation } from "react-i18next";
 import { ButtonAdd } from "../home-form/styled-index";
@@ -19,48 +19,61 @@ const HomeCost = ({ isCost }) => {
         <WrapperContainer>
           <h2>{t("HomeCost.0")}</h2>
           {calculator == 0
-            ? data
-                .slice(0, 1)
-                .map((elem, index) => 
+            ? data.slice(0, 1).map((elem, index) => (
                 <>
-                <HomeForm isCost={isCost} /> 
-                <ButtonAdd ref={calAdd} calculator={calculator == 1} onClick={() => {
-                  setCalcutor(1)
-                  calAdd.current.style.display = "none"
-                }}>{t("HomeCost.12")}</ButtonAdd>    
+                  <HomeForm isCost={isCost} />
+                  <ButtonAdd
+                    ref={calAdd}
+                    calculator={calculator == 1}
+                    onClick={() => {
+                      setCalcutor(1);
+                      calAdd.current.style.display = "none";
+                    }}
+                  >
+                    {t("HomeCost.12")}
+                  </ButtonAdd>
                 </>
-                )
+              ))
             : calculator == 1
-            ? data
-                .slice(0, 2)
-                .map((elem, index) => (
-                     <>
-                <HomeForm isCost={isCost} /> 
-                <ButtonAdd ref={calAdd1} onClick={() => {
-                  setCalcutor(2)
-                  calAdd1.current.style.display = "none"}}>{t("HomeCost.12")}</ButtonAdd>
-                </>
-                ))
-            : calculator == 2
-            ? data
-                .slice(0, 3)
-                .map((elem, index) => (
-                 <>
-                <HomeForm isCost={isCost} /> 
-                <ButtonAdd ref={calAdd2} onClick={() => {
-                  setCalcutor(3)
-                  calAdd2.current.style.display = "none"}}>{t("HomeCost.12")}</ButtonAdd>
-                </>
-                ))
-            : calculator == 3
-            ? data
-                .slice(0, 4)
-                .map((elem, index) => (
+            ? data.slice(0, 2).map((elem, index) => (
                 <>
-                <HomeForm isCost={isCost} /> 
+                  <HomeForm isCost={isCost} />
+                  <ButtonAdd
+                    ref={calAdd1}
+                    onClick={() => {
+                      setCalcutor(2);
+                      calAdd1.current.style.display = "none";
+                    }}
+                  >
+                    {t("HomeCost.12")}
+                  </ButtonAdd>
                 </>
-                ))
+              ))
+            : calculator == 2
+            ? data.slice(0, 3).map((elem, index) => (
+                <>
+                  <HomeForm isCost={isCost} />
+                  <ButtonAdd
+                    ref={calAdd2}
+                    onClick={() => {
+                      setCalcutor(3);
+                      calAdd2.current.style.display = "none";
+                    }}
+                  >
+                    {t("HomeCost.12")}
+                  </ButtonAdd>
+                </>
+              ))
+            : calculator == 3
+            ? data.slice(0, 4).map((elem, index) => (
+                <>
+                  <HomeForm isCost={isCost} />
+                </>
+              ))
             : null}
+          <Note>
+            <p>{t("HomeCost.13")}</p>
+          </Note>
         </WrapperContainer>
       </Section>
     </>

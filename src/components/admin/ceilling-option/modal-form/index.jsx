@@ -32,13 +32,13 @@ function ChooseModal() {
       })
         .then((res) => res.text())
         .then((result) => console.log(result));
-      e.target[0].value = null;
-      e.target[1].value = null;
-      e.target[2].value = null;
-      e.target[3].value = null;
-      e.target[4].value = null;
-      e.target[5].value = null;
-      e.target[6].value = null;
+      // e.target[0].value = null;
+      // e.target[1].value = null;
+      // e.target[2].value = null;
+      // e.target[3].value = null;
+      // e.target[4].value = null;
+      // e.target[5].value = null;
+      // e.target[6].value = null;
     } catch (err) {
       console.log(err);
     }

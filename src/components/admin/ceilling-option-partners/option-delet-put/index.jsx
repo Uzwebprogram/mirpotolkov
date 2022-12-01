@@ -33,7 +33,6 @@ function OptionRegionDeletPutComponent({}) {
       <SelectWrapper>
         <select onChange={HandleOpen2}>
           <option selected disabled>
-            
             Region Удалить
           </option>
           {RegionMap.map((elem, index) => (
@@ -44,7 +43,6 @@ function OptionRegionDeletPutComponent({}) {
         </select>
         <select onChange={HandleOpen}>
           <option selected disabled>
-            
             Region Изминеть
           </option>
           {RegionMap.map((elem, index) => (

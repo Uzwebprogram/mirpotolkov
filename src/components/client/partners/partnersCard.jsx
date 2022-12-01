@@ -3,10 +3,7 @@ import {
   CeilCardWrapper,
   CeilCard,
   CeilItem,
-  Discount,
-  DiscountItem,
-  Line,
-  LeftBlock,
+
   WrapperUser,
 } from "./styled-index";
 
@@ -34,7 +31,7 @@ const PartnersCard = ({ Element }) => {
                 <span>{elem.partner_name}</span>
               </WrapperUser>
 
-              <a href="tel:+998915039390">
+              <a href={`tel:${elem.phone}`}>
                 {elem.phone} <i class="bx bxs-phone-call"></i>
               </a>
             </CeilItem>

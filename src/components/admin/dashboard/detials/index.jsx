@@ -22,7 +22,7 @@ function Detials() {
                         <tbody>
                             {AdminMap.map(elem => 
                              <tr>
-                                                                    <td>
+                                <td>
                                     <span>{elem.name}</span>
                                     </td>
                                     <td>
@@ -39,18 +39,24 @@ function Detials() {
                         <h2>Добавить администратора</h2>
                     </div>
 
-                    <ul>
+                    <table>
+                    <thead>
+                            <tr>
+                                <td>имя</td>
+                                <td>ел.почта</td>
+                            </tr>
+                        </thead>
                     {AdminMap.map(elem => 
                              <tr>
                             <td>
-                                    <span>{elem.name}</span>
+                                    <p>{elem.name}</p>
                                     </td>
                                     <td>
-                                    <span>{elem.email}</span>
+                                    <p>{elem.email}</p>
                                     </td>
                                 </tr>
                                 ) }
-            </ul>
+            </table>
                 </div>
             </div>
         </Wrapper>

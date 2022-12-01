@@ -39,3 +39,11 @@ export const PrivacyPolicy = styled.div`
     text-decoration: underline;
   }
 `;
+export const Logo = styled.a`
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`

@@ -9,9 +9,9 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
     const HandleSubmit = async (e , id ) =>{
         e.preventDefault()
         let form = new FormData()
-        form.append("titlecuisineuz" , titleuz)
-        form.append("titlecuisineen" , titleen)
-        form.append("titlecuisineru" , titleru)
+        form.append("titleCuisineUz" , titleuz.current.value)
+        form.append("titleCuisineEn" , titleen.current.value)
+        form.append("titleCuisineRu" , titleru.current.value)
         form.append("image" ,  image.current.files[0])
         try {
            await fetch(`https://api.mirpotolkov.uz/cuisine/${id}`, {
@@ -20,12 +20,6 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
             })
             .then(res => res.text())
             .then(result => console.log(result));
-            e.target[0].value = null
-            e.target[1].value = null
-            e.target[2].value = null
-            e.target[3].value = null
-            e.target[4].value = null
-            e.target[5].value = null
           } catch(err) {
             console.log(err)
         }

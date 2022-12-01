@@ -1,5 +1,5 @@
 import HeaderBottom from "../header/HeaderBottom/index";
-import { Section, PrivacyPolicy } from "./styled-index";
+import { Section, PrivacyPolicy , Logo } from "./styled-index";
 import { WrapperContainer } from "../../../style-App";
 import { NavLink } from "react-router-dom";
 function Footer({isLogo}) {
@@ -19,6 +19,7 @@ function Footer({isLogo}) {
               <i class="bx bxl-telegram"></i>
             </a>
           </PrivacyPolicy>
+          <Logo href="http://supersite.uz/">©Разработала команда Supersite.uz</Logo>
         </WrapperContainer>
       </Section>
     </>

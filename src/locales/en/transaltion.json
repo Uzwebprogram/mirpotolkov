@@ -14,7 +14,7 @@
     },
 
     "Home": {
-        "0": "Stretch ceilings with benefits up to 30%",
+        "0": "Ready to hit the road right now!",
         "1": "- Consultation on the choice and installation of the ceiling ",
         "2": "Just leave your phone number",
         "3": "Phone number",
@@ -52,7 +52,7 @@
          "9" : "Order"
 },
     "HomeCeil": {
-        "0": "Affordable Stretch Ceiling Solutions"
+        "0": " Ceiling Solutions"
     },
 
     "HomeCost": {
@@ -97,7 +97,7 @@
     "HomeSxema":{
         "0": "Simple operation scheme",
         "1": "You leave a request, after 5 minutes our manager will contact you",
-         "2": "Our master arrives, measures the room",
+         "2": "Our manager will call in 5 minutes",
          "3": "We conclude a contract, pay 50% in a convenient way",
          "4": "The installation team installs stretch ceilings and takes out the garbage"
     },

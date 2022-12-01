@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef} from "react";
 import { Wrapper, ModalTop, Form } from "./styled-index";
 import ModalCommon from "../../../common/modal";
 
@@ -13,9 +13,9 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
     const HandleSubmit = async (e , id ) =>{
         e.preventDefault()
         let form = new FormData()
-        form.append("titleuz" , titleuz.current.value)
-        form.append("titleen" , titleen.current.value)
-        form.append("titleru" , titleru.current.value)
+        form.append("titleUz" , titleuz.current.value)
+        form.append("titleEn" , titleen.current.value)
+        form.append("titleRu" , titleru.current.value)
         form.append("money" ,  money.current.value)
         form.append("skidka" ,  skidka.current.value)
         form.append("shades" ,  shades.current.value)
@@ -31,7 +31,6 @@ function ModalPut({handleClose , open , PutBlog , Title , Element}) {
             console.log(err)
         }
     }
-
   return (
     <Wrapper>
       <ModalCommon
